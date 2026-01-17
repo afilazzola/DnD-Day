@@ -1,15 +1,14 @@
 version: 1
 frontend:
-  buildpath: src
   phases:
     preBuild:
       commands:
         - nvm install 22
         - nvm use 22
-        - npm install
+        - cd src && npm install
     build:
       commands:
-        - npm run build
+        - cd src && npm run build
   artifacts:
     baseDirectory: src/dist
     files:
