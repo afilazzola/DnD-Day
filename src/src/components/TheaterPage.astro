@@ -22,24 +22,24 @@ interface Props {
 const { theater } = Astro.props;
 
 const colorBorderMap: Record<string, string> = {
-  'theater-assault': 'border-theater-assault',
-  'theater-siege': 'border-theater-siege',
-  'theater-portals': 'border-theater-portals',
-  'theater-air': 'border-theater-air',
+  "theater-assault": "border-theater-assault",
+  "theater-siege": "border-theater-siege",
+  "theater-portals": "border-theater-portals",
+  "theater-air": "border-theater-air",
 };
 
 const colorTextMap: Record<string, string> = {
-  'theater-assault': 'text-theater-assault',
-  'theater-siege': 'text-theater-siege',
-  'theater-portals': 'text-theater-portals',
-  'theater-air': 'text-theater-air',
+  "theater-assault": "text-theater-assault",
+  "theater-siege": "text-theater-siege",
+  "theater-portals": "text-theater-portals",
+  "theater-air": "text-theater-air",
 };
 
 const iconMap: Record<string, string> = {
-  'sword': '⚔️',
-  'catapult': '🏰',
-  'portal': '🌀',
-  'dragon': '🐉',
+  sword: "⚔️",
+  catapult: "☄️",
+  portal: "🌀",
+  dragon: "🐦‍🔥",
 };
 ---
 
@@ -47,22 +47,34 @@ const iconMap: Record<string, string> = {
 <section class="py-16 bg-dnd-bg-secondary">
   <div class="container-custom">
     <div class="max-w-3xl mx-auto text-center">
-      <a href="/theaters" class="inline-flex items-center gap-2 text-dnd-text-muted hover:text-dnd-text transition-colors mb-6">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      <a
+        href="/theaters"
+        class="inline-flex items-center gap-2 text-dnd-text-muted hover:text-dnd-text transition-colors mb-6"
+      >
+        <svg
+          class="w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
         </svg>
         Back to All Theaters
       </a>
 
       <div class="flex items-center justify-center gap-4 mb-4">
-        <span class="text-5xl">{iconMap[theater.icon] || '⚔️'}</span>
+        <span class="text-5xl">{iconMap[theater.icon] || "⚔️"}</span>
       </div>
 
       <h1 class="text-3xl md:text-4xl font-display mb-2">
         <span class="gold-gradient">{theater.name}</span>
       </h1>
 
-      <p class:list={['text-lg font-medium mb-2', colorTextMap[theater.color]]}>
+      <p class:list={["text-lg font-medium mb-2", colorTextMap[theater.color]]}>
         {theater.role}
       </p>
 
@@ -79,19 +91,30 @@ const iconMap: Record<string, string> = {
         {theater.description}
       </p>
 
-      {theater.entryPoint && (
-        <div class="card mt-6 border-l-4" class:list={[colorBorderMap[theater.color]]}>
-          <p class="text-dnd-primary text-sm uppercase tracking-wider mb-2">Entry Point</p>
-          <p class="text-dnd-text">{theater.entryPoint}</p>
-        </div>
-      )}
+      {
+        theater.entryPoint && (
+          <div
+            class="card mt-6 border-l-4"
+            class:list={[colorBorderMap[theater.color]]}
+          >
+            <p class="text-dnd-primary text-sm uppercase tracking-wider mb-2">
+              Entry Point
+            </p>
+            <p class="text-dnd-text">{theater.entryPoint}</p>
+          </div>
+        )
+      }
 
-      {theater.keyTension && (
-        <div class="card mt-6 border-l-4 border-dnd-secondary">
-          <p class="text-dnd-secondary text-sm uppercase tracking-wider mb-2">Key Tension</p>
-          <p class="text-dnd-text">{theater.keyTension}</p>
-        </div>
-      )}
+      {
+        theater.keyTension && (
+          <div class="card mt-6 border-l-4 border-dnd-secondary">
+            <p class="text-dnd-secondary text-sm uppercase tracking-wider mb-2">
+              Key Tension
+            </p>
+            <p class="text-dnd-text">{theater.keyTension}</p>
+          </div>
+        )
+      }
     </div>
   </div>
 </section>
@@ -105,28 +128,35 @@ const iconMap: Record<string, string> = {
       <div class="card mb-6">
         <h3 class="font-display text-dnd-text mb-4">Primary Objectives</h3>
         <ul class="space-y-3">
-          {theater.primaryObjectives.map((objective) => (
-            <li class="flex items-start gap-3">
-              <span class="text-dnd-primary mt-1">●</span>
-              <span class="text-dnd-text-muted">{objective}</span>
-            </li>
-          ))}
+          {
+            theater.primaryObjectives.map((objective) => (
+              <li class="flex items-start gap-3">
+                <span class="text-dnd-primary mt-1">●</span>
+                <span class="text-dnd-text-muted">{objective}</span>
+              </li>
+            ))
+          }
         </ul>
       </div>
 
-      {theater.secondaryObjectives && theater.secondaryObjectives.length > 0 && (
-        <div class="card">
-          <h3 class="font-display text-dnd-text mb-4">Secondary Objectives (Optional)</h3>
-          <ul class="space-y-3">
-            {theater.secondaryObjectives.map((objective) => (
-              <li class="flex items-start gap-3">
-                <span class="text-dnd-text-muted mt-1">○</span>
-                <span class="text-dnd-text-muted">{objective}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {
+        theater.secondaryObjectives &&
+          theater.secondaryObjectives.length > 0 && (
+            <div class="card">
+              <h3 class="font-display text-dnd-text mb-4">
+                Secondary Objectives (Optional)
+              </h3>
+              <ul class="space-y-3">
+                {theater.secondaryObjectives.map((objective) => (
+                  <li class="flex items-start gap-3">
+                    <span class="text-dnd-text-muted mt-1">○</span>
+                    <span class="text-dnd-text-muted">{objective}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+      }
     </div>
   </div>
 </section>
@@ -141,24 +171,28 @@ const iconMap: Record<string, string> = {
         <div class="card border-l-4 border-dnd-accent">
           <h3 class="font-display text-dnd-accent mb-4">If You Succeed</h3>
           <ul class="space-y-3">
-            {theater.successEffects.map((effect) => (
-              <li class="flex items-start gap-3">
-                <span class="text-dnd-accent mt-1">✓</span>
-                <span class="text-dnd-text-muted">{effect}</span>
-              </li>
-            ))}
+            {
+              theater.successEffects.map((effect) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-dnd-accent mt-1">✓</span>
+                  <span class="text-dnd-text-muted">{effect}</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
 
         <div class="card border-l-4 border-dnd-secondary">
           <h3 class="font-display text-dnd-secondary mb-4">If You Fail</h3>
           <ul class="space-y-3">
-            {theater.failureEffects.map((effect) => (
-              <li class="flex items-start gap-3">
-                <span class="text-dnd-secondary mt-1">✗</span>
-                <span class="text-dnd-text-muted">{effect}</span>
-              </li>
-            ))}
+            {
+              theater.failureEffects.map((effect) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-dnd-secondary mt-1">✗</span>
+                  <span class="text-dnd-text-muted">{effect}</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>
@@ -170,24 +204,32 @@ const iconMap: Record<string, string> = {
 <section class="py-12 bg-dnd-bg-secondary">
   <div class="container-custom">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-display text-dnd-primary mb-6">Theater Connections</h2>
+      <h2 class="text-2xl font-display text-dnd-primary mb-6">
+        Theater Connections
+      </h2>
 
       <div class="grid md:grid-cols-2 gap-6">
         <div class="card">
           <h3 class="font-display text-dnd-accent mb-3">Your Success Helps:</h3>
           <ul class="space-y-2">
-            {theater.helps.map((item) => (
-              <li class="text-dnd-text-muted">• {item}</li>
-            ))}
+            {
+              theater.helps.map((item) => (
+                <li class="text-dnd-text-muted">• {item}</li>
+              ))
+            }
           </ul>
         </div>
 
         <div class="card">
-          <h3 class="font-display text-dnd-secondary mb-3">Your Failure Hurts:</h3>
+          <h3 class="font-display text-dnd-secondary mb-3">
+            Your Failure Hurts:
+          </h3>
           <ul class="space-y-2">
-            {theater.hurts.map((item) => (
-              <li class="text-dnd-text-muted">• {item}</li>
-            ))}
+            {
+              theater.hurts.map((item) => (
+                <li class="text-dnd-text-muted">• {item}</li>
+              ))
+            }
           </ul>
         </div>
       </div>
@@ -208,9 +250,7 @@ const iconMap: Record<string, string> = {
       <a href={`/signup?theater=${theater.id}`} class="btn btn-primary">
         Sign Up for This Theater
       </a>
-      <a href="/theaters" class="btn btn-secondary">
-        View Other Theaters
-      </a>
+      <a href="/theaters" class="btn btn-secondary"> View Other Theaters </a>
     </div>
   </div>
 </section>

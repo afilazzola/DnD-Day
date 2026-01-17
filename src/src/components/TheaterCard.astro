@@ -9,41 +9,60 @@ interface Props {
   href?: string;
 }
 
-const { id, name, role, tone, color, icon, href = `/theaters/${id}` } = Astro.props;
+const {
+  id,
+  name,
+  role,
+  tone,
+  color,
+  icon,
+  href = `/theaters/${id}`,
+} = Astro.props;
 
 const colorClasses: Record<string, string> = {
-  'theater-assault': 'border-theater-assault hover:bg-theater-assault/10',
-  'theater-siege': 'border-theater-siege hover:bg-theater-siege/10',
-  'theater-portals': 'border-theater-portals hover:bg-theater-portals/10',
-  'theater-air': 'border-theater-air hover:bg-theater-air/10',
+  "theater-assault": "border-theater-assault hover:bg-theater-assault/10",
+  "theater-siege": "border-theater-siege hover:bg-theater-siege/10",
+  "theater-portals": "border-theater-portals hover:bg-theater-portals/10",
+  "theater-air": "border-theater-air hover:bg-theater-air/10",
 };
 
 const iconMap: Record<string, string> = {
-  'sword': '⚔️',
-  'catapult': '🏰',
-  'portal': '🌀',
-  'dragon': '🐉',
+  sword: "⚔️",
+  catapult: "☄️",
+  portal: "🌀",
+  dragon: "🐦‍🔥",
 };
 ---
 
 <a
   href={href}
   class:list={[
-    'card group block border-l-4 hover:translate-y-[-4px]',
-    colorClasses[color] || 'border-dnd-primary'
+    "card group block border-l-4 hover:translate-y-[-4px]",
+    colorClasses[color] || "border-dnd-primary",
   ]}
 >
   <div class="flex items-start gap-4">
-    <span class="text-4xl">{iconMap[icon] || '⚔️'}</span>
+    <span class="text-4xl">{iconMap[icon] || "⚔️"}</span>
     <div class="flex-1">
-      <h3 class="font-display text-xl text-dnd-text group-hover:text-dnd-primary transition-colors mb-2">
+      <h3
+        class="font-display text-xl text-dnd-text group-hover:text-dnd-primary transition-colors mb-2"
+      >
         {name}
       </h3>
       <p class="text-dnd-primary text-sm font-medium mb-2">{role}</p>
       <p class="text-dnd-text-muted text-sm italic">{tone}</p>
     </div>
-    <svg class="w-5 h-5 text-dnd-text-muted group-hover:text-dnd-primary group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    <svg
+      class="w-5 h-5 text-dnd-text-muted group-hover:text-dnd-primary group-hover:translate-x-1 transition-all"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M9 5l7 7-7 7"></path>
     </svg>
   </div>
 </a>
