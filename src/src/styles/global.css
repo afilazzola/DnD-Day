@@ -40,15 +40,15 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 font-display font-semibold text-sm uppercase tracking-wider rounded transition-all duration-300;
+    @apply inline-flex items-center justify-center px-6 py-3 font-display font-semibold text-sm uppercase tracking-wider rounded transition-all duration-200 transform;
   }
 
   .btn-primary {
-    @apply bg-dnd-primary text-dnd-bg hover:bg-dnd-primary/90 hover:shadow-lg hover:shadow-dnd-primary/25;
+    @apply bg-dnd-primary text-dnd-bg hover:bg-yellow-500 hover:scale-105 hover:shadow-lg hover:shadow-dnd-primary/40 active:scale-95;
   }
 
   .btn-secondary {
-    @apply border-2 border-dnd-primary text-dnd-primary hover:bg-dnd-primary hover:text-dnd-bg;
+    @apply border-2 border-dnd-primary text-dnd-primary hover:bg-dnd-primary hover:text-dnd-bg hover:scale-105 active:scale-95;
   }
 
   .card {

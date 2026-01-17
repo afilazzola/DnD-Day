@@ -10,8 +10,8 @@ export default {
         'dnd-primary': '#c9a227',
         'dnd-secondary': '#8b0000',
         'dnd-accent': '#4a6741',
-        'dnd-text': '#e8e0d5',
-        'dnd-text-muted': '#8a8478',
+        'dnd-text': '#f7f3ec',
+        'dnd-text-muted': '#b8b0a4',
         'dnd-border': '#2a3444',
         // Theater colors
         'theater-assault': '#8b4513',
