@@ -11,27 +11,43 @@ import theaters from '../data/theaters.json';
     title="Operation Golden Sword"
     subtitle="DnD Day Event"
     description="The Iron Tide Rises. The Sword Coast Calls. Join a massive multi-table DnD event where heroes unite to break the Iron Conclave's grip on Amn."
+    backgroundImage="/images/hero-banner.jpg"
   />
 
   <!-- Story Teaser -->
   <section class="py-20 bg-dnd-bg-secondary">
     <div class="container-custom">
-      <div class="max-w-3xl mx-auto text-center">
-        <p class="section-title">The Setting</p>
-        <h2 class="text-3xl md:text-4xl font-display mb-6">
-          <span class="gold-gradient">The Kingdom of Amn Has Fallen</span>
-        </h2>
-        <p class="text-dnd-text-muted text-lg leading-relaxed mb-6">
-          Its capital city, <strong class="text-dnd-text">Athkatla</strong>, has been enslaved by
-          <a href="/enemies" class="text-dnd-secondary hover:text-dnd-primary transition-colors font-semibold">High Forgemaster Tharûm Blackmantle</a> and his Iron Conclave.
-          Massive armies guard every land approach — but the coastline remains the only viable weakness.
-        </p>
-        <p class="text-dnd-text-muted text-lg leading-relaxed mb-8">
-          This vulnerability has drawn a desperate gamble: <strong class="text-dnd-primary">a full-scale amphibious invasion.</strong>
-        </p>
-        <a href="/story" class="btn btn-secondary">
-          Read the Full Story
-        </a>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <!-- Image -->
+        <div class="order-2 lg:order-1">
+          <div class="relative rounded-lg overflow-hidden shadow-2xl">
+            <img
+              src="/images/athkalta.jpg"
+              alt="The city of Athkatla under siege"
+              class="w-full h-auto object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-dnd-bg/60 to-transparent"></div>
+          </div>
+        </div>
+
+        <!-- Text Content -->
+        <div class="order-1 lg:order-2 text-center lg:text-left">
+          <p class="section-title">The Setting</p>
+          <h2 class="text-3xl md:text-4xl font-display mb-6">
+            <span class="gold-gradient">The Kingdom of Amn Has Fallen</span>
+          </h2>
+          <p class="text-dnd-text-muted text-lg leading-relaxed mb-6">
+            Its capital city, <strong class="text-dnd-text">Athkatla</strong>, has been enslaved by
+            <a href="/enemies" class="text-dnd-secondary hover:text-dnd-primary transition-colors font-semibold">High Forgemaster Tharûm Blackmantle</a> and his Iron Conclave.
+            Massive armies guard every land approach — but the coastline remains the only viable weakness.
+          </p>
+          <p class="text-dnd-text-muted text-lg leading-relaxed mb-8">
+            This vulnerability has drawn a desperate gamble: <strong class="text-dnd-primary">a full-scale amphibious invasion.</strong>
+          </p>
+          <a href="/story" class="btn btn-secondary">
+            Read the Full Story
+          </a>
+        </div>
       </div>
     </div>
   </section>

@@ -6,6 +6,7 @@ interface Props {
   showCta?: boolean;
   ctaText?: string;
   ctaHref?: string;
+  backgroundImage?: string;
 }
 
 const {
@@ -14,13 +15,25 @@ const {
   description,
   showCta = true,
   ctaText = 'Join the Fight',
-  ctaHref = '/signup'
+  ctaHref = '/signup',
+  backgroundImage
 } = Astro.props;
 ---
 
 <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-  <!-- Background Effects -->
-  <div class="absolute inset-0 bg-gradient-to-b from-dnd-bg via-dnd-bg-secondary/50 to-dnd-bg"></div>
+  <!-- Background Image -->
+  {backgroundImage && (
+    <div class="absolute inset-0">
+      <img
+        src={backgroundImage}
+        alt=""
+        class="w-full h-full object-cover"
+      />
+    </div>
+  )}
+
+  <!-- Dark Overlay for text readability -->
+  <div class="absolute inset-0 bg-gradient-to-b from-dnd-bg/80 via-dnd-bg/70 to-dnd-bg"></div>
 
   <!-- Animated background elements -->
   <div class="absolute inset-0 overflow-hidden">
