@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TheaterCard from '../../components/TheaterCard.astro';
+import theaters from '../../data/theaters.json';
+---
+
+<BaseLayout title="Theaters of War" description="Explore the four theaters of war in Operation Golden Sword.">
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">Act II</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">Theaters of War</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        The invasion splits into four critical theaters. Each plays a vital role in the battle for the Coastal Keep.
+        Choose wisely — your theater will shape the fate of Amn.
+      </p>
+    </div>
+  </section>
+
+  <!-- Theater Grid -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {theaters.theaters.map((theater) => (
+          <TheaterCard
+            id={theater.id}
+            name={theater.name}
+            role={theater.role}
+            tone={theater.tone}
+            color={theater.color}
+            icon={theater.icon}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interconnection -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-8">
+          <p class="section-title">Strategy</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">No Theater Stands Alone</span>
+          </h2>
+        </div>
+
+        <p class="text-dnd-text-muted text-center mb-8">
+          Success or failure in one theater directly affects all others. The invasion is a coordinated effort —
+          every victory creates opportunities, every setback adds pressure.
+        </p>
+
+        <div class="card overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-dnd-border">
+                <th class="text-left py-3 text-dnd-text font-display">Theater</th>
+                <th class="text-left py-3 text-dnd-accent font-display">Success Helps</th>
+                <th class="text-left py-3 text-dnd-secondary font-display">Failure Hurts</th>
+              </tr>
+            </thead>
+            <tbody class="text-dnd-text-muted">
+              <tr class="border-b border-dnd-border/50">
+                <td class="py-3 font-medium text-dnd-text">General Assault</td>
+                <td class="py-3">Siege Train, Portals & Bridges</td>
+                <td class="py-3">All theaters</td>
+              </tr>
+              <tr class="border-b border-dnd-border/50">
+                <td class="py-3 font-medium text-dnd-text">Siege Train</td>
+                <td class="py-3">Act III - Final Battle</td>
+                <td class="py-3">Act III - Final Battle</td>
+              </tr>
+              <tr class="border-b border-dnd-border/50">
+                <td class="py-3 font-medium text-dnd-text">Portals & Bridges</td>
+                <td class="py-3">General Assault, Siege Train</td>
+                <td class="py-3">General Assault, Siege Train</td>
+              </tr>
+              <tr>
+                <td class="py-3 font-medium text-dnd-text">Air Battle</td>
+                <td class="py-3">All theaters</td>
+                <td class="py-3">All theaters</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl md:text-3xl font-display mb-4">
+        <span class="gold-gradient">Choose Your Theater</span>
+      </h2>
+      <p class="text-dnd-text-muted mb-8 max-w-xl mx-auto">
+        Ready to join the fight? Sign up for your preferred theater and prepare for war.
+      </p>
+      <a href="/signup" class="btn btn-primary">Sign Up Now</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  showCta?: boolean;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  showCta = true,
+  ctaText = 'Join the Fight',
+  ctaHref = '/signup'
+} = Astro.props;
+---
+
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+  <!-- Background Effects -->
+  <div class="absolute inset-0 bg-gradient-to-b from-dnd-bg via-dnd-bg-secondary/50 to-dnd-bg"></div>
+
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-dnd-secondary/5 rounded-full blur-3xl animate-pulse-slow"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-dnd-primary/5 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1.5s;"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 container-custom text-center px-4">
+    {subtitle && (
+      <p class="section-title animate-fade-in mb-4">{subtitle}</p>
+    )}
+
+    <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up">
+      <span class="gold-gradient">{title}</span>
+    </h1>
+
+    {description && (
+      <p class="text-lg md:text-xl text-dnd-text-muted max-w-2xl mx-auto mb-8 animate-fade-in" style="animation-delay: 0.3s;">
+        {description}
+      </p>
+    )}
+
+    {showCta && (
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style="animation-delay: 0.5s;">
+        <a href={ctaHref} class="btn btn-primary">
+          {ctaText}
+        </a>
+        <a href="/story" class="btn btn-secondary">
+          Learn the Story
+        </a>
+      </div>
+    )}
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-dnd-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </div>
+</section>

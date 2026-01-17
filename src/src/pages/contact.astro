@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact" description="Get in touch with the DnD Day organizers. Questions about Operation Golden Sword? We're here to help.">
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">Get in Touch</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">Contact Us</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        Have questions about DnD Day? Want to learn more about Operation Golden Sword?
+        We'd love to hear from you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div>
+            <h2 class="text-2xl font-display text-dnd-primary mb-6">Quick Contact</h2>
+
+            <div class="space-y-6">
+              <div class="card">
+                <div class="flex items-start gap-4">
+                  <span class="text-2xl">📧</span>
+                  <div>
+                    <h3 class="font-display text-dnd-text mb-1">Email</h3>
+                    <p class="text-dnd-text-muted text-sm">organizer@example.com</p>
+                    <p class="text-dnd-text-muted text-xs mt-1">(Placeholder - update with real email)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="flex items-start gap-4">
+                  <span class="text-2xl">💬</span>
+                  <div>
+                    <h3 class="font-display text-dnd-text mb-1">Discord</h3>
+                    <p class="text-dnd-text-muted text-sm">Join our Discord server</p>
+                    <p class="text-dnd-text-muted text-xs mt-1">(Link coming soon)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="flex items-start gap-4">
+                  <span class="text-2xl">🐦</span>
+                  <div>
+                    <h3 class="font-display text-dnd-text mb-1">Social Media</h3>
+                    <p class="text-dnd-text-muted text-sm">Follow us for updates</p>
+                    <p class="text-dnd-text-muted text-xs mt-1">(Links coming soon)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="font-display text-dnd-primary mb-4">Common Questions</h3>
+              <div class="space-y-4">
+                <div>
+                  <p class="text-dnd-text text-sm font-medium">What level should my character be?</p>
+                  <p class="text-dnd-text-muted text-sm">Character requirements will be announced closer to the event.</p>
+                </div>
+                <div>
+                  <p class="text-dnd-text text-sm font-medium">Can I switch theaters?</p>
+                  <p class="text-dnd-text-muted text-sm">Yes, contact us if you need to change your theater assignment.</p>
+                </div>
+                <div>
+                  <p class="text-dnd-text text-sm font-medium">Is food provided?</p>
+                  <p class="text-dnd-text-muted text-sm">Details about food will be announced with the event location.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div>
+            <h2 class="text-2xl font-display text-dnd-primary mb-6">Send a Message</h2>
+
+            <form id="contact-form" class="card">
+              <!-- Name -->
+              <div class="mb-6">
+                <label for="contact-name" class="block text-dnd-text text-sm font-medium mb-2">
+                  Name <span class="text-dnd-secondary">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 bg-dnd-bg border border-dnd-border rounded-lg text-dnd-text placeholder-dnd-text-muted focus:outline-none focus:border-dnd-primary transition-colors"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="mb-6">
+                <label for="contact-email" class="block text-dnd-text text-sm font-medium mb-2">
+                  Email <span class="text-dnd-secondary">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 bg-dnd-bg border border-dnd-border rounded-lg text-dnd-text placeholder-dnd-text-muted focus:outline-none focus:border-dnd-primary transition-colors"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <!-- Subject -->
+              <div class="mb-6">
+                <label for="contact-subject" class="block text-dnd-text text-sm font-medium mb-2">
+                  Subject
+                </label>
+                <select
+                  id="contact-subject"
+                  name="subject"
+                  class="w-full px-4 py-3 bg-dnd-bg border border-dnd-border rounded-lg text-dnd-text focus:outline-none focus:border-dnd-primary transition-colors"
+                >
+                  <option value="general">General Question</option>
+                  <option value="signup">Signup / Registration</option>
+                  <option value="character">Character Questions</option>
+                  <option value="logistics">Event Logistics</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="mb-6">
+                <label for="contact-message" class="block text-dnd-text text-sm font-medium mb-2">
+                  Message <span class="text-dnd-secondary">*</span>
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  required
+                  rows="5"
+                  class="w-full px-4 py-3 bg-dnd-bg border border-dnd-border rounded-lg text-dnd-text placeholder-dnd-text-muted focus:outline-none focus:border-dnd-primary transition-colors resize-none"
+                  placeholder="Your message..."
+                ></textarea>
+              </div>
+
+              <!-- Honeypot for spam -->
+              <div class="hidden">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary w-full">
+                Send Message
+              </button>
+
+              <!-- Success Message -->
+              <div id="contact-success" class="hidden mt-6 p-4 bg-dnd-accent/20 border border-dnd-accent rounded-lg text-center">
+                <p class="text-dnd-accent font-display">Message sent!</p>
+                <p class="text-dnd-text-muted text-sm mt-1">We'll get back to you as soon as possible.</p>
+              </div>
+
+              <!-- Error Message -->
+              <div id="contact-error" class="hidden mt-6 p-4 bg-dnd-secondary/20 border border-dnd-secondary rounded-lg text-center">
+                <p class="text-dnd-secondary font-display">Something went wrong.</p>
+                <p class="text-dnd-text-muted text-sm mt-1">Please try again or contact us directly via email.</p>
+              </div>
+
+              <!-- Note -->
+              <p class="text-dnd-text-muted text-xs mt-4 text-center">
+                Note: This form currently saves locally. Connect to a form service (Formspree, Netlify Forms, etc.) for actual email delivery.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const successMessage = document.getElementById('contact-success');
+  const errorMessage = document.getElementById('contact-error');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    // Check honeypot
+    if (formData.get('website')) {
+      return; // Likely spam
+    }
+
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
+
+    if (!name || !email || !message) {
+      errorMessage?.classList.remove('hidden');
+      successMessage?.classList.add('hidden');
+      return;
+    }
+
+    // In a real implementation, you would send this to a backend service
+    // For now, we'll just save it to localStorage and show success
+    const contacts = JSON.parse(localStorage.getItem('dndday-contacts') || '[]');
+    contacts.push({
+      id: crypto.randomUUID(),
+      name,
+      email,
+      subject,
+      message,
+      timestamp: Date.now(),
+    });
+    localStorage.setItem('dndday-contacts', JSON.stringify(contacts));
+
+    // Show success
+    successMessage?.classList.remove('hidden');
+    errorMessage?.classList.add('hidden');
+
+    // Reset form
+    form.reset();
+  });
+</script>

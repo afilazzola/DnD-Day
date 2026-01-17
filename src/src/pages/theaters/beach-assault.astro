@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TheaterPage from '../../components/TheaterPage.astro';
+import theaters from '../../data/theaters.json';
+
+const theater = theaters.theaters.find(t => t.id === 'beach-assault');
+---
+
+<BaseLayout
+  title={theater?.name || 'Beach Assault'}
+  description={theater?.description || 'Beach Landing - General Assault theater information.'}
+>
+  {theater && <TheaterPage theater={theater} />}
+</BaseLayout>

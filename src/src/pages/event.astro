@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Event Info" description="Date, time, location, and what to bring to DnD Day - Operation Golden Sword.">
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">The Event</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">Event Information</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        Everything you need to know about DnD Day - Operation Golden Sword.
+      </p>
+    </div>
+  </section>
+
+  <!-- When & Where -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- When -->
+          <div class="card">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-4xl">📅</span>
+              <h2 class="text-2xl font-display text-dnd-primary">When</h2>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <p class="text-dnd-text-muted text-sm uppercase tracking-wider mb-1">Date</p>
+                <p class="text-dnd-text text-xl font-display">May 2025</p>
+                <p class="text-dnd-primary text-sm">(Exact date TBD)</p>
+              </div>
+
+              <div>
+                <p class="text-dnd-text-muted text-sm uppercase tracking-wider mb-1">Start Time</p>
+                <p class="text-dnd-text text-xl font-display">TBD</p>
+              </div>
+
+              <div>
+                <p class="text-dnd-text-muted text-sm uppercase tracking-wider mb-1">Duration</p>
+                <p class="text-dnd-text text-xl font-display">~6-8 hours</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Where -->
+          <div class="card">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="text-4xl">📍</span>
+              <h2 class="text-2xl font-display text-dnd-primary">Where</h2>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <p class="text-dnd-text-muted text-sm uppercase tracking-wider mb-1">Location</p>
+                <p class="text-dnd-text text-xl font-display">TBD</p>
+                <p class="text-dnd-primary text-sm">(Details coming soon)</p>
+              </div>
+
+              <div>
+                <p class="text-dnd-text-muted text-sm uppercase tracking-wider mb-1">Address</p>
+                <p class="text-dnd-text-muted">To be announced</p>
+              </div>
+
+              <!-- Map placeholder -->
+              <div class="bg-dnd-bg rounded-lg h-32 flex items-center justify-center border border-dnd-border">
+                <p class="text-dnd-text-muted text-sm">Map will be added once location is confirmed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="section-title">Timeline</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">Event Schedule</span>
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          <div class="card flex items-start gap-4">
+            <div class="text-center min-w-[60px]">
+              <span class="text-2xl">🏰</span>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="font-display text-dnd-text">Arrival & Setup</h3>
+                <span class="text-dnd-text-muted text-sm">~30 min</span>
+              </div>
+              <p class="text-dnd-text-muted text-sm">
+                Arrive, set up your character, meet your party, and get settled in.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex items-start gap-4">
+            <div class="text-center min-w-[60px]">
+              <span class="text-2xl">📜</span>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="font-display text-dnd-text">Act I: Eve of War</h3>
+                <span class="text-dnd-text-muted text-sm">~1-1.5 hours</span>
+              </div>
+              <p class="text-dnd-text-muted text-sm">
+                Preparation in Velen. Final shopping, war council briefing, and deployment.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex items-start gap-4">
+            <div class="text-center min-w-[60px]">
+              <span class="text-2xl">⚔️</span>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="font-display text-dnd-text">Act II: The Iron Tide</h3>
+                <span class="text-dnd-text-muted text-sm">~3-4 hours</span>
+              </div>
+              <p class="text-dnd-text-muted text-sm">
+                The invasion begins. Four theaters of war run simultaneously.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex items-start gap-4 opacity-75">
+            <div class="text-center min-w-[60px]">
+              <span class="text-2xl">🍕</span>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="font-display text-dnd-text">Break / Food</h3>
+                <span class="text-dnd-text-muted text-sm">~30-45 min</span>
+              </div>
+              <p class="text-dnd-text-muted text-sm">
+                Mid-event break for food and refreshments.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex items-start gap-4">
+            <div class="text-center min-w-[60px]">
+              <span class="text-2xl">🔥</span>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="font-display text-dnd-text">Act III: Fall of the Coastal Keep</h3>
+                <span class="text-dnd-text-muted text-sm">~1.5-2 hours</span>
+              </div>
+              <p class="text-dnd-text-muted text-sm">
+                The final battle. All forces converge on the Coastal Keep.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex items-start gap-4">
+            <div class="text-center min-w-[60px]">
+              <span class="text-2xl">🎉</span>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-1">
+                <h3 class="font-display text-dnd-text">Epilogue & Wrap-up</h3>
+                <span class="text-dnd-text-muted text-sm">~30 min</span>
+              </div>
+              <p class="text-dnd-text-muted text-sm">
+                The unified epilogue, awards, and celebration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Bring -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="section-title">Prepare</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">What to Bring</span>
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="card">
+            <h3 class="font-display text-dnd-primary mb-4">Required</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-dnd-primary">✓</span>
+                <span class="text-dnd-text-muted">Character sheet (printed or digital)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-dnd-primary">✓</span>
+                <span class="text-dnd-text-muted">Dice set</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-dnd-primary">✓</span>
+                <span class="text-dnd-text-muted">Pencil/pen and paper</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-dnd-primary">✓</span>
+                <span class="text-dnd-text-muted">Good attitude and team spirit!</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="font-display text-dnd-primary mb-4">Recommended</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-dnd-text-muted">○</span>
+                <span class="text-dnd-text-muted">Miniature for your character</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-dnd-text-muted">○</span>
+                <span class="text-dnd-text-muted">Snacks to share</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-dnd-text-muted">○</span>
+                <span class="text-dnd-text-muted">Water bottle</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-dnd-text-muted">○</span>
+                <span class="text-dnd-text-muted">Phone charger</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mt-8 bg-dnd-primary/10 border-dnd-primary">
+          <h3 class="font-display text-dnd-primary mb-3">Character Requirements</h3>
+          <p class="text-dnd-text-muted text-sm leading-relaxed">
+            Character level and creation guidelines will be announced closer to the event.
+            Stay tuned for updates on character requirements and any homebrew restrictions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl md:text-3xl font-display mb-4">
+        <span class="gold-gradient">Ready to Join?</span>
+      </h2>
+      <p class="text-dnd-text-muted mb-8 max-w-xl mx-auto">
+        Sign up now to secure your spot in Operation Golden Sword.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/signup" class="btn btn-primary">Sign Up Now</a>
+        <a href="/contact" class="btn btn-secondary">Questions? Contact Us</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

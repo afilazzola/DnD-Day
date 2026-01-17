@@ -1,0 +1,366 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="The Story" description="Learn about Operation Golden Sword - the three acts of this epic DnD Day event.">
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">The Campaign</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">Operation Golden Sword</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        A three-act epic where heroes must race against time to break the Iron Conclave's grip on Amn.
+      </p>
+    </div>
+  </section>
+
+  <!-- Setting -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">The Setting</h2>
+
+        <div class="space-y-4 text-dnd-text-muted leading-relaxed">
+          <p>
+            <strong class="text-dnd-text">Location:</strong> The Sword Coast
+          </p>
+          <p>
+            <strong class="text-dnd-text">Primary Objective:</strong> The coastal region of the Kingdom of Amn
+          </p>
+          <p>
+            The Kingdom of Amn — one of the wealthiest powers on the Sword Coast — has fallen.
+            Its capital city, <strong class="text-dnd-text">Athkatla</strong>, has been enslaved by
+            <strong class="text-dnd-secondary">High Forgemaster Tharum Blackmantle</strong> and his Iron Conclave.
+          </p>
+          <p>
+            Massive armies now guard every land approach into the kingdom, forming an impenetrable wall of
+            steel, siegecraft, and merciless discipline.
+          </p>
+          <p>
+            The coastline, however — though heavily fortified — remains the only viable weakness. It is the fastest
+            route inland, and the only path that can bypass the Conclave's land armies before they fully mobilize.
+          </p>
+          <p class="text-dnd-primary font-semibold">
+            This vulnerability has drawn a desperate gamble: a full-scale amphibious invasion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- True Objective -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">The True Objective</h2>
+
+        <p class="text-dnd-text-muted leading-relaxed mb-6">
+          The goal of DnD Day is not to reclaim Amn in a single battle.
+          <strong class="text-dnd-text">The goal is to capture the Coastal Keep.</strong>
+        </p>
+
+        <div class="card mb-6">
+          <h3 class="font-display text-xl text-dnd-text mb-4">The Coastal Keep is:</h3>
+          <ul class="space-y-2 text-dnd-text-muted">
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-primary">•</span>
+              <span>A fortress</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-primary">•</span>
+              <span>A command hub</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-primary">•</span>
+              <span>The primary logistical and arcane relay between Athkatla and the Iron Conclave's eastern armies</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card border-dnd-accent">
+            <h4 class="font-display text-dnd-accent mb-3">If the Keep Falls:</h4>
+            <ul class="space-y-2 text-dnd-text-muted text-sm">
+              <li>• Eastern armies are cut off from command</li>
+              <li>• Reinforcements cannot be coordinated</li>
+              <li>• Battlefield intelligence collapses</li>
+              <li>• Athkatla becomes exposed</li>
+            </ul>
+          </div>
+          <div class="card border-dnd-secondary">
+            <h4 class="font-display text-dnd-secondary mb-3">If the Keep Holds:</h4>
+            <ul class="space-y-2 text-dnd-text-muted text-sm">
+              <li>• The invasion will be crushed between converging armies</li>
+              <li>• The Iron Conclave will respond with forces too vast to resist</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-dnd-primary font-display text-xl text-center mt-8">
+          The adventurers do not need to win the war today. They only need to break it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Act I -->
+  <section class="py-16" id="act-1">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-4xl">🏰</span>
+          <div>
+            <p class="section-title">Act I</p>
+            <h2 class="text-3xl font-display">The Eve of War</h2>
+          </div>
+        </div>
+
+        <div class="card mb-6">
+          <p class="text-dnd-primary text-sm uppercase tracking-wider mb-2">Location</p>
+          <p class="text-dnd-text font-display text-lg">Velen, Dragon's Head Peninsula</p>
+          <p class="text-dnd-text-muted text-sm mt-2 italic">Tone: Tense, anticipatory, grim camaraderie</p>
+        </div>
+
+        <div class="space-y-4 text-dnd-text-muted leading-relaxed mb-8">
+          <p>
+            The adventurers have gathered in <strong class="text-dnd-text">Velen</strong>, a fortified coastal town
+            at the tip of the Dragon's Head Peninsula. Once a bustling port town supporting Amnian trade,
+            Velen now serves as the final staging ground for the invasion.
+          </p>
+          <p>The town is overcrowded and strained:</p>
+          <ul class="space-y-2 ml-4">
+            <li>• Docks packed with rowboats, transport barges, and hastily reinforced vessels</li>
+            <li>• Soldiers and mercenaries sleeping in streets and taverns</li>
+            <li>• Signal towers manned day and night</li>
+            <li>• The sea watched constantly for signs of movement</li>
+          </ul>
+          <p>Across the water, somewhere beyond the horizon, the Iron Conclave waits.</p>
+        </div>
+
+        <h3 class="font-display text-xl text-dnd-primary mb-4">Purpose of Act I</h3>
+        <p class="text-dnd-text-muted mb-6">
+          Act I is not about action — it is about <strong class="text-dnd-text">weight</strong>.
+          This act should let players prepare mechanically (gear, spells, consumables) and emotionally
+          (farewells, vows, fear). It establishes the scale of the invasion and makes clear that
+          not everyone here will survive.
+        </p>
+
+        <h3 class="font-display text-xl text-dnd-primary mb-4">Key Events</h3>
+        <div class="space-y-4">
+          <div class="card">
+            <h4 class="font-display text-dnd-text mb-2">1. Final Preparations</h4>
+            <p class="text-dnd-text-muted text-sm">
+              Players are given limited time to spend gold, trade supplies, finalize plans, and say goodbyes.
+              <strong class="text-dnd-primary">Once the invasion begins, there is no returning to Velen.</strong>
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="font-display text-dnd-text mb-2">2. The War Council</h4>
+            <p class="text-dnd-text-muted text-sm">
+              All adventurers gather to hear the overarching plan. The briefing outlines the goal: seize the coast quickly.
+              Forces will be split into separate theaters, and success in one area affects all others.
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="font-display text-dnd-text mb-2">3. Deployment</h4>
+            <p class="text-dnd-text-muted text-sm">
+              As dawn approaches, beach assault teams board landing craft, air units prepare mounts,
+              infiltration forces ready teleportation circles. Horns sound across Velen. Signal fires ignite.
+              <strong class="text-dnd-primary">The sea is no longer empty.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Act II -->
+  <section class="py-16 bg-dnd-bg-secondary" id="act-2">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-4xl">⚔️</span>
+          <div>
+            <p class="section-title">Act II</p>
+            <h2 class="text-3xl font-display">The Iron Tide</h2>
+          </div>
+        </div>
+
+        <div class="card mb-6">
+          <p class="text-dnd-primary text-sm uppercase tracking-wider mb-2">The Invasion</p>
+          <p class="text-dnd-text-muted text-sm italic">Tone: Chaotic, heroic, overwhelming</p>
+        </div>
+
+        <p class="text-dnd-text-muted leading-relaxed mb-8">
+          The heroes are split into <strong class="text-dnd-text">four theaters of war</strong>,
+          each critical to the battle. No theater stands alone — success or failure in one directly
+          impacts the others.
+        </p>
+
+        <div class="grid gap-4 mb-8">
+          <a href="/theaters/beach-assault" class="card border-l-4 border-theater-assault hover:border-theater-assault/80 group">
+            <h4 class="font-display text-dnd-text group-hover:text-dnd-primary transition-colors">Theater 1: Beach Landing (General Assault)</h4>
+            <p class="text-dnd-text-muted text-sm">Shock force and distraction — brutal, relentless, high casualties</p>
+          </a>
+          <a href="/theaters/siege-train" class="card border-l-4 border-theater-siege hover:border-theater-siege/80 group">
+            <h4 class="font-display text-dnd-text group-hover:text-dnd-primary transition-colors">Theater 2: Beach Landing (Siege Train)</h4>
+            <p class="text-dnd-text-muted text-sm">Strategic enablers — precision under fire</p>
+          </a>
+          <a href="/theaters/portals-bridges" class="card border-l-4 border-theater-portals hover:border-theater-portals/80 group">
+            <h4 class="font-display text-dnd-text group-hover:text-dnd-primary transition-colors">Theater 3: Portals & Bridges</h4>
+            <p class="text-dnd-text-muted text-sm">Force multiplier — surgical, tense, isolated</p>
+          </a>
+          <a href="/theaters/air-battle" class="card border-l-4 border-theater-air hover:border-theater-air/80 group">
+            <h4 class="font-display text-dnd-text group-hover:text-dnd-primary transition-colors">Theater 4: Air Battle (Sky Control)</h4>
+            <p class="text-dnd-text-muted text-sm">Air superiority — fast, dangerous, cinematic</p>
+          </a>
+        </div>
+
+        <h3 class="font-display text-xl text-dnd-primary mb-4">How It All Connects</h3>
+        <div class="card overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-dnd-border">
+                <th class="text-left py-2 text-dnd-text font-display">Theater</th>
+                <th class="text-left py-2 text-dnd-accent font-display">Helps</th>
+                <th class="text-left py-2 text-dnd-secondary font-display">Hurts (if fails)</th>
+              </tr>
+            </thead>
+            <tbody class="text-dnd-text-muted">
+              <tr class="border-b border-dnd-border/50">
+                <td class="py-2">T1 - General Assault</td>
+                <td class="py-2">T2, T3</td>
+                <td class="py-2">All</td>
+              </tr>
+              <tr class="border-b border-dnd-border/50">
+                <td class="py-2">T2 - Siege</td>
+                <td class="py-2">Act III</td>
+                <td class="py-2">Act III</td>
+              </tr>
+              <tr class="border-b border-dnd-border/50">
+                <td class="py-2">T3 - Bridges</td>
+                <td class="py-2">T1, T2</td>
+                <td class="py-2">T1, T2</td>
+              </tr>
+              <tr>
+                <td class="py-2">T4 - Air</td>
+                <td class="py-2">All</td>
+                <td class="py-2">All</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="/theaters" class="btn btn-secondary">
+            Explore All Theaters in Detail
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Act III -->
+  <section class="py-16" id="act-3">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-4xl">🔥</span>
+          <div>
+            <p class="section-title">Act III</p>
+            <h2 class="text-3xl font-display">The Fall of the Coastal Keep</h2>
+          </div>
+        </div>
+
+        <div class="card mb-6">
+          <p class="text-dnd-primary text-sm uppercase tracking-wider mb-2">The Final Battle</p>
+          <p class="text-dnd-text-muted text-sm italic">Tone: Desperate, mythic, decisive</p>
+        </div>
+
+        <p class="text-dnd-text-muted leading-relaxed mb-8">
+          All surviving forces converge on the Coastal Keep. The outcome of Act II determines how
+          difficult this final battle will be.
+        </p>
+
+        <h3 class="font-display text-xl text-dnd-primary mb-4">The Twist: The Arcane Commander</h3>
+        <div class="card border-dnd-secondary mb-6">
+          <p class="text-dnd-text-muted leading-relaxed mb-4">
+            The Keep is commanded by a <strong class="text-dnd-text">Conclave Warmagus</strong>, responsible for
+            battlefield coordination, arcane relay with Athkatla, and synchronization of ground and air forces.
+          </p>
+          <p class="text-dnd-text-muted leading-relaxed">
+            As the assault begins, the Warmagus reveals a final contingency...
+          </p>
+        </div>
+
+        <h3 class="font-display text-xl text-dnd-primary mb-4">The Splintering of the Mind</h3>
+        <p class="text-dnd-text-muted leading-relaxed mb-4">
+          The Warmagus fractures into <strong class="text-dnd-text">four arcane aspects</strong>,
+          each tied to a theater of war. Each splinter represents a facet of command:
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="card text-center p-4">
+            <span class="text-2xl block mb-2">🛡️</span>
+            <p class="text-dnd-text text-sm font-display">Control</p>
+          </div>
+          <div class="card text-center p-4">
+            <span class="text-2xl block mb-2">💥</span>
+            <p class="text-dnd-text text-sm font-display">Destruction</p>
+          </div>
+          <div class="card text-center p-4">
+            <span class="text-2xl block mb-2">🎭</span>
+            <p class="text-dnd-text text-sm font-display">Deception</p>
+          </div>
+          <div class="card text-center p-4">
+            <span class="text-2xl block mb-2">👁️</span>
+            <p class="text-dnd-text text-sm font-display">Dominion</p>
+          </div>
+        </div>
+
+        <p class="text-dnd-text-muted leading-relaxed mb-4">
+          Each splinter manifests near or within one theater and must be defeated independently.
+        </p>
+
+        <div class="card bg-dnd-primary/10 border-dnd-primary">
+          <p class="text-dnd-primary font-display text-center text-lg">
+            Victory is collective.
+          </p>
+        </div>
+
+        <h3 class="font-display text-xl text-dnd-primary mb-4 mt-8">The Final Moment</h3>
+        <p class="text-dnd-text-muted leading-relaxed mb-4">
+          Once all splinters — or a decisive majority — are destroyed:
+        </p>
+        <ul class="space-y-2 text-dnd-text-muted ml-4 mb-6">
+          <li>• Arcane relays collapse</li>
+          <li>• Signal beacons fail</li>
+          <li>• Orders from Athkatla cease</li>
+          <li>• Enemy formations fragment</li>
+        </ul>
+
+        <p class="text-dnd-primary font-display text-xl text-center">
+          The Iron Conclave has not been destroyed — but its grip on Amn has been broken.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl md:text-3xl font-display mb-4">
+        <span class="gold-gradient">Ready to Join the Fight?</span>
+      </h2>
+      <p class="text-dnd-text-muted mb-8 max-w-xl mx-auto">
+        Choose your theater and become part of this epic battle.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/signup" class="btn btn-primary">Sign Up Now</a>
+        <a href="/theaters" class="btn btn-secondary">Explore Theaters</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

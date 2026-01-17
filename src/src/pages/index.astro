@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import TheaterCard from '../components/TheaterCard.astro';
+import theaters from '../data/theaters.json';
+---
+
+<BaseLayout title="Operation Golden Sword">
+  <!-- Hero Section -->
+  <Hero
+    title="Operation Golden Sword"
+    subtitle="DnD Day Event"
+    description="The Iron Tide Rises. The Sword Coast Calls. Join a massive multi-table DnD event where heroes unite to break the Iron Conclave's grip on Amn."
+  />
+
+  <!-- Story Teaser -->
+  <section class="py-20 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="section-title">The Setting</p>
+        <h2 class="text-3xl md:text-4xl font-display mb-6">
+          <span class="gold-gradient">The Kingdom of Amn Has Fallen</span>
+        </h2>
+        <p class="text-dnd-text-muted text-lg leading-relaxed mb-6">
+          Its capital city, <strong class="text-dnd-text">Athkatla</strong>, has been enslaved by
+          <strong class="text-dnd-secondary">High Forgemaster Tharum Blackmantle</strong> and his Iron Conclave.
+          Massive armies guard every land approach — but the coastline remains the only viable weakness.
+        </p>
+        <p class="text-dnd-text-muted text-lg leading-relaxed mb-8">
+          This vulnerability has drawn a desperate gamble: <strong class="text-dnd-primary">a full-scale amphibious invasion.</strong>
+        </p>
+        <a href="/story" class="btn btn-secondary">
+          Read the Full Story
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Theaters Preview -->
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <p class="section-title">Choose Your Battle</p>
+        <h2 class="text-3xl md:text-4xl font-display">
+          <span class="gold-gradient">Four Theaters of War</span>
+        </h2>
+        <p class="text-dnd-text-muted mt-4 max-w-2xl mx-auto">
+          The invasion splits into four critical theaters. Each plays a vital role.
+          Success or failure in one affects all others.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {theaters.theaters.map((theater) => (
+          <TheaterCard
+            id={theater.id}
+            name={theater.name}
+            role={theater.role}
+            tone={theater.tone}
+            color={theater.color}
+            icon={theater.icon}
+          />
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/theaters" class="btn btn-secondary">
+          Explore All Theaters
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Enemy -->
+  <section class="py-20 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="section-title">Know Your Enemy</p>
+          <h2 class="text-3xl md:text-4xl font-display mb-6">
+            <span class="gold-gradient">The Iron Conclave</span>
+          </h2>
+          <p class="text-dnd-text-muted leading-relaxed mb-4">
+            A militarized alliance of <strong class="text-dnd-text">Duergar (Dark Dwarves)</strong> and
+            <strong class="text-dnd-text">Orc War-Clans</strong>, united under a single, merciless doctrine.
+          </p>
+          <p class="text-dnd-text-muted leading-relaxed mb-6">
+            Their alliance is rare, unnatural, and deeply alarming to the wider world.
+            This is not a raiding force — <strong class="text-dnd-secondary">this is an occupation.</strong>
+          </p>
+
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-dnd-text-muted">
+              <span class="text-dnd-secondary">⚙️</span>
+              <span>Industrialized war</span>
+            </div>
+            <div class="flex items-center gap-3 text-dnd-text-muted">
+              <span class="text-dnd-secondary">⚙️</span>
+              <span>Ruthless efficiency</span>
+            </div>
+            <div class="flex items-center gap-3 text-dnd-text-muted">
+              <span class="text-dnd-secondary">⚙️</span>
+              <span>Rigid command structures</span>
+            </div>
+            <div class="flex items-center gap-3 text-dnd-text-muted">
+              <span class="text-dnd-secondary">⚙️</span>
+              <span>War as a machine, not a crusade</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-dnd-secondary">
+          <div class="text-center">
+            <span class="text-6xl mb-4 block">👑</span>
+            <h3 class="font-display text-2xl text-dnd-secondary mb-2">High Forgemaster Tharum Blackmantle</h3>
+            <p class="text-dnd-primary text-sm mb-4">Duergar Warlord / Artificer / Warlock</p>
+            <p class="text-dnd-text-muted text-sm leading-relaxed">
+              Seeks to rule one of the wealthiest kingdoms on the Sword Coast.
+              Employs enslaved fire elementals, bound fiends, and shadow-forged engines as battlefield artillery.
+              Believes resistance is futile.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-24">
+    <div class="container-custom text-center">
+      <h2 class="text-3xl md:text-5xl font-display mb-6">
+        <span class="gold-gradient">Will You Answer the Call?</span>
+      </h2>
+      <p class="text-dnd-text-muted text-lg mb-8 max-w-xl mx-auto">
+        The Sword Coast needs heroes. Choose your theater, gather your party, and prepare for war.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/signup" class="btn btn-primary text-lg px-8 py-4">
+          Sign Up Now
+        </a>
+        <a href="/event" class="btn btn-secondary">
+          Event Details
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

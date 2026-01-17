@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dnd-bg text-dnd-text font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-wide;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-display font-semibold text-sm uppercase tracking-wider rounded transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-dnd-primary text-dnd-bg hover:bg-dnd-primary/90 hover:shadow-lg hover:shadow-dnd-primary/25;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-dnd-primary text-dnd-primary hover:bg-dnd-primary hover:text-dnd-bg;
+  }
+
+  .card {
+    @apply bg-dnd-bg-secondary border border-dnd-border rounded-lg p-6 transition-all duration-300 hover:border-dnd-primary/50;
+  }
+
+  .section-title {
+    @apply text-dnd-primary mb-2 text-sm uppercase tracking-[0.2em] font-display;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-r from-dnd-primary via-yellow-500 to-dnd-primary bg-clip-text text-transparent;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0d14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a3444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a227;
+}

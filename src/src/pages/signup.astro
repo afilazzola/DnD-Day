@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import theaters from '../data/theaters.json';
+
+const iconMap: Record<string, string> = {
+  'sword': '⚔️',
+  'catapult': '🏰',
+  'portal': '🌀',
+  'dragon': '🐉',
+};
+---
+
+<BaseLayout title="Sign Up" description="Sign up for DnD Day - Operation Golden Sword. Choose your theater of war.">
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">Join the Fight</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">Sign Up</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        Choose your theater of war and join the battle for Amn.
+      </p>
+    </div>
+  </section>
+
+  <!-- Signup Form -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-2xl mx-auto">
+        <form id="signup-form" class="card">
+          <h2 class="text-2xl font-display text-dnd-primary mb-6">Register for Battle</h2>
+
+          <!-- Player Name -->
+          <div class="mb-6">
+            <label for="player-name" class="block text-dnd-text text-sm font-medium mb-2">
+              Player Name <span class="text-dnd-secondary">*</span>
+            </label>
+            <input
+              type="text"
+              id="player-name"
+              name="playerName"
+              required
+              class="w-full px-4 py-3 bg-dnd-bg border border-dnd-border rounded-lg text-dnd-text placeholder-dnd-text-muted focus:outline-none focus:border-dnd-primary transition-colors"
+              placeholder="Your name"
+            />
+          </div>
+
+          <!-- Character Name -->
+          <div class="mb-6">
+            <label for="character-name" class="block text-dnd-text text-sm font-medium mb-2">
+              Character Name <span class="text-dnd-text-muted">(optional)</span>
+            </label>
+            <input
+              type="text"
+              id="character-name"
+              name="characterName"
+              class="w-full px-4 py-3 bg-dnd-bg border border-dnd-border rounded-lg text-dnd-text placeholder-dnd-text-muted focus:outline-none focus:border-dnd-primary transition-colors"
+              placeholder="Your character's name"
+            />
+          </div>
+
+          <!-- Theater Selection -->
+          <div class="mb-8">
+            <label class="block text-dnd-text text-sm font-medium mb-4">
+              Choose Your Theater <span class="text-dnd-secondary">*</span>
+            </label>
+
+            <div class="grid gap-3">
+              {theaters.theaters.map((theater) => (
+                <label class="theater-option cursor-pointer">
+                  <input
+                    type="radio"
+                    name="theater"
+                    value={theater.id}
+                    required
+                    class="sr-only peer"
+                  />
+                  <div class="flex items-center gap-4 p-4 bg-dnd-bg border border-dnd-border rounded-lg transition-all peer-checked:border-dnd-primary peer-checked:bg-dnd-primary/10 hover:border-dnd-text-muted">
+                    <span class="text-2xl">{iconMap[theater.icon] || '⚔️'}</span>
+                    <div class="flex-1">
+                      <p class="text-dnd-text font-medium">{theater.name}</p>
+                      <p class="text-dnd-text-muted text-sm">{theater.role}</p>
+                    </div>
+                    <div class="theater-count text-dnd-text-muted text-sm" data-theater={theater.id}>
+                      <span class="count">0</span> signed up
+                    </div>
+                  </div>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-full">
+            Sign Up
+          </button>
+
+          <!-- Success Message -->
+          <div id="success-message" class="hidden mt-6 p-4 bg-dnd-accent/20 border border-dnd-accent rounded-lg text-center">
+            <p class="text-dnd-accent font-display">Successfully signed up!</p>
+            <p class="text-dnd-text-muted text-sm mt-1">We'll see you on the battlefield.</p>
+          </div>
+
+          <!-- Error Message -->
+          <div id="error-message" class="hidden mt-6 p-4 bg-dnd-secondary/20 border border-dnd-secondary rounded-lg text-center">
+            <p class="text-dnd-secondary font-display">Please fill in all required fields.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Roster -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="section-title">Current Forces</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">Who's Signed Up</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6" id="roster-grid">
+          {theaters.theaters.map((theater) => (
+            <div class="card" data-theater-roster={theater.id}>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-2xl">{iconMap[theater.icon] || '⚔️'}</span>
+                <h3 class="font-display text-dnd-text">{theater.name}</h3>
+              </div>
+              <div class="roster-list space-y-2">
+                <p class="text-dnd-text-muted text-sm italic">No one signed up yet. Be the first!</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const STORAGE_KEY = 'dndday-signups';
+
+  interface Signup {
+    id: string;
+    playerName: string;
+    characterName: string;
+    theater: string;
+    timestamp: number;
+  }
+
+  // Get signups from localStorage
+  function getSignups(): Signup[] {
+    if (typeof window === 'undefined') return [];
+    const data = localStorage.getItem(STORAGE_KEY);
+    return data ? JSON.parse(data) : [];
+  }
+
+  // Save signup to localStorage
+  function addSignup(signup: Omit<Signup, 'id' | 'timestamp'>): void {
+    const signups = getSignups();
+    const newSignup: Signup = {
+      ...signup,
+      id: crypto.randomUUID(),
+      timestamp: Date.now(),
+    };
+    signups.push(newSignup);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(signups));
+  }
+
+  // Update the roster display
+  function updateRoster(): void {
+    const signups = getSignups();
+
+    // Update counts in form
+    document.querySelectorAll('.theater-count').forEach((el) => {
+      const theater = el.getAttribute('data-theater');
+      const count = signups.filter(s => s.theater === theater).length;
+      const countSpan = el.querySelector('.count');
+      if (countSpan) countSpan.textContent = count.toString();
+    });
+
+    // Update roster lists
+    document.querySelectorAll('[data-theater-roster]').forEach((el) => {
+      const theater = el.getAttribute('data-theater-roster');
+      const theaterSignups = signups.filter(s => s.theater === theater);
+      const rosterList = el.querySelector('.roster-list');
+
+      if (rosterList) {
+        if (theaterSignups.length === 0) {
+          rosterList.innerHTML = '<p class="text-dnd-text-muted text-sm italic">No one signed up yet. Be the first!</p>';
+        } else {
+          rosterList.innerHTML = theaterSignups
+            .map(s => `
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50 last:border-0">
+                <div>
+                  <p class="text-dnd-text text-sm">${escapeHtml(s.playerName)}</p>
+                  ${s.characterName ? `<p class="text-dnd-text-muted text-xs">Playing: ${escapeHtml(s.characterName)}</p>` : ''}
+                </div>
+              </div>
+            `)
+            .join('');
+        }
+      }
+    });
+  }
+
+  // Escape HTML to prevent XSS
+  function escapeHtml(text: string): string {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  // Handle form submission
+  const form = document.getElementById('signup-form') as HTMLFormElement;
+  const successMessage = document.getElementById('success-message');
+  const errorMessage = document.getElementById('error-message');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const playerName = formData.get('playerName') as string;
+    const characterName = formData.get('characterName') as string;
+    const theater = formData.get('theater') as string;
+
+    if (!playerName || !theater) {
+      errorMessage?.classList.remove('hidden');
+      successMessage?.classList.add('hidden');
+      return;
+    }
+
+    addSignup({ playerName, characterName, theater });
+
+    // Show success message
+    successMessage?.classList.remove('hidden');
+    errorMessage?.classList.add('hidden');
+
+    // Reset form
+    form.reset();
+
+    // Update roster
+    updateRoster();
+
+    // Scroll to roster
+    setTimeout(() => {
+      document.getElementById('roster-grid')?.scrollIntoView({ behavior: 'smooth' });
+    }, 500);
+  });
+
+  // Check URL params for pre-selected theater
+  const urlParams = new URLSearchParams(window.location.search);
+  const preselectedTheater = urlParams.get('theater');
+  if (preselectedTheater) {
+    const radioInput = document.querySelector(`input[name="theater"][value="${preselectedTheater}"]`) as HTMLInputElement;
+    if (radioInput) radioInput.checked = true;
+  }
+
+  // Initial roster update
+  updateRoster();
+</script>

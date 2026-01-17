@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TheaterPage from '../../components/TheaterPage.astro';
+import theaters from '../../data/theaters.json';
+
+const theater = theaters.theaters.find(t => t.id === 'portals-bridges');
+---
+
+<BaseLayout
+  title={theater?.name || 'Portals & Bridges'}
+  description={theater?.description || 'Portals & Bridges theater information.'}
+>
+  {theater && <TheaterPage theater={theater} />}
+</BaseLayout>

@@ -1,0 +1,119 @@
+{
+  "theaters": [
+    {
+      "id": "beach-assault",
+      "name": "Beach Landing - General Assault",
+      "role": "Shock force and distraction",
+      "tone": "Brutal, relentless, high casualties",
+      "color": "theater-assault",
+      "icon": "sword",
+      "description": "You are the tip of the spear. Your mission is to break shoreline defenses and draw the bulk of the Iron Conclave's attention while other forces move into position.",
+      "primaryObjectives": [
+        "Break shoreline defenses and push inland",
+        "Engage enemy forces directly",
+        "Draw the bulk of the Iron Conclave's attention",
+        "Reach the road to the Coastal Keep"
+      ],
+      "secondaryObjectives": [
+        "Destroy barricades",
+        "Kill or rout commanders",
+        "Capture signal towers"
+      ],
+      "successEffects": [
+        "Enemy reinforcements delayed",
+        "Theater 2 faces lighter resistance",
+        "Theater 3 encounters fewer patrols"
+      ],
+      "failureEffects": [
+        "Enemy pressure increases everywhere",
+        "Additional enemy waves appear",
+        "Operational pressure escalates"
+      ],
+      "helps": ["Siege Train", "Portals & Bridges"],
+      "hurts": ["All theaters"]
+    },
+    {
+      "id": "siege-train",
+      "name": "Beach Landing - Siege Train",
+      "role": "Strategic enablers",
+      "tone": "Precision under fire",
+      "color": "theater-siege",
+      "icon": "catapult",
+      "description": "You escort the siege engines that will crack the Coastal Keep. Without these weapons, the assault becomes a grinding war of attrition.",
+      "primaryObjectives": [
+        "Land and protect catapults",
+        "Deliver siege engines intact",
+        "Reach the Coastal Keep"
+      ],
+      "secondaryObjectives": [],
+      "keyTension": "Shorter route, heavier exposure. Losing siege equipment is catastrophic.",
+      "successEffects": [
+        "Faster breach in Act III",
+        "Weakened fortifications",
+        "Shorter, less lethal final fights"
+      ],
+      "failureEffects": [
+        "Keep becomes far harder to take",
+        "Act III shifts toward attrition or sabotage",
+        "Enemy morale strengthens"
+      ],
+      "helps": ["Act III - Final Battle"],
+      "hurts": ["Act III - Final Battle"]
+    },
+    {
+      "id": "portals-bridges",
+      "name": "Portals & Bridges",
+      "role": "Force multiplier",
+      "tone": "Surgical, tense, isolated",
+      "color": "theater-portals",
+      "icon": "portal",
+      "description": "Teleported behind enemy lines, your mission is to secure critical bridges before enemy forces can destroy them or use them to reinforce the coast.",
+      "entryPoint": "Teleportation to a resistance-held watchtower behind enemy lines.",
+      "primaryObjectives": [
+        "Secure two critical bridges",
+        "Hold them long enough for Theaters 1 and 2",
+        "Prevent counterattacks"
+      ],
+      "secondaryObjectives": [],
+      "successEffects": [
+        "Faster inland advance",
+        "Split enemy forces",
+        "Early arrival at the Keep"
+      ],
+      "failureEffects": [
+        "Ground forces delayed or rerouted",
+        "Casualties spike",
+        "Reinforcements reach the Keep in greater numbers"
+      ],
+      "helps": ["General Assault", "Siege Train"],
+      "hurts": ["General Assault", "Siege Train"]
+    },
+    {
+      "id": "air-battle",
+      "name": "Air Battle - Sky Control",
+      "role": "Air superiority",
+      "tone": "Fast, dangerous, cinematic",
+      "color": "theater-air",
+      "icon": "dragon",
+      "description": "The skies above the battlefield are contested. Enemy wyverns, gyrocopters, and war-mages threaten to turn the tide. You must stop them.",
+      "primaryObjectives": [
+        "Prevent enemy air dominance",
+        "Defend ground forces from aerial threats",
+        "Intercept gyrocopters, wyverns, and spellcraft"
+      ],
+      "secondaryObjectives": [],
+      "successEffects": [
+        "Ground forces protected",
+        "Siege engines safer",
+        "Enemy communications disrupted"
+      ],
+      "failureEffects": [
+        "Air strikes harass all theaters",
+        "Siege equipment endangered",
+        "Catastrophic events may occur"
+      ],
+      "helps": ["All theaters"],
+      "hurts": ["All theaters"]
+    }
+  ]
+}
