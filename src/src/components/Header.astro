@@ -1,15 +1,43 @@
 ---
-const navItems = [
+interface NavItem {
+  href?: string;
+  label: string;
+  children?: { href: string; label: string }[];
+}
+
+const navItems: NavItem[] = [
   { href: '/', label: 'Home' },
-  { href: '/story', label: 'The Story' },
-  { href: '/briefing', label: 'Briefing' },
+  {
+    label: 'The Story',
+    children: [
+      { href: '/story', label: 'Campaign Overview' },
+      { href: '/enemies', label: 'The Enemies' },
+      { href: '/briefing', label: 'Mission Briefing' },
+    ],
+  },
   { href: '/theaters', label: 'Theaters' },
-  { href: '/event', label: 'Event Info' },
+  {
+    label: 'The Event',
+    children: [
+      { href: '/event', label: 'Event Details' },
+      { href: '/players', label: 'For Players' },
+      { href: '/dm-prep', label: 'For DMs' },
+    ],
+  },
   { href: '/signup', label: 'Sign Up' },
-  { href: '/contact', label: 'Contact' },
 ];
 
 const currentPath = Astro.url.pathname;
+
+function isActive(item: NavItem): boolean {
+  if (item.href) {
+    return currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+  }
+  if (item.children) {
+    return item.children.some(child => currentPath === child.href || currentPath.startsWith(child.href));
+  }
+  return false;
+}
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-dnd-bg/95 backdrop-blur-sm border-b border-dnd-border">
@@ -26,18 +54,53 @@ const currentPath = Astro.url.pathname;
       <!-- Desktop Navigation -->
       <ul class="hidden md:flex items-center gap-1">
         {navItems.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              class:list={[
-                'px-4 py-2 font-display text-sm uppercase tracking-wider transition-colors rounded',
-                currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
-                  ? 'text-dnd-primary bg-dnd-primary/10'
-                  : 'text-dnd-text-muted hover:text-dnd-text hover:bg-dnd-bg-secondary'
-              ]}
-            >
-              {item.label}
-            </a>
+          <li class="relative group">
+            {item.children ? (
+              <>
+                <button
+                  class:list={[
+                    'px-4 py-2 font-display text-sm uppercase tracking-wider transition-colors rounded flex items-center gap-1',
+                    isActive(item)
+                      ? 'text-dnd-primary bg-dnd-primary/10'
+                      : 'text-dnd-text-muted hover:text-dnd-text hover:bg-dnd-bg-secondary'
+                  ]}
+                >
+                  {item.label}
+                  <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <ul class="absolute top-full left-0 mt-1 py-2 bg-dnd-bg-secondary border border-dnd-border rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[180px]">
+                  {item.children.map((child) => (
+                    <li>
+                      <a
+                        href={child.href}
+                        class:list={[
+                          'block px-4 py-2 text-sm transition-colors',
+                          currentPath === child.href
+                            ? 'text-dnd-primary bg-dnd-primary/10'
+                            : 'text-dnd-text-muted hover:text-dnd-text hover:bg-dnd-bg'
+                        ]}
+                      >
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <a
+                href={item.href}
+                class:list={[
+                  'px-4 py-2 font-display text-sm uppercase tracking-wider transition-colors rounded block',
+                  isActive(item)
+                    ? 'text-dnd-primary bg-dnd-primary/10'
+                    : 'text-dnd-text-muted hover:text-dnd-text hover:bg-dnd-bg-secondary'
+                ]}
+              >
+                {item.label}
+              </a>
+            )}
           </li>
         ))}
       </ul>
@@ -60,19 +123,54 @@ const currentPath = Astro.url.pathname;
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden pb-4">
       <ul class="flex flex-col gap-1">
-        {navItems.map((item) => (
+        {navItems.map((item, index) => (
           <li>
-            <a
-              href={item.href}
-              class:list={[
-                'block px-4 py-3 font-display text-sm uppercase tracking-wider transition-colors rounded',
-                currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
-                  ? 'text-dnd-primary bg-dnd-primary/10'
-                  : 'text-dnd-text-muted hover:text-dnd-text hover:bg-dnd-bg-secondary'
-              ]}
-            >
-              {item.label}
-            </a>
+            {item.children ? (
+              <div class="mobile-dropdown" data-dropdown={index}>
+                <button
+                  class:list={[
+                    'w-full flex items-center justify-between px-4 py-3 font-display text-sm uppercase tracking-wider transition-colors rounded',
+                    isActive(item)
+                      ? 'text-dnd-primary bg-dnd-primary/10'
+                      : 'text-dnd-text-muted hover:text-dnd-text hover:bg-dnd-bg-secondary'
+                  ]}
+                >
+                  {item.label}
+                  <svg class="w-4 h-4 transition-transform dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <ul class="hidden dropdown-content pl-4 mt-1 space-y-1">
+                  {item.children.map((child) => (
+                    <li>
+                      <a
+                        href={child.href}
+                        class:list={[
+                          'block px-4 py-2 text-sm transition-colors rounded',
+                          currentPath === child.href
+                            ? 'text-dnd-primary bg-dnd-primary/10'
+                            : 'text-dnd-text-muted hover:text-dnd-text hover:bg-dnd-bg-secondary'
+                        ]}
+                      >
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <a
+                href={item.href}
+                class:list={[
+                  'block px-4 py-3 font-display text-sm uppercase tracking-wider transition-colors rounded',
+                  isActive(item)
+                    ? 'text-dnd-primary bg-dnd-primary/10'
+                    : 'text-dnd-text-muted hover:text-dnd-text hover:bg-dnd-bg-secondary'
+                ]}
+              >
+                {item.label}
+              </a>
+            )}
           </li>
         ))}
       </ul>
@@ -84,16 +182,27 @@ const currentPath = Astro.url.pathname;
 <div class="h-16 md:h-20"></div>
 
 <script>
+  // Mobile menu toggle
   const menuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIcon = document.getElementById('menu-icon');
   const closeIcon = document.getElementById('close-icon');
 
   menuBtn?.addEventListener('click', () => {
-    const isOpen = !mobileMenu?.classList.contains('hidden');
-
     mobileMenu?.classList.toggle('hidden');
     menuIcon?.classList.toggle('hidden');
     closeIcon?.classList.toggle('hidden');
+  });
+
+  // Mobile dropdown toggles
+  document.querySelectorAll('.mobile-dropdown').forEach((dropdown) => {
+    const button = dropdown.querySelector('button');
+    const content = dropdown.querySelector('.dropdown-content');
+    const arrow = dropdown.querySelector('.dropdown-arrow');
+
+    button?.addEventListener('click', () => {
+      content?.classList.toggle('hidden');
+      arrow?.classList.toggle('rotate-180');
+    });
   });
 </script>

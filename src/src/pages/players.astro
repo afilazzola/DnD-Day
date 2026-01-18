@@ -1,0 +1,233 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Player Guide"
+  description="What to expect and how to prepare for Operation Golden Sword"
+>
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">For Players</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">What to Expect</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        Everything you need to know before joining the invasion.
+      </p>
+    </div>
+  </section>
+
+  <!-- Character Requirements -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">Your Character</h2>
+
+        <div class="card mb-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <p class="text-dnd-primary text-sm font-semibold mb-2">Level</p>
+              <p class="text-dnd-text text-2xl font-display">10</p>
+            </div>
+            <div>
+              <p class="text-dnd-primary text-sm font-semibold mb-2">Sources</p>
+              <p class="text-dnd-text-muted">Any official D&D 5e content</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-dnd-text-muted leading-relaxed">
+          <p>
+            <strong class="text-dnd-text">Bring a character ready for war.</strong> This is a
+            military campaign—your character has joined the Adventurers' Alliance to liberate Amn.
+            They should have a reason to fight.
+          </p>
+          <p>
+            If you don't have a character or need help building one, let us know when you sign up.
+            We can help you create something that fits the campaign.
+          </p>
+        </div>
+
+        <div class="card mt-6 border-dnd-accent">
+          <h3 class="font-display text-dnd-accent mb-3">Character Tips</h3>
+          <ul class="text-dnd-text-muted space-y-2 text-sm">
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-accent">•</span>
+              <span>Combat will be frequent—bring something that can hold its own in a fight</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-accent">•</span>
+              <span>Teamwork matters—consider how you'll support your party</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-accent">•</span>
+              <span>Have a backup plan if your main abilities are countered</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Bring -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">What to Bring</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-3">Required</h3>
+            <ul class="text-dnd-text-muted space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-dnd-primary">•</span>
+                <span>Your character sheet (paper or digital)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-dnd-primary">•</span>
+                <span>Dice (or a dice app)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-dnd-primary">•</span>
+                <span>Something to write with</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-3">Recommended</h3>
+            <ul class="text-dnd-text-muted space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-dnd-text-muted">•</span>
+                <span>Snacks and drinks</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-dnd-text-muted">•</span>
+                <span>A mini or token for your character</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-dnd-text-muted">•</span>
+                <span>Spell cards or quick reference sheets</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Format -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">How It Works</h2>
+
+        <div class="space-y-4 text-dnd-text-muted leading-relaxed">
+          <p>
+            <strong class="text-dnd-text">This is a multi-table event.</strong> Multiple groups
+            will be playing simultaneously, each in a different theater of the war. What happens
+            at your table affects the others.
+          </p>
+          <p>
+            You'll choose a theater when you sign up. Each theater has different objectives and
+            a different tone—pick the one that sounds most exciting to you.
+          </p>
+        </div>
+
+        <div class="card mt-8">
+          <h3 class="font-display text-dnd-text mb-4">The Theaters</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-start gap-3">
+              <span class="text-xl">⚔️</span>
+              <div>
+                <p class="text-dnd-text font-semibold">Gold Beach — General Assault</p>
+                <p class="text-dnd-text-muted">Brutal beach landing. High action, high stakes.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-xl">☄️</span>
+              <div>
+                <p class="text-dnd-text font-semibold">Juno Beach — Siege Train</p>
+                <p class="text-dnd-text-muted">Protect critical siege engines under fire.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-xl">🌀</span>
+              <div>
+                <p class="text-dnd-text font-semibold">Watch Tower — Portals & Bridges</p>
+                <p class="text-dnd-text-muted">Behind enemy lines. Tense and tactical.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-xl">🐦‍🔥</span>
+              <div>
+                <p class="text-dnd-text font-semibold">Contested Airspace — Sky Control</p>
+                <p class="text-dnd-text-muted">Aerial combat. Fast and cinematic.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expectations -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">Tone & Expectations</h2>
+
+        <div class="space-y-4 text-dnd-text-muted leading-relaxed">
+          <p>
+            <strong class="text-dnd-text">This is a war story.</strong> Expect combat, tension,
+            and real consequences. Not everyone makes it home from the beach.
+          </p>
+          <p>
+            Your actions matter. If your table succeeds, other tables benefit. If you fail,
+            the pressure increases everywhere. Play like the fate of Amn depends on you—because it does.
+          </p>
+        </div>
+
+        <div class="card mt-8 border-dnd-primary">
+          <p class="text-dnd-primary font-display text-lg mb-2">Come Ready To</p>
+          <ul class="text-dnd-text-muted space-y-2">
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-primary">•</span>
+              <span>Work with your party toward a common goal</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-primary">•</span>
+              <span>Make bold decisions under pressure</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-primary">•</span>
+              <span>Embrace both victory and setbacks as part of the story</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-dnd-primary">•</span>
+              <span>Have fun storming the coast</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl md:text-3xl font-display mb-4">
+        <span class="gold-gradient">Ready to Fight?</span>
+      </h2>
+      <p class="text-dnd-text-muted mb-8 max-w-xl mx-auto">
+        Pick your theater and join the Adventurers' Alliance.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/signup" class="btn btn-primary">Sign Up</a>
+        <a href="/theaters" class="btn btn-secondary">Explore Theaters</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
