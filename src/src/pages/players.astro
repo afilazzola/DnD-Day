@@ -22,50 +22,64 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <!-- Character Requirements -->
   <section class="py-16">
     <div class="container-custom">
-      <div class="max-w-3xl mx-auto">
-        <h2 class="text-2xl font-display text-dnd-primary mb-6">Your Character</h2>
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <!-- Flyer Image -->
+          <div>
+            <img
+              src="/images/Flyer2_Iwantyou.jpg"
+              alt="I Want You to Enlist Now - Recruitment Poster"
+              class="rounded-lg shadow-2xl border-2 border-dnd-border w-full"
+            />
+          </div>
 
-        <div class="card mb-6">
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <p class="text-dnd-primary text-sm font-semibold mb-2">Level</p>
-              <p class="text-dnd-text text-2xl font-display">10</p>
+          <!-- Character Info -->
+          <div>
+            <h2 class="text-2xl font-display text-dnd-primary mb-6">Your Character</h2>
+
+            <div class="card mb-6">
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <p class="text-dnd-primary text-sm font-semibold mb-2">Level</p>
+                  <p class="text-dnd-text text-2xl font-display">10</p>
+                </div>
+                <div>
+                  <p class="text-dnd-primary text-sm font-semibold mb-2">Sources</p>
+                  <p class="text-dnd-text-muted">Any official D&D 5e content</p>
+                </div>
+              </div>
             </div>
-            <div>
-              <p class="text-dnd-primary text-sm font-semibold mb-2">Sources</p>
-              <p class="text-dnd-text-muted">Any official D&D 5e content</p>
+
+            <div class="space-y-4 text-dnd-text-muted leading-relaxed">
+              <p>
+                <strong class="text-dnd-text">Bring a character ready for war.</strong> This is a
+                military campaign—your character has joined the Adventurers' Alliance to liberate Amn.
+                They should have a reason to fight.
+              </p>
+              <p>
+                If you don't have a character or need help building one, let us know when you sign up.
+                We can help you create something that fits the campaign.
+              </p>
+            </div>
+
+            <div class="card mt-6 border-dnd-accent">
+              <h3 class="font-display text-dnd-accent mb-3">Character Tips</h3>
+              <ul class="text-dnd-text-muted space-y-2 text-sm">
+                <li class="flex items-start gap-2">
+                  <span class="text-dnd-accent">•</span>
+                  <span>Combat will be frequent—bring something that can hold its own in a fight</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dnd-accent">•</span>
+                  <span>Teamwork matters—consider how you'll support your party</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dnd-accent">•</span>
+                  <span>Have a backup plan if your main abilities are countered</span>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-
-        <div class="space-y-4 text-dnd-text-muted leading-relaxed">
-          <p>
-            <strong class="text-dnd-text">Bring a character ready for war.</strong> This is a
-            military campaign—your character has joined the Adventurers' Alliance to liberate Amn.
-            They should have a reason to fight.
-          </p>
-          <p>
-            If you don't have a character or need help building one, let us know when you sign up.
-            We can help you create something that fits the campaign.
-          </p>
-        </div>
-
-        <div class="card mt-6 border-dnd-accent">
-          <h3 class="font-display text-dnd-accent mb-3">Character Tips</h3>
-          <ul class="text-dnd-text-muted space-y-2 text-sm">
-            <li class="flex items-start gap-2">
-              <span class="text-dnd-accent">•</span>
-              <span>Combat will be frequent—bring something that can hold its own in a fight</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-dnd-accent">•</span>
-              <span>Teamwork matters—consider how you'll support your party</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-dnd-accent">•</span>
-              <span>Have a backup plan if your main abilities are countered</span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
