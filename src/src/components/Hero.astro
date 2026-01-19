@@ -7,6 +7,7 @@ interface Props {
   ctaText?: string;
   ctaHref?: string;
   backgroundImage?: string;
+  backgroundVideo?: string;
 }
 
 const {
@@ -16,19 +17,37 @@ const {
   showCta = true,
   ctaText = 'Join the Fight',
   ctaHref = '/signup',
-  backgroundImage
+  backgroundImage,
+  backgroundVideo
 } = Astro.props;
 ---
 
 <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-  <!-- Background Image -->
+  <!-- Background Image (always present as fallback) -->
   {backgroundImage && (
     <div class="absolute inset-0">
       <img
         src={backgroundImage}
         alt=""
-        class="w-full h-full object-cover"
+        class="hero-image w-full h-full object-cover"
       />
+    </div>
+  )}
+
+  <!-- Background Video (progressive enhancement) -->
+  {backgroundVideo && backgroundImage && (
+    <div class="absolute inset-0 hero-video-container hidden">
+      <video
+        class="hero-video w-full h-full object-cover"
+        poster={backgroundImage}
+        muted
+        loop
+        playsinline
+        preload="none"
+        data-src={backgroundVideo}
+      >
+        <source data-src={backgroundVideo} type="video/mp4" />
+      </video>
     </div>
   )}
 
@@ -76,3 +95,85 @@ const {
     </svg>
   </div>
 </section>
+
+<style>
+  /* Hide video for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-video-container {
+      display: none !important;
+    }
+    .hero-image {
+      display: block !important;
+    }
+  }
+</style>
+
+<script>
+  function initHeroVideo() {
+    const videoContainer = document.querySelector('.hero-video-container');
+    const video = document.querySelector('.hero-video') as HTMLVideoElement;
+    const heroImage = document.querySelector('.hero-image') as HTMLImageElement;
+
+    if (!videoContainer || !video) return;
+
+    // Check if user prefers reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    // Check connection quality
+    const connection = (navigator as any).connection ||
+                       (navigator as any).mozConnection ||
+                       (navigator as any).webkitConnection;
+
+    if (connection) {
+      // Skip video on slow connections or data saver mode
+      const slowConnections = ['slow-2g', '2g', '3g'];
+      if (slowConnections.includes(connection.effectiveType) || connection.saveData) {
+        return;
+      }
+    }
+
+    // Load and play the video
+    const videoSrc = video.getAttribute('data-src');
+    const source = video.querySelector('source');
+
+    if (videoSrc && source) {
+      video.src = videoSrc;
+      source.src = videoSrc;
+      video.load();
+
+      // Show video container and hide image once video can play
+      video.addEventListener('canplay', () => {
+        videoContainer.classList.remove('hidden');
+        if (heroImage) {
+          heroImage.style.opacity = '0';
+        }
+        video.play().catch(() => {
+          // If autoplay fails, hide video and show image
+          videoContainer.classList.add('hidden');
+          if (heroImage) {
+            heroImage.style.opacity = '1';
+          }
+        });
+      }, { once: true });
+
+      // Fallback: if video doesn't load within 5 seconds, give up
+      setTimeout(() => {
+        if (video.readyState < 3) {
+          videoContainer.classList.add('hidden');
+          if (heroImage) {
+            heroImage.style.opacity = '1';
+          }
+        }
+      }, 5000);
+    }
+  }
+
+  // Run on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeroVideo);
+  } else {
+    initHeroVideo();
+  }
+</script>
