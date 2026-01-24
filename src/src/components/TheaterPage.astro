@@ -8,7 +8,15 @@ interface Props {
     color: string;
     icon: string;
     description: string;
-    primaryObjectives: string[];
+    actII?: {
+      title: string;
+      objectives: string[];
+    };
+    actIII?: {
+      title: string;
+      objectives: string[];
+    };
+    primaryObjectives?: string[];
     secondaryObjectives?: string[];
     keyTension?: string;
     entryPoint?: string;
@@ -125,19 +133,55 @@ const iconMap: Record<string, string> = {
     <div class="max-w-3xl mx-auto">
       <h2 class="text-2xl font-display text-dnd-primary mb-6">Objectives</h2>
 
-      <div class="card mb-6">
-        <h3 class="font-display text-dnd-text mb-4">Primary Objectives</h3>
-        <ul class="space-y-3">
-          {
-            theater.primaryObjectives.map((objective) => (
-              <li class="flex items-start gap-3">
-                <span class="text-dnd-primary mt-1">●</span>
-                <span class="text-dnd-text-muted">{objective}</span>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+      {
+        theater.actII && (
+          <div class="card mb-6 border-l-4" class:list={[colorBorderMap[theater.color]]}>
+            <p class="text-dnd-primary text-sm uppercase tracking-wider mb-2">Act II — The Iron Tide</p>
+            <h3 class="font-display text-dnd-text mb-4">{theater.actII.title}</h3>
+            <ul class="space-y-3">
+              {theater.actII.objectives.map((objective) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-dnd-primary mt-1">●</span>
+                  <span class="text-dnd-text-muted">{objective}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+
+      {
+        theater.actIII && (
+          <div class="card mb-6 border-l-4 border-dnd-accent">
+            <p class="text-dnd-accent text-sm uppercase tracking-wider mb-2">Act III — The Bridge</p>
+            <h3 class="font-display text-dnd-text mb-4">{theater.actIII.title}</h3>
+            <ul class="space-y-3">
+              {theater.actIII.objectives.map((objective) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-dnd-accent mt-1">●</span>
+                  <span class="text-dnd-text-muted">{objective}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+
+      {
+        !theater.actII && !theater.actIII && theater.primaryObjectives && (
+          <div class="card mb-6">
+            <h3 class="font-display text-dnd-text mb-4">Primary Objectives</h3>
+            <ul class="space-y-3">
+              {theater.primaryObjectives.map((objective) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-dnd-primary mt-1">●</span>
+                  <span class="text-dnd-text-muted">{objective}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
 
       {
         theater.secondaryObjectives &&

@@ -239,15 +239,21 @@ The heroes are split into four theaters of war, each critical to the battle.
 
 ## THEATER 1 — BEACH LANDING (GENERAL ASSAULT)
 
-**Role:** Shock force and distraction  
+**Role:** Shock force and distraction
 **Tone:** Brutal, relentless, high casualties
 
-### Primary Objective
+### Act II — Storm the Beach
 
 - Break shoreline defenses and push inland
 - Engage enemy forces directly
-- Draw the bulk of the Iron Conclave’s attention
-- Reach the road to the Coastal Keep
+- Draw the bulk of the Iron Conclave's attention
+- Reach the road toward the Orn River
+
+### Act III — Break the Line
+
+- Breach fortified enemy positions between the beach and the river
+- Clear the road for the siege train following behind
+- Link up with portal team at the Orn River Bridge
 
 ### Secondary Objectives (Optional)
 
@@ -258,111 +264,135 @@ The heroes are split into four theaters of war, each critical to the battle.
 ### Success Effects
 
 - Enemy reinforcements delayed
-- Theater 2 faces lighter resistance
-- Theater 3 encounters fewer patrols
+- Siege Train faces lighter resistance
+- Road to the bridge cleared
 
 ### Failure Effects
 
 - Enemy pressure increases everywhere
-- Additional enemy waves appear
-- Operational pressure escalates
+- Siege Train bogged down
+- Bridge reinforcements arrive from the beach side
 
 ---
 
 ## THEATER 2 — BEACH LANDING (SIEGE TRAIN)
 
-**Role:** Strategic enablers  
-**Tone:** Precision under fire
+**Role:** Strategic enablers
+**Tone:** Precision under fire, problem-solving
 
-### Primary Objective
+### Act II — Land the Siege Engines
 
-- Land and protect catapults
-- Deliver siege engines intact
-- Reach the Coastal Keep
+- Land catapults and trebuchets on Juno Beach
+- Protect siege engines from enemy fire
+- Begin moving equipment inland
+
+### Act III — Climb the Bluffs
+
+- Haul massive siege engines up the sandy bluffs
+- Get creative — winches, magic, beasts of burden, or brute force
+- Protect the equipment from saboteurs while vulnerable
+- Cross the Orn River Bridge and advance to the Keep
 
 ### Key Tension
 
-- Shorter route, heavier exposure
-- Losing siege is catastrophic
+The siege engines are slow and vulnerable. Getting them up the sandy terrain requires ingenuity. Losing them is catastrophic.
 
 ### Success Effects
 
-- Faster breach in Act III
-- Weakened fortifications
-- Shorter, less lethal final fights
+- Siege engines reach the Keep
+- Faster breach in Act IV
+- Shorter, less lethal final assault
 
 ### Failure Effects
 
-- Keep becomes far harder to take
-- Act III shifts toward attrition or sabotage
-- Enemy morale strengthens
+- Keep becomes nearly impregnable
+- Act IV shifts toward attrition or sabotage
+- Casualties spike dramatically
 
 ---
 
 ## THEATER 3 — PORTALS & BRIDGES
 
-**Role:** Force multiplier  
+**Role:** Force multiplier
 **Tone:** Surgical, tense, isolated
 
 ### Entry Point
 
 Teleportation to a resistance-held watchtower behind enemy lines.
 
-### Primary Objective
+### Act II — Secure the Landing Zone
 
-- Secure two critical bridges
-- Hold them long enough for Theaters 1 and 2
-- Prevent counterattacks
+- Emerge from the portal at the watchtower
+- Eliminate enemy patrols before alarm is raised
+- Establish a foothold behind enemy lines
+- Begin moving toward the Orn River Bridge
+
+### Act III — Disarm the Bridge
+
+- Assault the Duergar demolition platoon holding the bridge
+- Neutralize sappers before they trigger the charges
+- Disarm or destroy the explosive runes and barrels
+- Hold the bridge until reinforcements arrive
 
 ### Success Effects
 
-- Faster inland advance
-- Split enemy forces
-- Early arrival at the Keep
+- Bridge secured — siege engines can cross
+- Ground forces link up and advance
+- Enemy cut off from reinforcements
 
 ### Failure Effects
 
-- Ground forces delayed or rerouted
-- Casualties spike
-- Reinforcements reach the Keep in greater numbers
+- Bridge destroyed — invasion stalls
+- Siege engines cannot reach the Keep
+- Enemy has time to fortify the Coastal Keep
 
 ---
 
 ## THEATER 4 — AIR BATTLE (SKY CONTROL)
 
-**Role:** Air superiority  
+**Role:** Air superiority
 **Tone:** Fast, dangerous, cinematic
 
-### Primary Objective
+### Act II — Win the Sky
 
-- Prevent enemy air dominance
-- Defend ground forces
-- Intercept gyrocopters, wyverns, spellcraft
+- Achieve air superiority over landing zones
+- Intercept wyvern cavalry and gyrocopter bombers
+- Neutralize war-mage spellcasters
+- Protect ground forces from aerial bombardment
+
+### Act III — Block the Road
+
+- Land on the inland road beyond the Orn River Bridge
+- Establish a blocking position against Keep reinforcements
+- Hold the road until beach forces break through
+- Prevent enemy counterattack from reaching the bridge
 
 ### Success Effects
 
-- Ground forces protected
-- Siege engines safer
-- Enemy communications disrupted
+- Ground forces protected from air strikes
+- Bridge isolated from Keep reinforcements
+- Enemy command and control disrupted
 
 ### Failure Effects
 
 - Air strikes harass all theaters
-- Siege equipment endangered
-- Catastrophic events may occur
+- Keep reinforcements reach the bridge
+- Portal team overwhelmed
 
 ---
 
 ## HOW IT ALL CONNECTS
 
-| Theater              | Helps   | Hurts   |
-| -------------------- | ------- | ------- |
-| T1 – General Assault | T2, T3  | All     |
-| T2 – Siege           | Act III | Act III |
-| T3 – Bridges         | T1, T2  | T1, T2  |
-| T4 – Air             | All     | All     |
+| Theater              | Act II Role           | Act III Role              | If They Fail           |
+| -------------------- | --------------------- | ------------------------- | ---------------------- |
+| T1 – General Assault | Storm the beach       | Break through to bridge   | Siege Train trapped    |
+| T2 – Siege           | Land the engines      | Climb the bluffs          | Keep impregnable       |
+| T3 – Portals/Bridge  | Infiltrate            | Disarm the bridge         | Bridge destroyed       |
+| T4 – Air             | Win the sky           | Block reinforcements      | Portal team overwhelmed|
 
 **No theater stands alone.**
+
+All four theaters converge on the Orn River Bridge in Act III. The portal team disarms it, the air units block reinforcements, and the beach forces break through to link up.
 
 ---
 
@@ -377,7 +407,127 @@ Escalations occur only if theaters fail:
 
 ---
 
-# ACT III — THE FALL OF THE COASTAL KEEP
+# ACT III — THE BRIDGE
+
+### _The Orn River Crossing_
+
+**Tone:** Tense, desperate, against the clock
+
+---
+
+## THE CRITICAL CROSSING
+
+Between the beaches and the Coastal Keep lies the **Orn River Bridge** — the only crossing capable of supporting siege engines and massed troops.
+
+Intelligence confirms the Iron Conclave has rigged it for demolition.
+
+If the bridge falls:
+
+- Siege engines cannot cross the river
+- Ground forces must find alternate routes through enemy territory
+- The Coastal Keep has time to reinforce
+- The invasion stalls
+
+**The bridge must hold. Everything depends on it.**
+
+---
+
+## FOUR THEATERS, ONE OBJECTIVE
+
+All four theaters converge on the Orn River Bridge. Each has a critical role.
+
+---
+
+### THEATER 3 — DISARM THE BRIDGE
+
+**Role:** The tip of the spear
+**Tone:** Surgical, desperate, isolated
+
+The portal team is already behind enemy lines — the only force close enough to reach the bridge before the demolition order is given.
+
+**Objectives:**
+
+- Assault the Duergar demolition platoon holding the bridge
+- Neutralize sappers before they trigger the charges
+- Disarm or destroy the explosive runes and barrels
+- Hold the bridge until reinforcements arrive
+
+**Key Tension:** They are outnumbered and isolated. If they fail, the invasion stalls.
+
+---
+
+### THEATER 4 — BLOCK THE ROAD
+
+**Role:** Cut off reinforcements
+**Tone:** Fast transition from air to ground combat
+
+With air superiority achieved, flying units must land on the road beyond the bridge to intercept enemy reinforcements marching from the Coastal Keep.
+
+**Objectives:**
+
+- Land on the inland road past the bridge
+- Establish a blocking position against Keep reinforcements
+- Buy time for the portal team and beach forces
+- Prevent enemy counterattack from reaching the bridge
+
+**Key Tension:** They're trading mobility for position. Once grounded, they must hold.
+
+---
+
+### THEATER 1 — BREAK THE LINE
+
+**Role:** Punch through to the bridge
+**Tone:** Brutal, relentless push
+
+The assault force must smash through the entrenched enemy defensive line blocking the road to the river.
+
+**Objectives:**
+
+- Breach fortified enemy positions between the beach and the river
+- Clear the road for the siege train following behind
+- Link up with the portal team at the bridge
+
+**Key Tension:** Speed matters. The longer they take, the more pressure on the bridge defenders.
+
+---
+
+### THEATER 2 — CLIMB THE BLUFFS
+
+**Role:** Get the siege engines through
+**Tone:** Problem-solving under fire
+
+The siege train faces a brutal challenge: hauling massive catapults and trebuchets up the sandy bluffs and through difficult terrain while under fire.
+
+**Objectives:**
+
+- Haul siege engines up the sandy bluffs
+- Get creative — winches, magic, beasts of burden, brute force, or improvised solutions
+- Protect the equipment from saboteurs while vulnerable
+- Cross the bridge and advance to the Keep
+
+**Key Tension:** The siege engines are slow and vulnerable. Losing them is catastrophic for Act IV.
+
+---
+
+## ACT III OUTCOMES
+
+### If the Bridge Holds
+
+- Siege engines cross and advance toward the Keep
+- All ground forces converge and link up
+- The final assault begins with momentum
+- Enemy forces at the Keep are isolated
+
+### If the Bridge Falls
+
+- Siege equipment cannot reach the Keep
+- Ground forces must find alternate crossings through enemy territory
+- The Keep has time to reinforce
+- Act IV becomes significantly harder — or impossible
+
+---
+
+# ACT IV — THE FALL OF THE COASTAL KEEP
 
 **Tone:** Desperate, mythic, decisive
 

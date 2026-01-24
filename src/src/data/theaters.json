@@ -8,12 +8,23 @@
       "color": "theater-assault",
       "icon": "sword",
       "description": "You are the tip of the spear. Your mission is to break shoreline defenses and draw the bulk of the Iron Conclave's attention while other forces move into position.",
-      "primaryObjectives": [
-        "Break shoreline defenses and push inland",
-        "Engage enemy forces directly",
-        "Draw the bulk of the Iron Conclave's attention",
-        "Reach the road to the Coastal Keep"
-      ],
+      "actII": {
+        "title": "Storm the Beach",
+        "objectives": [
+          "Break shoreline defenses and push inland",
+          "Engage enemy forces directly",
+          "Draw the bulk of the Iron Conclave's attention",
+          "Reach the road toward the Orn River"
+        ]
+      },
+      "actIII": {
+        "title": "Break the Line",
+        "objectives": [
+          "Breach fortified enemy positions between the beach and the river",
+          "Clear the road for the siege train following behind",
+          "Link up with portal team at the Orn River Bridge"
+        ]
+      },
       "secondaryObjectives": [
         "Destroy barricades",
         "Kill or rout commanders",
@@ -21,15 +32,15 @@
       ],
       "successEffects": [
         "Enemy reinforcements delayed",
-        "Theater 2 faces lighter resistance",
-        "Theater 3 encounters fewer patrols"
+        "Siege Train faces lighter resistance",
+        "Road to the bridge cleared"
       ],
       "failureEffects": [
         "Enemy pressure increases everywhere",
-        "Additional enemy waves appear",
-        "Operational pressure escalates"
+        "Siege Train bogged down",
+        "Bridge reinforcements arrive from the beach side"
       ],
-      "helps": ["Siege Train", "Portals & Bridges"],
+      "helps": ["Siege Train", "Act III - The Bridge"],
       "hurts": ["All theaters"]
     },
     {
@@ -39,26 +50,41 @@
       "tone": "Precision under fire",
       "color": "theater-siege",
       "icon": "catapult",
-      "description": "You escort the siege engines that will crack the Coastal Keep. Without these weapons, the assault becomes a grinding war of attrition.",
-      "primaryObjectives": [
-        "Land and protect catapults",
-        "Deliver siege engines intact",
-        "Reach the Coastal Keep"
+      "description": "You escort the siege engines that will crack the Coastal Keep. Without these weapons, the assault becomes a grinding war of attrition. But first, you must get them off the beach.",
+      "actII": {
+        "title": "Land the Siege Engines",
+        "objectives": [
+          "Land catapults and trebuchets on Juno Beach",
+          "Protect siege engines from enemy fire",
+          "Begin moving equipment inland"
+        ]
+      },
+      "actIII": {
+        "title": "Climb the Bluffs",
+        "objectives": [
+          "Haul massive siege engines up the sandy bluffs",
+          "Get creative — winches, magic, beasts of burden, or brute force",
+          "Protect the equipment from saboteurs while vulnerable",
+          "Cross the Orn River Bridge and advance to the Keep"
+        ]
+      },
+      "secondaryObjectives": [
+        "Salvage enemy siege equipment",
+        "Establish supply lines"
       ],
-      "secondaryObjectives": [],
-      "keyTension": "Shorter route, heavier exposure. Losing siege equipment is catastrophic.",
+      "keyTension": "The siege engines are slow and vulnerable. Getting them up the sandy terrain requires ingenuity. Losing them is catastrophic.",
       "successEffects": [
-        "Faster breach in Act III",
-        "Weakened fortifications",
-        "Shorter, less lethal final fights"
+        "Siege engines reach the Keep",
+        "Faster breach in Act IV",
+        "Shorter, less lethal final assault"
       ],
       "failureEffects": [
-        "Keep becomes far harder to take",
-        "Act III shifts toward attrition or sabotage",
-        "Enemy morale strengthens"
+        "Keep becomes nearly impregnable",
+        "Act IV shifts toward attrition or sabotage",
+        "Casualties spike dramatically"
       ],
-      "helps": ["Act III - Final Battle"],
-      "hurts": ["Act III - Final Battle"]
+      "helps": ["Act IV - Final Battle"],
+      "hurts": ["Act IV - Final Battle"]
     },
     {
       "id": "portals-bridges",
@@ -67,26 +93,42 @@
       "tone": "Surgical, tense, isolated",
       "color": "theater-portals",
       "icon": "portal",
-      "description": "Teleported behind enemy lines, your mission is to secure critical bridges before enemy forces can destroy them or use them to reinforce the coast.",
+      "description": "Teleported behind enemy lines, you are the only force close enough to reach the Orn River Bridge before the Iron Conclave destroys it. The entire invasion depends on you.",
       "entryPoint": "Teleportation to a resistance-held watchtower behind enemy lines.",
-      "primaryObjectives": [
-        "Secure two critical bridges",
-        "Hold them long enough for Theaters 1 and 2",
-        "Prevent counterattacks"
+      "actII": {
+        "title": "Secure the Landing Zone",
+        "objectives": [
+          "Emerge from the portal at the watchtower",
+          "Eliminate enemy patrols before alarm is raised",
+          "Establish a foothold behind enemy lines",
+          "Begin moving toward the Orn River Bridge"
+        ]
+      },
+      "actIII": {
+        "title": "Disarm the Bridge",
+        "objectives": [
+          "Assault the Duergar demolition platoon holding the bridge",
+          "Neutralize sappers before they trigger the charges",
+          "Disarm or destroy the explosive runes and barrels",
+          "Hold the bridge until reinforcements arrive"
+        ]
+      },
+      "secondaryObjectives": [
+        "Capture demolition officer for intelligence",
+        "Secure secondary crossing points"
       ],
-      "secondaryObjectives": [],
       "successEffects": [
-        "Faster inland advance",
-        "Split enemy forces",
-        "Early arrival at the Keep"
+        "Bridge secured — siege engines can cross",
+        "Ground forces link up and advance",
+        "Enemy cut off from reinforcements"
       ],
       "failureEffects": [
-        "Ground forces delayed or rerouted",
-        "Casualties spike",
-        "Reinforcements reach the Keep in greater numbers"
+        "Bridge destroyed — invasion stalls",
+        "Siege engines cannot reach the Keep",
+        "Enemy has time to fortify the Coastal Keep"
       ],
-      "helps": ["General Assault", "Siege Train"],
-      "hurts": ["General Assault", "Siege Train"]
+      "helps": ["All theaters", "Act IV"],
+      "hurts": ["Entire operation"]
     },
     {
       "id": "air-battle",
@@ -95,24 +137,40 @@
       "tone": "Fast, dangerous, cinematic",
       "color": "theater-air",
       "icon": "dragon",
-      "description": "The skies above the battlefield are contested. Enemy wyverns, gyrocopters, and war-mages threaten to turn the tide. You must stop them.",
-      "primaryObjectives": [
-        "Prevent enemy air dominance",
-        "Defend ground forces from aerial threats",
-        "Intercept gyrocopters, wyverns, and spellcraft"
+      "description": "The skies above the battlefield are contested. Enemy wyverns, gyrocopters, and war-mages threaten to turn the tide. Once you own the sky, you must land and hold the road.",
+      "actII": {
+        "title": "Win the Sky",
+        "objectives": [
+          "Achieve air superiority over landing zones",
+          "Intercept wyvern cavalry and gyrocopter bombers",
+          "Neutralize war-mage spellcasters",
+          "Protect ground forces from aerial bombardment"
+        ]
+      },
+      "actIII": {
+        "title": "Block the Road",
+        "objectives": [
+          "Land on the inland road beyond the Orn River Bridge",
+          "Establish a blocking position against Keep reinforcements",
+          "Hold the road until beach forces break through",
+          "Prevent enemy counterattack from reaching the bridge"
+        ]
+      },
+      "secondaryObjectives": [
+        "Destroy enemy signal towers",
+        "Disrupt arcane communications with Athkatla"
       ],
-      "secondaryObjectives": [],
       "successEffects": [
-        "Ground forces protected",
-        "Siege engines safer",
-        "Enemy communications disrupted"
+        "Ground forces protected from air strikes",
+        "Bridge isolated from Keep reinforcements",
+        "Enemy command and control disrupted"
       ],
       "failureEffects": [
         "Air strikes harass all theaters",
-        "Siege equipment endangered",
-        "Catastrophic events may occur"
+        "Keep reinforcements reach the bridge",
+        "Portal team overwhelmed"
       ],
-      "helps": ["All theaters"],
+      "helps": ["All theaters", "Act III - The Bridge"],
       "hurts": ["All theaters"]
     }
   ]
