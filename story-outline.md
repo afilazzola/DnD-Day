@@ -182,7 +182,7 @@ but still small in the face of what’s coming.
 
 Scouts reporting:
 
-- Enemy fortifications along the beaches
+- Enemy fortifications along the beaches — a wall of iron and stone the scouts call the "Amnian Wall"
 - Wyverns and flying patrols circling offshore
 - Fires burning along occupied coastlines
 
@@ -276,7 +276,7 @@ The heroes are split into four theaters of war, each critical to the battle.
 
 - Breach fortified enemy positions between the beach and the river
 - Clear the road for the siege train following behind
-- Link up with portal team at the Orn River Bridge
+- Link up with portal team at the Pegasus Bridge
 
 ### Secondary Objectives (Optional)
 
@@ -314,7 +314,7 @@ The heroes are split into four theaters of war, each critical to the battle.
 - Haul massive siege engines up the sandy bluffs
 - Get creative — winches, magic, beasts of burden, or brute force
 - Protect the equipment from saboteurs while vulnerable
-- Cross the Orn River Bridge and advance to the Keep
+- Cross the Pegasus Bridge and advance to the Keep
 
 ### Key Tension
 
@@ -348,7 +348,7 @@ Teleportation to a resistance-held watchtower behind enemy lines.
 - Emerge from the portal at the watchtower
 - Eliminate enemy patrols before alarm is raised
 - Establish a foothold behind enemy lines
-- Begin moving toward the Orn River Bridge
+- Begin moving toward the Pegasus Bridge
 
 ### Act III — Disarm the Bridge
 
@@ -385,7 +385,7 @@ Teleportation to a resistance-held watchtower behind enemy lines.
 
 ### Act III — Block the Road
 
-- Land on the inland road beyond the Orn River Bridge
+- Land on the inland road beyond the Pegasus Bridge
 - Establish a blocking position against Keep reinforcements
 - Hold the road until beach forces break through
 - Prevent enemy counterattack from reaching the bridge
@@ -415,7 +415,7 @@ Teleportation to a resistance-held watchtower behind enemy lines.
 
 **No theater stands alone.**
 
-All four theaters converge on the Orn River Bridge in Act III. Shadow Company disarms it, Storm Riders block reinforcements, and the Iron Wolves and Stone Breakers break through to link up.
+All four theaters converge on Pegasus Bridge in Act III. Shadow Company disarms it, Storm Riders block reinforcements, and the Iron Wolves and Stone Breakers break through to link up.
 
 ---
 
@@ -440,7 +440,7 @@ Escalations occur only if theaters fail:
 
 ## THE CRITICAL CROSSING
 
-Between the beaches and the Coastal Keep lies the **Orn River Bridge** — the only crossing capable of supporting siege engines and massed troops.
+Between the beaches and the Coastal Keep lies **Pegasus Bridge** over the Orn River — the only crossing capable of supporting siege engines and massed troops.
 
 Intelligence confirms the Iron Conclave has rigged it for demolition.
 
@@ -457,7 +457,7 @@ If the bridge falls:
 
 ## FOUR THEATERS, ONE OBJECTIVE
 
-All four theaters converge on the Orn River Bridge. Each has a critical role.
+All four theaters converge on Pegasus Bridge. Each has a critical role.
 
 ---
 
@@ -483,7 +483,7 @@ The assault force must smash through the entrenched enemy defensive line blockin
 **Role:** Get the siege engines through
 **Tone:** Problem-solving under fire
 
-The siege train faces a brutal challenge: hauling massive catapults and trebuchets up the sandy bluffs and through difficult terrain while under fire.
+The siege train faces a brutal challenge: hauling massive catapults and trebuchets up the sandy bluffs of Hoc's Point and through difficult terrain while under fire.
 
 **Objectives:**
 

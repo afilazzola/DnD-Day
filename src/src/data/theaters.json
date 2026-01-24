@@ -22,7 +22,7 @@
         "objectives": [
           "Breach fortified enemy positions between the beach and the river",
           "Clear the road for the siege train following behind",
-          "Link up with portal team at the Orn River Bridge"
+          "Link up with portal team at the Pegasus Bridge"
         ]
       },
       "secondaryObjectives": [
@@ -62,17 +62,17 @@
       "actIII": {
         "title": "Climb the Bluffs",
         "objectives": [
-          "Haul massive siege engines up the sandy bluffs",
+          "Haul massive siege engines up the sandy bluffs of Hoc's Point",
           "Get creative — winches, magic, beasts of burden, or brute force",
           "Protect the equipment from saboteurs while vulnerable",
-          "Cross the Orn River Bridge and advance to the Keep"
+          "Cross the Pegasus Bridge and advance to the Keep"
         ]
       },
       "secondaryObjectives": [
         "Salvage enemy siege equipment",
         "Establish supply lines"
       ],
-      "keyTension": "The siege engines are slow and vulnerable. Getting them up the sandy terrain requires ingenuity. Losing them is catastrophic.",
+      "keyTension": "The siege engines are slow and vulnerable. Getting them up the sandy bluffs of Hoc's Point requires ingenuity. Losing them is catastrophic.",
       "successEffects": [
         "Siege engines reach the Keep",
         "Faster breach in Act IV",
@@ -93,7 +93,7 @@
       "tone": "Surgical, tense, isolated",
       "color": "theater-portals",
       "icon": "portal",
-      "description": "Teleported behind enemy lines, you are the only force close enough to reach the Orn River Bridge before the Iron Conclave destroys it. The entire invasion depends on you.",
+      "description": "Teleported behind enemy lines, you are the only force close enough to reach the Pegasus Bridge before the Iron Conclave destroys it. The entire invasion depends on you.",
       "entryPoint": "Teleportation to a resistance-held watchtower behind enemy lines.",
       "actII": {
         "title": "Secure the Landing Zone",
@@ -101,7 +101,7 @@
           "Emerge from the portal at the watchtower",
           "Eliminate enemy patrols before alarm is raised",
           "Establish a foothold behind enemy lines",
-          "Begin moving toward the Orn River Bridge"
+          "Begin moving toward the Pegasus Bridge"
         ]
       },
       "actIII": {
@@ -150,7 +150,7 @@
       "actIII": {
         "title": "Block the Road",
         "objectives": [
-          "Land on the inland road beyond the Orn River Bridge",
+          "Land on the inland road beyond the Pegasus Bridge",
           "Establish a blocking position against Keep reinforcements",
           "Hold the road until beach forces break through",
           "Prevent enemy counterattack from reaching the bridge"
