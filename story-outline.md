@@ -4,6 +4,29 @@
 
 ---
 
+## EVENT INFORMATION
+
+**Setting:** Forgotten Realms, Sword Coast, late 1480s to mid-1490s DR
+**Character Level:** 7
+**Allowed Content:** Official 5e material including Unearthed Arcana, Eberron, and Tasha's Cauldron of Everything
+**Character Creation:** Point buy preferred
+**Structure:** Four acts (Eve of War → Iron Tide → The Bridge → Fall of the Coastal Keep)
+
+---
+
+## COMPANIES
+
+Each theater fields one company of adventurers (1 DM + 6 players):
+
+| Theater | Company Name    | Role                    |
+| ------- | --------------- | ----------------------- |
+| T1      | Iron Wolves     | General Assault         |
+| T2      | Stone Breakers  | Siege Train             |
+| T3      | Shadow Company  | Portals & Bridges       |
+| T4      | Storm Riders    | Air Battle / Sky Control|
+
+---
+
 ## SETTING
 
 **Location:** The Sword Coast  
@@ -171,7 +194,7 @@ Conflicting rumors about the Iron Conclave’s true plans.
 - Veterans offering grim advice
 - Fresh recruits hiding fear behind bravado
 
-These NPCs may reappear wounded, missing, or dead during Acts II and III.
+These NPCs may reappear wounded, missing, or dead during Acts II, III, and IV.
 
 ---
 
@@ -237,7 +260,7 @@ The heroes are split into four theaters of war, each critical to the battle.
 
 ---
 
-## THEATER 1 — BEACH LANDING (GENERAL ASSAULT)
+## THEATER 1 — IRON WOLVES — BEACH LANDING (GENERAL ASSAULT)
 
 **Role:** Shock force and distraction
 **Tone:** Brutal, relentless, high casualties
@@ -275,7 +298,7 @@ The heroes are split into four theaters of war, each critical to the battle.
 
 ---
 
-## THEATER 2 — BEACH LANDING (SIEGE TRAIN)
+## THEATER 2 — STONE BREAKERS — BEACH LANDING (SIEGE TRAIN)
 
 **Role:** Strategic enablers
 **Tone:** Precision under fire, problem-solving
@@ -311,7 +334,7 @@ The siege engines are slow and vulnerable. Getting them up the sandy terrain req
 
 ---
 
-## THEATER 3 — PORTALS & BRIDGES
+## THEATER 3 — SHADOW COMPANY — PORTALS & BRIDGES
 
 **Role:** Force multiplier
 **Tone:** Surgical, tense, isolated
@@ -348,7 +371,7 @@ Teleportation to a resistance-held watchtower behind enemy lines.
 
 ---
 
-## THEATER 4 — AIR BATTLE (SKY CONTROL)
+## THEATER 4 — STORM RIDERS — AIR BATTLE (SKY CONTROL)
 
 **Role:** Air superiority
 **Tone:** Fast, dangerous, cinematic
@@ -383,16 +406,16 @@ Teleportation to a resistance-held watchtower behind enemy lines.
 
 ## HOW IT ALL CONNECTS
 
-| Theater              | Act II Role           | Act III Role              | If They Fail           |
-| -------------------- | --------------------- | ------------------------- | ---------------------- |
-| T1 – General Assault | Storm the beach       | Break through to bridge   | Siege Train trapped    |
-| T2 – Siege           | Land the engines      | Climb the bluffs          | Keep impregnable       |
-| T3 – Portals/Bridge  | Infiltrate            | Disarm the bridge         | Bridge destroyed       |
-| T4 – Air             | Win the sky           | Block reinforcements      | Portal team overwhelmed|
+| Theater | Company        | Act II Role           | Act III Role              | If They Fail           |
+| ------- | -------------- | --------------------- | ------------------------- | ---------------------- |
+| T1      | Iron Wolves    | Storm the beach       | Break through to bridge   | Siege Train trapped    |
+| T2      | Stone Breakers | Land the engines      | Climb the bluffs          | Keep impregnable       |
+| T3      | Shadow Company | Infiltrate            | Disarm the bridge         | Bridge destroyed       |
+| T4      | Storm Riders   | Win the sky           | Block reinforcements      | Portal team overwhelmed|
 
 **No theater stands alone.**
 
-All four theaters converge on the Orn River Bridge in Act III. The portal team disarms it, the air units block reinforcements, and the beach forces break through to link up.
+All four theaters converge on the Orn River Bridge in Act III. Shadow Company disarms it, Storm Riders block reinforcements, and the Iron Wolves and Stone Breakers break through to link up.
 
 ---
 
@@ -438,7 +461,42 @@ All four theaters converge on the Orn River Bridge. Each has a critical role.
 
 ---
 
-### THEATER 3 — DISARM THE BRIDGE
+### THEATER 1 — IRON WOLVES — BREAK THE LINE
+
+**Role:** Punch through to the bridge
+**Tone:** Brutal, relentless push
+
+The assault force must smash through the entrenched enemy defensive line blocking the road to the river.
+
+**Objectives:**
+
+- Breach fortified enemy positions between the beach and the river
+- Clear the road for the siege train following behind
+- Link up with the portal team at the bridge
+
+**Key Tension:** Speed matters. The longer they take, the more pressure on the bridge defenders.
+
+---
+
+### THEATER 2 — STONE BREAKERS — CLIMB THE BLUFFS
+
+**Role:** Get the siege engines through
+**Tone:** Problem-solving under fire
+
+The siege train faces a brutal challenge: hauling massive catapults and trebuchets up the sandy bluffs and through difficult terrain while under fire.
+
+**Objectives:**
+
+- Haul siege engines up the sandy bluffs
+- Get creative — winches, magic, beasts of burden, brute force, or improvised solutions
+- Protect the equipment from saboteurs while vulnerable
+- Cross the bridge and advance to the Keep
+
+**Key Tension:** The siege engines are slow and vulnerable. Losing them is catastrophic for Act IV.
+
+---
+
+### THEATER 3 — SHADOW COMPANY — DISARM THE BRIDGE
 
 **Role:** The tip of the spear
 **Tone:** Surgical, desperate, isolated
@@ -456,7 +514,7 @@ The portal team is already behind enemy lines — the only force close enough to
 
 ---
 
-### THEATER 4 — BLOCK THE ROAD
+### THEATER 4 — STORM RIDERS — BLOCK THE ROAD
 
 **Role:** Cut off reinforcements
 **Tone:** Fast transition from air to ground combat
@@ -471,41 +529,6 @@ With air superiority achieved, flying units must land on the road beyond the bri
 - Prevent enemy counterattack from reaching the bridge
 
 **Key Tension:** They're trading mobility for position. Once grounded, they must hold.
-
----
-
-### THEATER 1 — BREAK THE LINE
-
-**Role:** Punch through to the bridge
-**Tone:** Brutal, relentless push
-
-The assault force must smash through the entrenched enemy defensive line blocking the road to the river.
-
-**Objectives:**
-
-- Breach fortified enemy positions between the beach and the river
-- Clear the road for the siege train following behind
-- Link up with the portal team at the bridge
-
-**Key Tension:** Speed matters. The longer they take, the more pressure on the bridge defenders.
-
----
-
-### THEATER 2 — CLIMB THE BLUFFS
-
-**Role:** Get the siege engines through
-**Tone:** Problem-solving under fire
-
-The siege train faces a brutal challenge: hauling massive catapults and trebuchets up the sandy bluffs and through difficult terrain while under fire.
-
-**Objectives:**
-
-- Haul siege engines up the sandy bluffs
-- Get creative — winches, magic, beasts of burden, brute force, or improvised solutions
-- Protect the equipment from saboteurs while vulnerable
-- Cross the bridge and advance to the Keep
-
-**Key Tension:** The siege engines are slow and vulnerable. Losing them is catastrophic for Act IV.
 
 ---
 
