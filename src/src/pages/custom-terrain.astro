@@ -57,36 +57,50 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <!-- Forest & Airship -->
         <div class="card overflow-hidden p-0">
-          <img
-            src="/images/terrain-forest-airship.jpg"
-            alt="Forest terrain with airship miniature"
-            class="w-full h-64 object-cover"
-          />
+          <button
+            class="w-full cursor-pointer lightbox-trigger"
+            data-src="/images/terrain-forest-airship.jpg"
+            data-alt="Forest terrain with airship miniature"
+          >
+            <img
+              src="/images/terrain-forest-airship.jpg"
+              alt="Forest terrain with airship miniature"
+              class="w-full h-[28rem] object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </button>
           <div class="p-6">
             <h3 class="font-display text-dnd-primary text-xl mb-2">Forest & Sky</h3>
             <p class="text-dnd-text-muted text-sm">
               Dense woodland terrain with towering trees and an airship ready for aerial combat
               scenarios. Perfect for ambushes and the Storm Riders' sky battles.
             </p>
+            <p class="text-dnd-text-muted/60 text-xs mt-3">Click image to view full size</p>
           </div>
         </div>
 
         <!-- Beach & Ship -->
         <div class="card overflow-hidden p-0">
-          <img
-            src="/images/terrain-beach-ship.jpg"
-            alt="Beach terrain with naval vessel"
-            class="w-full h-64 object-cover"
-          />
+          <button
+            class="w-full cursor-pointer lightbox-trigger"
+            data-src="/images/terrain-beach-ship.jpg"
+            data-alt="Beach terrain with naval vessel"
+          >
+            <img
+              src="/images/terrain-beach-ship.jpg"
+              alt="Beach terrain with naval vessel"
+              class="w-full h-[28rem] object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </button>
           <div class="p-6">
             <h3 class="font-display text-dnd-primary text-xl mb-2">Beach Landing</h3>
             <p class="text-dnd-text-muted text-sm">
               Coastal assault terrain featuring sandy beaches, defensive fortifications,
               and naval vessels. Built for the Iron Wolves' dramatic beach storming.
             </p>
+            <p class="text-dnd-text-muted/60 text-xs mt-3">Click image to view full size</p>
           </div>
         </div>
       </div>
@@ -206,4 +220,68 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
     </div>
   </section>
+
+  <!-- Lightbox Modal -->
+  <div
+    id="lightbox"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+  >
+    <button
+      id="lightbox-close"
+      class="absolute top-4 right-4 text-white hover:text-dnd-primary transition-colors p-2"
+      aria-label="Close lightbox"
+    >
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <img
+      id="lightbox-image"
+      src=""
+      alt=""
+      class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+    />
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image') as HTMLImageElement;
+    const lightboxClose = document.getElementById('lightbox-close');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const src = trigger.getAttribute('data-src');
+        const alt = trigger.getAttribute('data-alt');
+        if (src && lightboxImage && lightbox) {
+          lightboxImage.src = src;
+          lightboxImage.alt = alt || '';
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    function closeLightbox() {
+      if (lightbox) {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
 </BaseLayout>
