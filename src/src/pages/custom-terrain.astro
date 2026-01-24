@@ -1,0 +1,287 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Custom Terrain"
+  description="Custom terrain and miniatures for DnD Day - Operation Golden Sword. Immersive battlefields for every theater of war."
+>
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">The Event</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">Custom Terrain</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        Bringing Operation Golden Sword to life with handcrafted battlefields and detailed miniatures.
+      </p>
+    </div>
+  </section>
+
+  <!-- Immersion Section -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="section-title">Experience</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">Immersive Battlefields</span>
+          </h2>
+        </div>
+
+        <div class="card">
+          <p class="text-dnd-text-muted leading-relaxed mb-6">
+            Custom terrain transforms tabletop gaming from imagination alone into a tangible,
+            shared experience. When you can see the sandy beaches your characters are storming,
+            the dense forests hiding enemy forces, or the towering walls of the Coastal Keep,
+            every tactical decision becomes more meaningful and every heroic moment more memorable.
+          </p>
+          <p class="text-dnd-text-muted leading-relaxed">
+            For Operation Golden Sword, we're building custom terrain pieces for each theater of war,
+            ensuring that whether you're landing on the beaches, navigating forest paths, breaching
+            dungeon corridors, or battling in the skies, you'll have a battlefield worthy of your adventure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terrain Gallery -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="text-center mb-10">
+        <p class="section-title">Gallery</p>
+        <h2 class="text-2xl md:text-3xl font-display">
+          <span class="gold-gradient">Terrain Preview</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Forest & Airship -->
+        <div class="card overflow-hidden p-0">
+          <button
+            class="w-full cursor-pointer lightbox-trigger"
+            data-src="/images/terrain-forest-airship.jpg"
+            data-alt="Forest terrain with airship miniature"
+          >
+            <img
+              src="/images/terrain-forest-airship.jpg"
+              alt="Forest terrain with airship miniature"
+              class="w-full h-[28rem] object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </button>
+          <div class="p-6">
+            <h3 class="font-display text-dnd-primary text-xl mb-2">Forest & Sky</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Dense woodland terrain with towering trees and an airship ready for aerial combat
+              scenarios. Perfect for ambushes and the Storm Riders' sky battles.
+            </p>
+            <p class="text-dnd-text-muted/60 text-xs mt-3">Click image to view full size</p>
+          </div>
+        </div>
+
+        <!-- Beach & Ship -->
+        <div class="card overflow-hidden p-0">
+          <button
+            class="w-full cursor-pointer lightbox-trigger"
+            data-src="/images/terrain-beach-ship.jpg"
+            data-alt="Beach terrain with naval vessel"
+          >
+            <img
+              src="/images/terrain-beach-ship.jpg"
+              alt="Beach terrain with naval vessel"
+              class="w-full h-[28rem] object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </button>
+          <div class="p-6">
+            <h3 class="font-display text-dnd-primary text-xl mb-2">Beach Landing</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Coastal assault terrain featuring sandy beaches, defensive fortifications,
+              and naval vessels. Built for the Iron Wolves' dramatic beach storming.
+            </p>
+            <p class="text-dnd-text-muted/60 text-xs mt-3">Click image to view full size</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials List -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="section-title">Materials</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">What We're Providing</span>
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card text-center">
+            <span class="text-4xl mb-4 block">🏖️</span>
+            <h3 class="font-display text-dnd-primary mb-2">Beach Terrain</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Sandy shores, rocky outcrops, and coastal fortifications for the amphibious assault.
+            </p>
+          </div>
+
+          <div class="card text-center">
+            <span class="text-4xl mb-4 block">🌲</span>
+            <h3 class="font-display text-dnd-primary mb-2">Forest Terrain</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Dense woodland with trees, undergrowth, and hidden paths for tactical maneuvering.
+            </p>
+          </div>
+
+          <div class="card text-center">
+            <span class="text-4xl mb-4 block">🏰</span>
+            <h3 class="font-display text-dnd-primary mb-2">Dungeon Terrain</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Stone corridors, fortress walls, and the Coastal Keep's interior chambers.
+            </p>
+          </div>
+
+          <div class="card text-center">
+            <span class="text-4xl mb-4 block">⛵</span>
+            <h3 class="font-display text-dnd-primary mb-2">Boats & Ships</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Landing craft, transport vessels, and naval ships for the beach invasion.
+            </p>
+          </div>
+
+          <div class="card text-center">
+            <span class="text-4xl mb-4 block">🎈</span>
+            <h3 class="font-display text-dnd-primary mb-2">Airships</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Flying vessels and platforms for the Storm Riders' aerial combat theater.
+            </p>
+          </div>
+
+          <div class="card text-center">
+            <span class="text-4xl mb-4 block">🌀</span>
+            <h3 class="font-display text-dnd-primary mb-2">Portals</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Arcane gateways and teleportation circles for Shadow Company's infiltration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Miniatures Section -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="section-title">Miniatures</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">Bring Your Character to Life</span>
+          </h2>
+        </div>
+
+        <div class="card bg-dnd-primary/10 border-dnd-primary">
+          <div class="flex items-start gap-4">
+            <span class="text-4xl">🎭</span>
+            <div>
+              <h3 class="font-display text-dnd-primary mb-3">Your Miniature</h3>
+              <p class="text-dnd-text-muted leading-relaxed mb-4">
+                We encourage all players to bring a miniature representing their character.
+                Having your own figure on the battlefield adds a personal connection to every
+                encounter and makes those heroic moments truly yours.
+              </p>
+              <p class="text-dnd-text-muted leading-relaxed">
+                <strong class="text-dnd-text">Don't have a miniature?</strong> No problem!
+                Let us know and we can help provide one for you. We have a collection of
+                miniatures available and can work with you to find something that fits your
+                character's race, class, and style.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl md:text-3xl font-display mb-4">
+        <span class="gold-gradient">Ready to Storm the Beach?</span>
+      </h2>
+      <p class="text-dnd-text-muted mb-8 max-w-xl mx-auto">
+        Sign up now to secure your spot in Operation Golden Sword.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/signup" class="btn btn-primary">Sign Up Now</a>
+        <a href="/contact" class="btn btn-secondary">Questions? Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div
+    id="lightbox"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+  >
+    <button
+      id="lightbox-close"
+      class="absolute top-4 right-4 text-white hover:text-dnd-primary transition-colors p-2"
+      aria-label="Close lightbox"
+    >
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <img
+      id="lightbox-image"
+      src=""
+      alt=""
+      class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+    />
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image') as HTMLImageElement;
+    const lightboxClose = document.getElementById('lightbox-close');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const src = trigger.getAttribute('data-src');
+        const alt = trigger.getAttribute('data-alt');
+        if (src && lightboxImage && lightbox) {
+          lightboxImage.src = src;
+          lightboxImage.alt = alt || '';
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    function closeLightbox() {
+      if (lightbox) {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  </script>
+</BaseLayout>
