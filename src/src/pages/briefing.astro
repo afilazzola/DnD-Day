@@ -44,7 +44,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <strong class="text-dnd-text">Type:</strong> Full-Scale Amphibious Invasion
               </p>
               <p>
-                <strong class="text-dnd-text">Theater:</strong> Shadow Coast, Kingdom of Amn
+                <strong class="text-dnd-text">Theater:</strong> Sword Coast, Kingdom of Amn
               </p>
               <p>
                 <strong class="text-dnd-text">Primary Target:</strong>
@@ -127,8 +127,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </div>
             <p class="text-dnd-primary text-sm font-semibold mb-2">Theater 3 — Portals & Bridges</p>
             <p class="text-dnd-text-muted">
-              Portal entry point behind enemy lines. Resistance-held position. Objective:
-              secure critical bridges before enemy demolition.
+              Portal entry point behind enemy lines. Resistance-held position. Critical objective:
+              reach and secure the <strong class="text-dnd-text">Pegasus Bridge</strong> before
+              enemy demolition teams destroy it.
             </p>
           </div>
 
@@ -141,7 +142,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <p class="text-dnd-primary text-sm font-semibold mb-2">Theater 4 — Sky Control</p>
             <p class="text-dnd-text-muted">
               Full aerial theater above all landing zones. Enemy wyverns, gyrocopters, and
-              war-mages must be neutralized.
+              war-mages must be neutralized. Once air superiority is achieved, units will
+              land to reinforce the <strong class="text-dnd-text">Pegasus Bridge</strong>.
             </p>
           </div>
         </div>
@@ -190,15 +192,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-dnd-primary">•</span>
-                  <span>Deliver siege engines to the Coastal Keep</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-dnd-primary">•</span>
-                  <span>Secure inland bridges before destruction</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <span class="text-dnd-primary">•</span>
                   <span>Achieve air superiority over landing zones</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dnd-primary">•</span>
+                  <span><strong class="text-dnd-text">Secure Pegasus Bridge before demolition</strong></span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-dnd-primary">•</span>
+                  <span>Deliver siege engines to the Coastal Keep</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-dnd-primary">•</span>
@@ -245,8 +247,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <ul class="space-y-2 text-dnd-text-muted text-sm">
               <li>• Duergar infantry and engineers</li>
               <li>• Orc shock troops and berserkers</li>
-              <li>• Fortified beach emplacements</li>
-              <li>• Anti-landing barricades</li>
+              <li>• Fortified beach emplacements (the "Amnian Wall")</li>
+              <li>• Anti-landing barricades and beach obstacles</li>
               <li>• Arcane artillery positions</li>
             </ul>
           </div>
@@ -293,8 +295,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="text-center mb-10">
           <p class="section-title">Strategy</p>
           <h2 class="text-2xl md:text-3xl font-display">
-            <span class="gold-gradient">No Theater Stands Alone</span>
+            <span class="gold-gradient">Two Acts, One Objective</span>
           </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-10">
+          <div class="card border-l-4 border-dnd-primary">
+            <p class="text-dnd-primary text-sm uppercase tracking-wider mb-2">Act II — The Iron Tide</p>
+            <p class="text-dnd-text-muted text-sm">
+              Initial landings. Beach forces storm the shore, portal team infiltrates behind enemy lines,
+              air units fight for control of the sky.
+            </p>
+          </div>
+          <div class="card border-l-4 border-dnd-accent">
+            <p class="text-dnd-accent text-sm uppercase tracking-wider mb-2">Act III — The Bridge</p>
+            <p class="text-dnd-text-muted text-sm">
+              All four theaters converge on the Pegasus Bridge. The portal team disarms it,
+              air units block reinforcements, beach forces break through to link up.
+            </p>
+          </div>
         </div>
 
         <p class="text-dnd-text-muted text-center mb-8">
@@ -307,30 +326,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <thead>
               <tr class="border-b border-dnd-border">
                 <th class="text-left py-3 text-dnd-text font-display">Theater</th>
-                <th class="text-left py-3 text-dnd-accent font-display">Success Supports</th>
-                <th class="text-left py-3 text-dnd-secondary font-display">Failure Impacts</th>
+                <th class="text-left py-3 text-dnd-text font-display">Act III Role</th>
+                <th class="text-left py-3 text-dnd-secondary font-display">If They Fail</th>
               </tr>
             </thead>
             <tbody class="text-dnd-text-muted">
               <tr class="border-b border-dnd-border/50">
                 <td class="py-3 text-dnd-text font-medium">Gold Beach (T1)</td>
-                <td class="py-3">Siege Train, Portals & Bridges</td>
-                <td class="py-3">All theaters face increased pressure</td>
+                <td class="py-3">Break through to the bridge</td>
+                <td class="py-3">Siege Train trapped, link-up fails</td>
               </tr>
               <tr class="border-b border-dnd-border/50">
                 <td class="py-3 text-dnd-text font-medium">Juno Beach (T2)</td>
-                <td class="py-3">Final Assault on Keep</td>
+                <td class="py-3">Haul siege engines up Hoc's Point</td>
                 <td class="py-3">Keep becomes nearly impregnable</td>
               </tr>
               <tr class="border-b border-dnd-border/50">
                 <td class="py-3 text-dnd-text font-medium">Watch Tower (T3)</td>
-                <td class="py-3">General Assault, Siege Train</td>
-                <td class="py-3">Ground forces delayed, casualties spike</td>
+                <td class="py-3">Disarm the bridge demolitions</td>
+                <td class="py-3">Bridge destroyed, invasion stalls</td>
               </tr>
               <tr>
                 <td class="py-3 text-dnd-text font-medium">Airspace (T4)</td>
-                <td class="py-3">All theaters protected</td>
-                <td class="py-3">All theaters suffer air strikes</td>
+                <td class="py-3">Block enemy reinforcements</td>
+                <td class="py-3">Portal team overwhelmed at bridge</td>
               </tr>
             </tbody>
           </table>

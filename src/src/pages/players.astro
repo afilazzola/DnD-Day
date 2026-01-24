@@ -41,11 +41,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <div class="grid grid-cols-2 gap-6">
                 <div>
                   <p class="text-dnd-primary text-sm font-semibold mb-2">Level</p>
-                  <p class="text-dnd-text text-2xl font-display">10</p>
+                  <p class="text-dnd-text text-2xl font-display">7</p>
                 </div>
                 <div>
                   <p class="text-dnd-primary text-sm font-semibold mb-2">Sources</p>
-                  <p class="text-dnd-text-muted">Any official D&D 5e content</p>
+                  <p class="text-dnd-text-muted">Official 5e content including Unearthed Arcana, Eberron, and Tasha's</p>
+                </div>
+                <div>
+                  <p class="text-dnd-primary text-sm font-semibold mb-2">Creation Method</p>
+                  <p class="text-dnd-text-muted">Point buy preferred</p>
+                </div>
+                <div>
+                  <p class="text-dnd-primary text-sm font-semibold mb-2">Setting</p>
+                  <p class="text-dnd-text-muted">Sword Coast, late 1480s DR</p>
                 </div>
               </div>
             </div>
@@ -229,8 +237,54 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- FAQ -->
   <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">Frequently Asked Questions</h2>
+
+        <div class="space-y-6">
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-2">Do I need to bring a pre-made character?</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Yes, please come with your character ready to play. If you need help building one,
+              reach out when you sign up and we'll help you create something that fits.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-2">What's the setting?</h3>
+            <p class="text-dnd-text-muted text-sm">
+              The Forgotten Realms, specifically the Sword Coast, during the late 1480s to mid-1490s DR.
+              The kingdom of Amn has been captured by enemy forces, though pockets of resistance remain.
+              Your character has joined the Adventurers' Alliance to liberate the region.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-2">Who decides what happens during the game?</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Although everyone is participating in a massive campaign, you engage primarily with your DM.
+              They'll guide you through shared objectives and decide what happens, what enemies you face,
+              and whether you succeed.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-2">What tools can help me build my character?</h3>
+            <p class="text-dnd-text-muted text-sm">
+              <a href="https://www.dndbeyond.com" target="_blank" rel="noopener" class="text-dnd-primary hover:underline">D&D Beyond</a>
+              is a useful website and app for building and playing your character. It handles the math
+              and keeps everything organized.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-dnd-bg-secondary">
     <div class="container-custom text-center">
       <h2 class="text-2xl md:text-3xl font-display mb-4">
         <span class="gold-gradient">Ready to Fight?</span>

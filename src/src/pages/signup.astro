@@ -84,8 +84,215 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- What to Expect -->
+  <!-- Company Rosters -->
   <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="section-title">Current Roster</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">Company Assignments</span>
+          </h2>
+          <p class="text-dnd-text-muted mt-4 max-w-2xl mx-auto">
+            Each theater fields one company of adventurers. Find your comrades and claim your spot.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Theater 1: Iron Wolves -->
+          <div class="card border-l-4 border-theater-assault">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">⚔️</span>
+              <div>
+                <h3 class="font-display text-dnd-text">Iron Wolves</h3>
+                <p class="text-theater-assault text-sm">Theater 1 — Gold Beach</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-primary font-semibold">Dungeon Master</span>
+                <span class="text-dnd-accent">✓ Taken</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 1</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 2</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 3</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 4</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 5</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2">
+                <span class="text-dnd-text-muted">Adventurer 6</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-dnd-border">
+              <p class="text-dnd-text-muted text-xs">1/7 slots filled</p>
+            </div>
+          </div>
+
+          <!-- Theater 2: Stone Breakers -->
+          <div class="card border-l-4 border-theater-siege">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">☄️</span>
+              <div>
+                <h3 class="font-display text-dnd-text">Stone Breakers</h3>
+                <p class="text-theater-siege text-sm">Theater 2 — Juno Beach</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-primary font-semibold">Dungeon Master</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 1</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 2</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 3</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 4</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 5</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2">
+                <span class="text-dnd-text-muted">Adventurer 6</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-dnd-border">
+              <p class="text-dnd-text-muted text-xs">0/7 slots filled</p>
+            </div>
+          </div>
+
+          <!-- Theater 3: Shadow Company -->
+          <div class="card border-l-4 border-theater-portals">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">🌀</span>
+              <div>
+                <h3 class="font-display text-dnd-text">Shadow Company</h3>
+                <p class="text-theater-portals text-sm">Theater 3 — Portals & Bridges</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-primary font-semibold">Dungeon Master</span>
+                <span class="text-dnd-accent">✓ Taken</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 1</span>
+                <span class="text-dnd-accent">✓ Taken</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 2</span>
+                <span class="text-dnd-accent">✓ Taken</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 3</span>
+                <span class="text-dnd-accent">✓ Taken</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 4</span>
+                <span class="text-dnd-accent">✓ Taken</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 5</span>
+                <span class="text-dnd-accent">✓ Taken</span>
+              </div>
+              <div class="flex items-center justify-between py-2">
+                <span class="text-dnd-text-muted">Adventurer 6</span>
+                <span class="text-dnd-accent">✓ Taken</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-dnd-border">
+              <p class="text-dnd-accent text-xs font-semibold">7/7 slots filled — FULL</p>
+            </div>
+          </div>
+
+          <!-- Theater 4: Storm Riders -->
+          <div class="card border-l-4 border-theater-air">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">🐦‍🔥</span>
+              <div>
+                <h3 class="font-display text-dnd-text">Storm Riders</h3>
+                <p class="text-theater-air text-sm">Theater 4 — Sky Control</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-primary font-semibold">Dungeon Master</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 1</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 2</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 3</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 4</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-dnd-border/50">
+                <span class="text-dnd-text-muted">Adventurer 5</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+              <div class="flex items-center justify-between py-2">
+                <span class="text-dnd-text-muted">Adventurer 6</span>
+                <span class="text-dnd-text-muted">○ Open</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-dnd-border">
+              <p class="text-dnd-text-muted text-xs">0/7 slots filled</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="mt-8 text-center">
+          <div class="inline-flex items-center gap-6 text-sm">
+            <span class="flex items-center gap-2">
+              <span class="text-dnd-accent">✓ Taken</span>
+            </span>
+            <span class="flex items-center gap-2">
+              <span class="text-dnd-text-muted">○ Open</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="py-16">
     <div class="container-custom">
       <div class="max-w-2xl mx-auto text-center">
         <h2 class="text-2xl font-display mb-6">
@@ -94,7 +301,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <ul class="text-dnd-text-muted space-y-3 text-left max-w-md mx-auto">
           <li class="flex items-start gap-3">
             <span class="text-dnd-primary">⚔️</span>
-            <span>A level 10 character (or we can help you create one)</span>
+            <span>A level 7 character (or we can help you create one)</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="text-dnd-primary">📜</span>

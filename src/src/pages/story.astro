@@ -11,7 +11,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span class="gold-gradient">Operation Golden Sword</span>
       </h1>
       <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
-        A three-act epic where heroes must race against time to break the Iron Conclave's grip on Amn.
+        A four-act epic where heroes must race against time to break the Iron Conclave's grip on Amn.
       </p>
     </div>
   </section>
@@ -231,22 +231,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <tbody class="text-dnd-text-muted">
               <tr class="border-b border-dnd-border/50">
                 <td class="py-2">T1 - General Assault</td>
-                <td class="py-2">T2, T3</td>
+                <td class="py-2">T2, Act III</td>
                 <td class="py-2">All</td>
               </tr>
               <tr class="border-b border-dnd-border/50">
                 <td class="py-2">T2 - Siege</td>
-                <td class="py-2">Act III</td>
-                <td class="py-2">Act III</td>
+                <td class="py-2">Act IV</td>
+                <td class="py-2">Act IV</td>
               </tr>
               <tr class="border-b border-dnd-border/50">
-                <td class="py-2">T3 - Bridges</td>
-                <td class="py-2">T1, T2</td>
-                <td class="py-2">T1, T2</td>
+                <td class="py-2">T3 - Portals</td>
+                <td class="py-2">Act III (Bridge)</td>
+                <td class="py-2">Act III, T1, T2</td>
               </tr>
               <tr>
                 <td class="py-2">T4 - Air</td>
-                <td class="py-2">All</td>
+                <td class="py-2">Act III (Bridge)</td>
                 <td class="py-2">All</td>
               </tr>
             </tbody>
@@ -267,9 +267,100 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
         <div class="flex items-center gap-4 mb-6">
-          <span class="text-4xl">🔥</span>
+          <span class="text-4xl">🌉</span>
           <div>
             <p class="section-title">Act III</p>
+            <h2 class="text-3xl font-display">The Bridge</h2>
+          </div>
+        </div>
+
+        <div class="card mb-6">
+          <p class="text-dnd-primary text-sm uppercase tracking-wider mb-2">The Critical Crossing</p>
+          <p class="text-dnd-text-muted text-sm italic">Tone: Tense, desperate, against the clock</p>
+        </div>
+
+        <p class="text-dnd-text-muted leading-relaxed mb-8">
+          Between the beaches and the Coastal Keep lies <strong class="text-dnd-text">Pegasus Bridge</strong>
+          over the Orn River — the only crossing capable of supporting siege engines and massed troops. Intelligence confirms
+          the Iron Conclave has rigged it for demolition. All four theaters must converge on this single objective.
+        </p>
+
+        <h3 class="font-display text-xl text-dnd-primary mb-4">Four Theaters, One Objective</h3>
+        <p class="text-dnd-text-muted leading-relaxed mb-6">
+          If the bridge falls, the invasion stalls. Every theater has a critical role to play in securing the crossing.
+        </p>
+
+        <div class="grid gap-4 mb-8">
+          <div class="card border-l-4 border-theater-assault">
+            <h4 class="font-display text-dnd-text mb-2">Theater 1: Gold Beach — Break the Line</h4>
+            <p class="text-dnd-text-muted text-sm mb-3">
+              The assault force must smash through the entrenched enemy defensive line blocking the road
+              to the bridge.
+            </p>
+            <ul class="text-dnd-text-muted text-sm space-y-1">
+              <li>• Breach fortified enemy positions between the beach and the river</li>
+              <li>• Clear the road for the siege train following behind</li>
+              <li>• Link up with portal team at the bridge</li>
+            </ul>
+          </div>
+
+          <div class="card border-l-4 border-theater-siege">
+            <h4 class="font-display text-dnd-text mb-2">Theater 2: Juno Beach — Move the Siege Engines</h4>
+            <p class="text-dnd-text-muted text-sm mb-3">
+              The siege train faces a brutal challenge: hauling massive catapults and trebuchets up the sandy
+              bluffs of Hoc's Point and through difficult terrain while under fire.
+            </p>
+            <ul class="text-dnd-text-muted text-sm space-y-1">
+              <li>• Get creative — winches, magic, brute force, or improvised solutions</li>
+              <li>• Protect the siege engines from saboteurs and enemy fire</li>
+              <li>• Reach the bridge before the window closes</li>
+            </ul>
+          </div>
+
+          <div class="card border-l-4 border-theater-portals">
+            <h4 class="font-display text-dnd-text mb-2">Theater 3: Portals — Disarm the Bridge</h4>
+            <p class="text-dnd-text-muted text-sm mb-3">
+              The portal team is already behind enemy lines — the only force close enough to reach the bridge
+              before the demolition order is given.
+            </p>
+            <ul class="text-dnd-text-muted text-sm space-y-1">
+              <li>• Assault the Duergar demolition platoon holding the bridge</li>
+              <li>• Neutralize sappers and disarm explosive charges</li>
+              <li>• Hold the bridge against counterattack until reinforced</li>
+            </ul>
+          </div>
+
+          <div class="card border-l-4 border-theater-air">
+            <h4 class="font-display text-dnd-text mb-2">Theater 4: Air — Block the Reinforcements</h4>
+            <p class="text-dnd-text-muted text-sm mb-3">
+              With air superiority achieved, flying units must land on the road beyond the bridge to intercept
+              enemy reinforcements marching from the Coastal Keep.
+            </p>
+            <ul class="text-dnd-text-muted text-sm space-y-1">
+              <li>• Land on the inland road past the bridge</li>
+              <li>• Establish a blocking position against Keep reinforcements</li>
+              <li>• Buy time for the portal team and beach forces to secure the crossing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card bg-dnd-primary/10 border-dnd-primary">
+          <p class="text-dnd-primary font-display text-center text-lg">
+            The bridge must hold. The siege engines must cross. Everything depends on it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Act IV -->
+  <section class="py-16 bg-dnd-bg-secondary" id="act-4">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-4xl">🔥</span>
+          <div>
+            <p class="section-title">Act IV</p>
             <h2 class="text-3xl font-display">The Fall of the Coastal Keep</h2>
           </div>
         </div>

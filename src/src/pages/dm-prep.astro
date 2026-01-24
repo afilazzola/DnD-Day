@@ -54,8 +54,46 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- Theater Objectives -->
+  <!-- Campaign Setting -->
   <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">
+          Campaign Setting
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-2">Setting</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Forgotten Realms, Sword Coast, late 1480s to mid-1490s DR. The entire kingdom
+              of Amn has been captured, though pockets of resistance remain.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-2">Player Characters</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Level 7 characters using official 5e content including Unearthed Arcana,
+              Eberron, and Tasha's Cauldron of Everything. Point buy is preferred.
+            </p>
+          </div>
+        </div>
+
+        <div class="card border-dnd-accent">
+          <h3 class="font-display text-dnd-accent mb-2">Your Authority</h3>
+          <p class="text-dnd-text-muted text-sm">
+            You guide players through shared objectives and decide what can happen,
+            what enemies they face, and whether they succeed. You have free license
+            to introduce whatever challenges you see fit against the adventurers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Theater Objectives -->
+  <section class="py-16">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-2xl font-display text-dnd-primary mb-6">
@@ -63,54 +101,110 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </h2>
 
         <p class="text-dnd-text-muted mb-8">
-          Each theater has primary objectives that must be resolved by the end
-          of your session. Whether players succeed or fail, report the
-          outcome—it affects other tables.
+          Each theater has objectives across two acts. Act II is the initial landing;
+          Act III is the convergence on the Pegasus Bridge. Report outcomes at each
+          checkpoint—they affect other tables.
         </p>
 
-        <div class="space-y-6">
+        <div class="space-y-8">
+          <!-- Theater 1 -->
           <div class="card border-l-4 border-theater-assault">
-            <h3 class="font-display text-dnd-text mb-2">
+            <h3 class="font-display text-dnd-text mb-4">
               Theater 1 — Gold Beach (General Assault)
             </h3>
-            <ul class="text-dnd-text-muted text-sm space-y-1">
-              <li>• Break shoreline defenses and push inland</li>
-              <li>• Draw enemy attention away from the Siege Train</li>
-              <li>• Reach the road to the Coastal Keep</li>
-            </ul>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-dnd-primary text-xs uppercase tracking-wider mb-2">Act II — Storm the Beach</p>
+                <ul class="text-dnd-text-muted text-sm space-y-1">
+                  <li>• Break shoreline defenses</li>
+                  <li>• Draw enemy attention from Siege Train</li>
+                  <li>• Reach the road toward the Orn River</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-dnd-accent text-xs uppercase tracking-wider mb-2">Act III — Break the Line</p>
+                <ul class="text-dnd-text-muted text-sm space-y-1">
+                  <li>• Breach fortified positions inland</li>
+                  <li>• Clear the road for the Siege Train</li>
+                  <li>• Link up at the bridge</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
+          <!-- Theater 2 -->
           <div class="card border-l-4 border-theater-siege">
-            <h3 class="font-display text-dnd-text mb-2">
+            <h3 class="font-display text-dnd-text mb-4">
               Theater 2 — Juno Beach (Siege Train)
             </h3>
-            <ul class="text-dnd-text-muted text-sm space-y-1">
-              <li>• Land and protect the siege engines</li>
-              <li>• Deliver equipment intact to the Coastal Keep</li>
-              <li>• Losing siege engines is catastrophic for Act III</li>
-            </ul>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-dnd-primary text-xs uppercase tracking-wider mb-2">Act II — Land the Engines</p>
+                <ul class="text-dnd-text-muted text-sm space-y-1">
+                  <li>• Land catapults and trebuchets</li>
+                  <li>• Protect from enemy fire</li>
+                  <li>• Begin moving inland</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-dnd-accent text-xs uppercase tracking-wider mb-2">Act III — Climb the Bluffs</p>
+                <ul class="text-dnd-text-muted text-sm space-y-1">
+                  <li>• Haul engines up sandy terrain</li>
+                  <li>• Get creative (winches, magic, brute force)</li>
+                  <li>• Cross the bridge to the Keep</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
+          <!-- Theater 3 -->
           <div class="card border-l-4 border-theater-portals">
-            <h3 class="font-display text-dnd-text mb-2">
+            <h3 class="font-display text-dnd-text mb-4">
               Theater 3 — Watch Tower (Portals & Bridges)
             </h3>
-            <ul class="text-dnd-text-muted text-sm space-y-1">
-              <li>• Secure two critical bridges behind enemy lines</li>
-              <li>• Hold them for Theaters 1 and 2</li>
-              <li>• Prevent enemy counterattacks and demolition</li>
-            </ul>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-dnd-primary text-xs uppercase tracking-wider mb-2">Act II — Secure Landing Zone</p>
+                <ul class="text-dnd-text-muted text-sm space-y-1">
+                  <li>• Emerge from portal at watchtower</li>
+                  <li>• Eliminate patrols quietly</li>
+                  <li>• Move toward the bridge</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-dnd-accent text-xs uppercase tracking-wider mb-2">Act III — Disarm the Bridge</p>
+                <ul class="text-dnd-text-muted text-sm space-y-1">
+                  <li>• Assault demolition platoon</li>
+                  <li>• Disarm explosive charges</li>
+                  <li>• Hold until reinforced</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
+          <!-- Theater 4 -->
           <div class="card border-l-4 border-theater-air">
-            <h3 class="font-display text-dnd-text mb-2">
+            <h3 class="font-display text-dnd-text mb-4">
               Theater 4 — Contested Airspace (Sky Control)
             </h3>
-            <ul class="text-dnd-text-muted text-sm space-y-1">
-              <li>• Achieve air superiority over landing zones</li>
-              <li>• Intercept wyverns, gyrocopters, and war-mages</li>
-              <li>• Protect ground forces from aerial bombardment</li>
-            </ul>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-dnd-primary text-xs uppercase tracking-wider mb-2">Act II — Win the Sky</p>
+                <ul class="text-dnd-text-muted text-sm space-y-1">
+                  <li>• Achieve air superiority</li>
+                  <li>• Intercept wyverns and gyrocopters</li>
+                  <li>• Protect ground forces</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-dnd-accent text-xs uppercase tracking-wider mb-2">Act III — Block the Road</p>
+                <ul class="text-dnd-text-muted text-sm space-y-1">
+                  <li>• Land beyond the bridge</li>
+                  <li>• Block Keep reinforcements</li>
+                  <li>• Hold until beach forces arrive</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -118,7 +212,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <!-- Preparation Tips -->
-  <section class="py-16">
+  <section class="py-16 bg-dnd-bg-secondary">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-2xl font-display text-dnd-primary mb-6">
@@ -129,7 +223,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="card">
             <h3 class="font-display text-dnd-text mb-3">Encounters</h3>
             <p class="text-dnd-text-muted text-sm">
-              Design 3-4 combat encounters scaled for level 10 characters.
+              Design 3-4 combat encounters scaled for level 7 characters.
               Include at least one setpiece battle that feels cinematic and
               high-stakes.
             </p>
@@ -164,7 +258,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <!-- Coordination -->
-  <section class="py-16 bg-dnd-bg-secondary">
+  <section class="py-16">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-2xl font-display text-dnd-primary mb-6">
@@ -207,21 +301,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <!-- Resources -->
-  <section class="py-16">
+  <section class="py-16 bg-dnd-bg-secondary">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-2xl font-display text-dnd-primary mb-6">Resources</h2>
 
-        <div class="space-y-4">
-          <p class="text-dnd-text-muted">
-            Review these pages for campaign context and enemy details:
-          </p>
+        <div class="space-y-6">
+          <div>
+            <p class="text-dnd-text-muted mb-4">
+              Review these pages for campaign context and enemy details:
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="/story" class="btn btn-secondary">Campaign Story</a>
+              <a href="/briefing" class="btn btn-secondary">Mission Briefing</a>
+              <a href="/enemies" class="btn btn-secondary">Enemy Guide</a>
+              <a href="/theaters" class="btn btn-secondary">Theater Details</a>
+            </div>
+          </div>
 
-          <div class="flex flex-wrap gap-4">
-            <a href="/story" class="btn btn-secondary">Campaign Story</a>
-            <a href="/briefing" class="btn btn-secondary">Mission Briefing</a>
-            <a href="/enemies" class="btn btn-secondary">Enemy Guide</a>
-            <a href="/theaters" class="btn btn-secondary">Theater Details</a>
+          <div>
+            <p class="text-dnd-text-muted mb-4">
+              External tools for encounter building and reference:
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="https://www.dndbeyond.com" target="_blank" rel="noopener" class="btn btn-secondary">D&D Beyond</a>
+            </div>
           </div>
         </div>
       </div>
