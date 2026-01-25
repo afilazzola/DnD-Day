@@ -8,7 +8,7 @@
 
 **Setting:** Forgotten Realms, Sword Coast, late 1480s to mid-1490s DR
 **Character Level:** 7
-**Allowed Content:** Official 5e material including Unearthed Arcana, Eberron, and Tasha's Cauldron of Everything
+**Allowed Content:** Official 5e material including Unearthed Arcana, Tasha's Cauldron of Everything, Tal'Dorei Campaign Setting, and Explorer's Guide to Wildemount
 **Character Creation:** Point buy preferred
 **Structure:** Four acts (Eve of War → Iron Tide → The Bridge → Fall of the Coastal Keep)
 
