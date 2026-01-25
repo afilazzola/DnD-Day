@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Event Organizers
+const organizers = [
+  { name: "Alex Filazzola", role: "Co-Organizer, Story & Web Design" },
+  { name: "Nick Filazzola", role: "Co-Organizer, Terrain & Props" },
+  { name: "Stefan Kovaliw", role: "Story & Miniatures" },
+  { name: "Dante Nocera", role: "Graphic Design" },
+];
+
+// Dungeon Masters
+const dungeonMasters = [
+  { name: "Stefan Kovaliw", role: "Dungeon Master" },
+  { name: "Alex Filazzola", role: "Dungeon Master" },
+  { name: "Michael Rosa", role: "Dungeon Master" },
+];
+---
+
+<BaseLayout
+  title="The Crew"
+  description="Meet the volunteers making DnD Day - Operation Golden Sword possible."
+>
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">The Team</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">The Crew</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        Meet the passionate volunteers bringing Operation Golden Sword to life.
+      </p>
+    </div>
+  </section>
+
+  <!-- Event Organizers -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="section-title">Leadership</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">Event Organizers</span>
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {
+            organizers.map((member) => (
+              <div class="card text-center">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-dnd-primary/20 flex items-center justify-center">
+                  <span class="text-2xl text-dnd-primary">&#x2694;</span>
+                </div>
+                <h3 class="font-display text-dnd-text text-lg">
+                  {member.name}
+                </h3>
+                <p class="text-dnd-text-muted text-sm">{member.role}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dungeon Masters -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+          <p class="section-title">At the Table</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">Dungeon Masters</span>
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+          {
+            dungeonMasters.map((member) => (
+              <div class="card text-center">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-dnd-secondary/20 flex items-center justify-center">
+                  <span class="text-2xl text-dnd-secondary">&#x1F4DC;</span>
+                </div>
+                <h3 class="font-display text-dnd-text text-lg">
+                  {member.name}
+                </h3>
+                <p class="text-dnd-text-muted text-sm">{member.role}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join the Crew CTA -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="section-title">Join Us</p>
+        <h2 class="text-2xl md:text-3xl font-display mb-6">
+          <span class="gold-gradient">Want to Be Part of the Crew?</span>
+        </h2>
+        <p class="text-dnd-text-muted mb-4 max-w-xl mx-auto">
+          We're always looking for passionate people to help make DnD Day even
+          better. Whether you can DM, build terrain, help with logistics, or
+          contribute in other ways&mdash;we'd love to have you on board.
+        </p>
+        <p class="text-dnd-text mb-8 max-w-xl mx-auto">
+          Reach out and let us know how you'd like to help!
+        </p>
+        <a href="/contact" class="btn btn-primary">Volunteer with Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Support -->
+  <section class="py-8 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <a
+        href="/support"
+        class="text-dnd-primary hover:text-dnd-text transition-colors"
+      >
+        &larr; Back to Support the Event
+      </a>
+    </div>
+  </section>
+</BaseLayout>
