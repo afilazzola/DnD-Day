@@ -253,8 +253,8 @@ The heroes are split into four theaters of war, each critical to the battle.
 
 ### Theater Themes
 
-- Beach Landing (General Assault)
-- Beach Landing (Siege Train)
+- Juno Beach (General Assault)
+- Gold Beach (Siege Train)
 - Portals & Bridges (Behind Enemy Lines)
 - Air Battle (Sky Control)
 
@@ -305,7 +305,7 @@ The heroes are split into four theaters of war, each critical to the battle.
 
 ### Act II — Land the Siege Engines
 
-- Land catapults and trebuchets on Juno Beach
+- Land catapults and trebuchets on Gold Beach
 - Protect siege engines from enemy fire
 - Begin moving equipment inland
 

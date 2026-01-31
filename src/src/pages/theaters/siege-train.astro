@@ -8,7 +8,7 @@ const theater = theaters.theaters.find(t => t.id === 'siege-train');
 
 <BaseLayout
   title={theater?.name || 'Siege Train'}
-  description={theater?.description || 'Beach Landing - Siege Train theater information.'}
+  description={theater?.description || 'Gold Beach - Siege Train theater information.'}
 >
   {theater && <TheaterPage theater={theater} />}
 </BaseLayout>
