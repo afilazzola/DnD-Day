@@ -38,8 +38,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 >
                   Date
                 </p>
-                <p class="text-dnd-text text-xl font-display">May 2026</p>
-                <p class="text-dnd-primary text-sm">(Exact date TBD)</p>
+                <p class="text-dnd-text text-xl font-display">June 6th, 2026</p>
+                <p class="text-dnd-primary text-sm">(D-Day Anniversary)</p>
               </div>
 
               <div>
@@ -48,7 +48,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 >
                   Start Time
                 </p>
-                <p class="text-dnd-text text-xl font-display">TBD</p>
+                <p class="text-dnd-text text-xl font-display">5:00 PM</p>
               </div>
 
               <div>
@@ -76,8 +76,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 >
                   Location
                 </p>
-                <p class="text-dnd-text text-xl font-display">TBD</p>
-                <p class="text-dnd-primary text-sm">(Details coming soon)</p>
+                <p class="text-dnd-text text-xl font-display">Royal Canadian Legion</p>
+                <p class="text-dnd-primary text-sm">Coronation Branch 286</p>
               </div>
 
               <div>
@@ -86,17 +86,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 >
                   Address
                 </p>
-                <p class="text-dnd-text-muted">To be announced</p>
+                <p class="text-dnd-text-muted">Etobicoke, Toronto</p>
               </div>
 
-              <!-- Map placeholder -->
-              <div
-                class="bg-dnd-bg rounded-lg h-32 flex items-center justify-center border border-dnd-border"
-              >
-                <p class="text-dnd-text-muted text-sm">
-                  Map will be added once location is confirmed
-                </p>
+              <!-- Embedded Map -->
+              <div class="rounded-lg overflow-hidden border border-dnd-border">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.8!2d-79.5578787!3d43.7259734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b308427e0b297%3A0xf206ce8602b90818!2sRCL%20CORONATION%20Branch%20286!5e0!3m2!1sen!2sca!4v1706700000000"
+                  width="100%"
+                  height="200"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="w-full"
+                ></iframe>
               </div>
+              <a
+                href="https://maps.app.goo.gl/WD56hj3nPPfjr5FD8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-dnd-primary text-sm hover:underline inline-block mt-2"
+              >
+                Open in Google Maps →
+              </a>
             </div>
           </div>
         </div>

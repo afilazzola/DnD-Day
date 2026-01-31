@@ -2,7 +2,7 @@
   "theaters": [
     {
       "id": "beach-assault",
-      "name": "Beach Landing - General Assault",
+      "name": "Juno Beach - General Assault",
       "role": "Shock force and distraction",
       "tone": "Brutal, relentless, high casualties",
       "color": "theater-assault",
@@ -45,7 +45,7 @@
     },
     {
       "id": "siege-train",
-      "name": "Beach Landing - Siege Train",
+      "name": "Gold Beach - Siege Train",
       "role": "Strategic enablers",
       "tone": "Precision under fire",
       "color": "theater-siege",
@@ -54,7 +54,7 @@
       "actII": {
         "title": "Land the Siege Engines",
         "objectives": [
-          "Land catapults and trebuchets on Juno Beach",
+          "Land catapults and trebuchets on Gold Beach",
           "Protect siege engines from enemy fire",
           "Begin moving equipment inland"
         ]
