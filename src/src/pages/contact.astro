@@ -1,8 +1,14 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const RECAPTCHA_SITE_KEY = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
+const API_ENDPOINT = import.meta.env.PUBLIC_API_ENDPOINT;
 ---
 
-<BaseLayout title="Contact" description="Get in touch with the DnD Day organizers. Questions about Operation Golden Sword? We're here to help.">
+<BaseLayout
+  title="Contact"
+  description="Get in touch with the DnD Day organizers. Questions about Operation Golden Sword? We're here to help."
+>
   <!-- Header -->
   <section class="py-16 bg-dnd-bg-secondary">
     <div class="container-custom text-center">
@@ -11,8 +17,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span class="gold-gradient">Contact Us</span>
       </h1>
       <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
-        Have questions about DnD Day? Want to learn more about Operation Golden Sword?
-        We'd love to hear from you.
+        Have questions about DnD Day? Want to learn more about Operation Golden
+        Sword? We'd love to hear from you.
       </p>
     </div>
   </section>
@@ -24,7 +30,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="grid md:grid-cols-2 gap-12">
           <!-- Contact Info -->
           <div>
-            <h2 class="text-2xl font-display text-dnd-primary mb-6">Quick Contact</h2>
+            <h2 class="text-2xl font-display text-dnd-primary mb-6">
+              Quick Contact
+            </h2>
 
             <div class="space-y-6">
               <div class="card">
@@ -32,8 +40,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <span class="text-2xl">📧</span>
                   <div>
                     <h3 class="font-display text-dnd-text mb-1">Email</h3>
-                    <p class="text-dnd-text-muted text-sm">organizer@example.com</p>
-                    <p class="text-dnd-text-muted text-xs mt-1">(Placeholder - update with real email)</p>
+                    <p class="text-dnd-text-muted text-sm">
+                      organizer@example.com
+                    </p>
+                    <p class="text-dnd-text-muted text-xs mt-1">
+                      (Placeholder - update with real email)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -43,8 +55,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <span class="text-2xl">💬</span>
                   <div>
                     <h3 class="font-display text-dnd-text mb-1">Discord</h3>
-                    <p class="text-dnd-text-muted text-sm">Join our Discord server</p>
-                    <p class="text-dnd-text-muted text-xs mt-1">(Link coming soon)</p>
+                    <p class="text-dnd-text-muted text-sm">
+                      Join our Discord server
+                    </p>
+                    <p class="text-dnd-text-muted text-xs mt-1">
+                      (Link coming soon)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -53,28 +69,51 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <div class="flex items-start gap-4">
                   <span class="text-2xl">🐦</span>
                   <div>
-                    <h3 class="font-display text-dnd-text mb-1">Social Media</h3>
-                    <p class="text-dnd-text-muted text-sm">Follow us for updates</p>
-                    <p class="text-dnd-text-muted text-xs mt-1">(Links coming soon)</p>
+                    <h3 class="font-display text-dnd-text mb-1">
+                      Social Media
+                    </h3>
+                    <p class="text-dnd-text-muted text-sm">
+                      Follow us for updates
+                    </p>
+                    <p class="text-dnd-text-muted text-xs mt-1">
+                      (Links coming soon)
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="mt-8">
-              <h3 class="font-display text-dnd-primary mb-4">Common Questions</h3>
+              <h3 class="font-display text-dnd-primary mb-4">
+                Common Questions
+              </h3>
               <div class="space-y-4">
                 <div>
-                  <p class="text-dnd-text text-sm font-medium">What level should my character be?</p>
-                  <p class="text-dnd-text-muted text-sm">Character requirements will be announced closer to the event.</p>
+                  <p class="text-dnd-text text-sm font-medium">
+                    What level should my character be?
+                  </p>
+                  <p class="text-dnd-text-muted text-sm">
+                    Character requirements will be announced closer to the
+                    event.
+                  </p>
                 </div>
                 <div>
-                  <p class="text-dnd-text text-sm font-medium">Can I switch theaters?</p>
-                  <p class="text-dnd-text-muted text-sm">Yes, contact us if you need to change your theater assignment.</p>
+                  <p class="text-dnd-text text-sm font-medium">
+                    Can I switch theaters?
+                  </p>
+                  <p class="text-dnd-text-muted text-sm">
+                    Yes, contact us if you need to change your theater
+                    assignment.
+                  </p>
                 </div>
                 <div>
-                  <p class="text-dnd-text text-sm font-medium">Is food provided?</p>
-                  <p class="text-dnd-text-muted text-sm">Details about food will be announced with the event location.</p>
+                  <p class="text-dnd-text text-sm font-medium">
+                    Is food provided?
+                  </p>
+                  <p class="text-dnd-text-muted text-sm">
+                    Details about food will be announced with the event
+                    location.
+                  </p>
                 </div>
               </div>
             </div>
@@ -82,12 +121,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <!-- Contact Form -->
           <div>
-            <h2 class="text-2xl font-display text-dnd-primary mb-6">Send a Message</h2>
+            <h2 class="text-2xl font-display text-dnd-primary mb-6">
+              Send a Message
+            </h2>
 
             <form id="contact-form" class="card">
               <!-- Name -->
               <div class="mb-6">
-                <label for="contact-name" class="block text-dnd-text text-sm font-medium mb-2">
+                <label
+                  for="contact-name"
+                  class="block text-dnd-text text-sm font-medium mb-2"
+                >
                   Name <span class="text-dnd-secondary">*</span>
                 </label>
                 <input
@@ -102,7 +146,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
               <!-- Email -->
               <div class="mb-6">
-                <label for="contact-email" class="block text-dnd-text text-sm font-medium mb-2">
+                <label
+                  for="contact-email"
+                  class="block text-dnd-text text-sm font-medium mb-2"
+                >
                   Email <span class="text-dnd-secondary">*</span>
                 </label>
                 <input
@@ -117,7 +164,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
               <!-- Subject -->
               <div class="mb-6">
-                <label for="contact-subject" class="block text-dnd-text text-sm font-medium mb-2">
+                <label
+                  for="contact-subject"
+                  class="block text-dnd-text text-sm font-medium mb-2"
+                >
                   Subject
                 </label>
                 <select
@@ -135,7 +185,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
               <!-- Message -->
               <div class="mb-6">
-                <label for="contact-message" class="block text-dnd-text text-sm font-medium mb-2">
+                <label
+                  for="contact-message"
+                  class="block text-dnd-text text-sm font-medium mb-2"
+                >
                   Message <span class="text-dnd-secondary">*</span>
                 </label>
                 <textarea
@@ -144,13 +197,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   required
                   rows="5"
                   class="w-full px-4 py-3 bg-dnd-bg border border-dnd-border rounded-lg text-dnd-text placeholder-dnd-text-muted focus:outline-none focus:border-dnd-primary transition-colors resize-none"
-                  placeholder="Your message..."
-                ></textarea>
+                  placeholder="Your message..."></textarea>
               </div>
 
               <!-- Honeypot for spam -->
               <div class="hidden">
-                <input type="text" name="website" tabindex="-1" autocomplete="off" />
+                <input
+                  type="text"
+                  name="website"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
               </div>
 
               <!-- Submit Button -->
@@ -159,22 +216,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </button>
 
               <!-- Success Message -->
-              <div id="contact-success" class="hidden mt-6 p-4 bg-dnd-accent/20 border border-dnd-accent rounded-lg text-center">
+              <div
+                id="contact-success"
+                class="hidden mt-6 p-4 bg-dnd-accent/20 border border-dnd-accent rounded-lg text-center"
+              >
                 <p class="text-dnd-accent font-display">Message sent!</p>
-                <p class="text-dnd-text-muted text-sm mt-1">We'll get back to you as soon as possible.</p>
+                <p class="text-dnd-text-muted text-sm mt-1">
+                  We'll get back to you as soon as possible.
+                </p>
               </div>
 
               <!-- Error Message -->
-              <div id="contact-error" class="hidden mt-6 p-4 bg-dnd-secondary/20 border border-dnd-secondary rounded-lg text-center">
-                <p class="text-dnd-secondary font-display">Something went wrong.</p>
-                <p class="text-dnd-text-muted text-sm mt-1">Please try again or contact us directly via email.</p>
+              <div
+                id="contact-error"
+                class="hidden mt-6 p-4 bg-dnd-secondary/20 border border-dnd-secondary rounded-lg text-center"
+              >
+                <p class="text-dnd-secondary font-display">
+                  Something went wrong.
+                </p>
+                <p class="text-dnd-text-muted text-sm mt-1">
+                  Please try again or contact us directly via email.
+                </p>
               </div>
 
               <!-- reCAPTCHA notice -->
               <p class="text-dnd-text-muted text-xs mt-4 text-center">
                 This site is protected by reCAPTCHA and the Google
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-dnd-primary hover:underline">Privacy Policy</a> and
-                <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="text-dnd-primary hover:underline">Terms of Service</a> apply.
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-dnd-primary hover:underline">Privacy Policy</a
+                > and
+                <a
+                  href="https://policies.google.com/terms"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-dnd-primary hover:underline">Terms of Service</a
+                > apply.
               </p>
             </form>
           </div>
@@ -184,66 +263,70 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 </BaseLayout>
 
-<script is:inline src="https://www.google.com/recaptcha/api.js?render=RECAPTCHA_SITE_KEY"></script>
-<script is:inline>
-  // Configuration - replace with your actual values
-  const RECAPTCHA_SITE_KEY = 'RECAPTCHA_SITE_KEY'; // Replace with your reCAPTCHA v3 site key
-  const API_ENDPOINT = 'API_ENDPOINT'; // Replace with your Lambda Function URL
+<script is:inline define:vars={{ RECAPTCHA_SITE_KEY }}>
+  // Load reCAPTCHA script dynamically
+  const script = document.createElement('script');
+  script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+  document.head.appendChild(script);
+</script>
+<script define:vars={{ RECAPTCHA_SITE_KEY, API_ENDPOINT }}>
 
-  const form = document.getElementById('contact-form');
+  const form = document.getElementById("contact-form");
   const submitBtn = form?.querySelector('button[type="submit"]');
-  const successMessage = document.getElementById('contact-success');
-  const errorMessage = document.getElementById('contact-error');
+  const successMessage = document.getElementById("contact-success");
+  const errorMessage = document.getElementById("contact-error");
 
-  form?.addEventListener('submit', async (e) => {
+  form?.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
 
     // Check honeypot
-    if (formData.get('website')) {
+    if (formData.get("website")) {
       return; // Likely spam
     }
 
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
 
     if (!name || !email || !message) {
-      errorMessage?.classList.remove('hidden');
-      successMessage?.classList.add('hidden');
+      errorMessage?.classList.remove("hidden");
+      successMessage?.classList.add("hidden");
       return;
     }
 
     // Disable button and show loading state
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
+      submitBtn.textContent = "Sending...";
     }
 
     // Hide any previous messages
-    successMessage?.classList.add('hidden');
-    errorMessage?.classList.add('hidden');
+    successMessage?.classList.add("hidden");
+    errorMessage?.classList.add("hidden");
 
     try {
       // Get reCAPTCHA token
-      const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact_submit' });
+      const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+        action: "contact_submit",
+      });
 
       // Send to Lambda
       const response = await fetch(API_ENDPOINT, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           name,
           email,
           subject,
           message,
-          website: formData.get('website'), // honeypot
+          website: formData.get("website"), // honeypot
           recaptchaToken,
-          recaptchaAction: 'contact_submit'
+          recaptchaAction: "contact_submit",
         }),
       });
 
@@ -251,23 +334,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       if (response.ok && result.ok) {
         // Show success
-        successMessage?.classList.remove('hidden');
-        errorMessage?.classList.add('hidden');
+        successMessage?.classList.remove("hidden");
+        errorMessage?.classList.add("hidden");
         form.reset();
       } else {
-        console.error('Form submission failed:', result);
-        errorMessage?.classList.remove('hidden');
-        successMessage?.classList.add('hidden');
+        console.error("Form submission failed:", result);
+        errorMessage?.classList.remove("hidden");
+        successMessage?.classList.add("hidden");
       }
     } catch (error) {
-      console.error('Form submission error:', error);
-      errorMessage?.classList.remove('hidden');
-      successMessage?.classList.add('hidden');
+      console.error("Form submission error:", error);
+      errorMessage?.classList.remove("hidden");
+      successMessage?.classList.add("hidden");
     } finally {
       // Re-enable button
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
+        submitBtn.textContent = "Send Message";
       }
     }
   });
