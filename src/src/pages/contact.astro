@@ -170,9 +170,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <p class="text-dnd-text-muted text-sm mt-1">Please try again or contact us directly via email.</p>
               </div>
 
-              <!-- Note -->
+              <!-- reCAPTCHA notice -->
               <p class="text-dnd-text-muted text-xs mt-4 text-center">
-                Note: This form currently saves locally. Connect to a form service (Formspree, Netlify Forms, etc.) for actual email delivery.
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-dnd-primary hover:underline">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms" target="_blank" rel="noopener" class="text-dnd-primary hover:underline">Terms of Service</a> apply.
               </p>
             </form>
           </div>
@@ -182,12 +184,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 </BaseLayout>
 
-<script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
+<script is:inline src="https://www.google.com/recaptcha/api.js?render=RECAPTCHA_SITE_KEY"></script>
+<script is:inline>
+  // Configuration - replace with your actual values
+  const RECAPTCHA_SITE_KEY = 'RECAPTCHA_SITE_KEY'; // Replace with your reCAPTCHA v3 site key
+  const API_ENDPOINT = 'API_ENDPOINT'; // Replace with your Lambda Function URL
+
+  const form = document.getElementById('contact-form');
+  const submitBtn = form?.querySelector('button[type="submit"]');
   const successMessage = document.getElementById('contact-success');
   const errorMessage = document.getElementById('contact-error');
 
-  form?.addEventListener('submit', (e) => {
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
@@ -197,10 +205,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       return; // Likely spam
     }
 
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const subject = formData.get('subject') as string;
-    const message = formData.get('message') as string;
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
 
     if (!name || !email || !message) {
       errorMessage?.classList.remove('hidden');
@@ -208,24 +216,59 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       return;
     }
 
-    // In a real implementation, you would send this to a backend service
-    // For now, we'll just save it to localStorage and show success
-    const contacts = JSON.parse(localStorage.getItem('dndday-contacts') || '[]');
-    contacts.push({
-      id: crypto.randomUUID(),
-      name,
-      email,
-      subject,
-      message,
-      timestamp: Date.now(),
-    });
-    localStorage.setItem('dndday-contacts', JSON.stringify(contacts));
+    // Disable button and show loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+    }
 
-    // Show success
-    successMessage?.classList.remove('hidden');
+    // Hide any previous messages
+    successMessage?.classList.add('hidden');
     errorMessage?.classList.add('hidden');
 
-    // Reset form
-    form.reset();
+    try {
+      // Get reCAPTCHA token
+      const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact_submit' });
+
+      // Send to Lambda
+      const response = await fetch(API_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          message,
+          website: formData.get('website'), // honeypot
+          recaptchaToken,
+          recaptchaAction: 'contact_submit'
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.ok) {
+        // Show success
+        successMessage?.classList.remove('hidden');
+        errorMessage?.classList.add('hidden');
+        form.reset();
+      } else {
+        console.error('Form submission failed:', result);
+        errorMessage?.classList.remove('hidden');
+        successMessage?.classList.add('hidden');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      errorMessage?.classList.remove('hidden');
+      successMessage?.classList.add('hidden');
+    } finally {
+      // Re-enable button
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    }
   });
 </script>
