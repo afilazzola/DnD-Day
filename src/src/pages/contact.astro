@@ -265,7 +265,7 @@ const API_ENDPOINT = import.meta.env.PUBLIC_API_ENDPOINT;
 
 <script define:vars={{ RECAPTCHA_SITE_KEY, API_ENDPOINT }}>
   // Load reCAPTCHA script dynamically
-  const recaptchaScript = document.createElement('script');
+  const recaptchaScript = document.createElement("script");
   recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
   document.head.appendChild(recaptchaScript);
 
@@ -307,10 +307,11 @@ const API_ENDPOINT = import.meta.env.PUBLIC_API_ENDPOINT;
 
     try {
       // Get reCAPTCHA token
-      const actionName = 'contact_submit';
+      const actionName = "contact_submit";
       const recaptchaToken = await new Promise((resolve, reject) => {
         grecaptcha.ready(() => {
-          grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: actionName })
+          grecaptcha
+            .execute(RECAPTCHA_SITE_KEY, { action: actionName })
             .then(resolve)
             .catch(reject);
         });
