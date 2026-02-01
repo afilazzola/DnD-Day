@@ -264,11 +264,21 @@ const API_ENDPOINT = import.meta.env.PUBLIC_API_ENDPOINT;
 </BaseLayout>
 
 <script define:vars={{ RECAPTCHA_SITE_KEY, API_ENDPOINT }}>
-  // Load reCAPTCHA script
-  const recaptchaScript = document.createElement('script');
-  recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
-  recaptchaScript.async = true;
-  document.head.appendChild(recaptchaScript);
+  // Track when reCAPTCHA is fully loaded
+  let recaptchaReady = false;
+  const recaptchaReadyPromise = new Promise((resolve) => {
+    const recaptchaScript = document.createElement('script');
+    recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+    recaptchaScript.async = true;
+    recaptchaScript.onload = () => {
+      // Script loaded, now wait for grecaptcha.ready
+      grecaptcha.ready(() => {
+        recaptchaReady = true;
+        resolve();
+      });
+    };
+    document.head.appendChild(recaptchaScript);
+  });
 
   const form = document.getElementById("contact-form");
   const submitBtn = form?.querySelector('button[type="submit"]');
@@ -307,29 +317,11 @@ const API_ENDPOINT = import.meta.env.PUBLIC_API_ENDPOINT;
     errorMessage?.classList.add("hidden");
 
     try {
-      // Wait for reCAPTCHA to be ready, then get token
-      const recaptchaToken = await new Promise((resolve, reject) => {
-        // Wait for grecaptcha to be available (max 10 seconds)
-        let attempts = 0;
-        const maxAttempts = 100;
+      // Wait for reCAPTCHA to be fully loaded
+      await recaptchaReadyPromise;
 
-        const checkRecaptcha = () => {
-          if (typeof grecaptcha !== 'undefined' && grecaptcha.ready) {
-            grecaptcha.ready(() => {
-              grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact_submit' })
-                .then(resolve)
-                .catch(reject);
-            });
-          } else if (attempts < maxAttempts) {
-            attempts++;
-            setTimeout(checkRecaptcha, 100);
-          } else {
-            reject(new Error('reCAPTCHA failed to load'));
-          }
-        };
-
-        checkRecaptcha();
-      });
+      // Get reCAPTCHA token
+      const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact_submit' });
 
       // Send to Lambda
       const response = await fetch(API_ENDPOINT, {
