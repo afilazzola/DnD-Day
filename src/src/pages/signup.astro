@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import NewsletterSignup from "../components/NewsletterSignup.astro";
 ---
 
 <BaseLayout
@@ -314,6 +315,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <span>Snacks and drinks to fuel the battle</span>
           </li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="card max-w-2xl mx-auto">
+        <NewsletterSignup
+          title="Not Ready Yet?"
+          description="Subscribe to get notified about character requirements, event updates, and when registration opens for new spots."
+        />
       </div>
     </div>
   </section>

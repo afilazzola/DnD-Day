@@ -1,0 +1,75 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  compact?: boolean;
+}
+
+const {
+  title = "Stay in the Loop",
+  description = "Get updates on event details, character requirements, and important announcements.",
+  compact = false
+} = Astro.props;
+---
+
+<div class={compact ? "" : "text-center"}>
+  {!compact && (
+    <>
+      <p class="section-title">Newsletter</p>
+      <h2 class="text-2xl md:text-3xl font-display mb-4">
+        <span class="gold-gradient">{title}</span>
+      </h2>
+      <p class="text-dnd-text-muted mb-6 max-w-md mx-auto">
+        {description}
+      </p>
+    </>
+  )}
+
+  <form
+    action="https://legendarydnd.us22.list-manage.com/subscribe/post?u=9167d57bd4695f1db971839e9&amp;id=d6fca2373c&amp;f_id=00fac2e1f0"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate"
+    target="_blank"
+  >
+    <div class={compact ? "flex flex-col sm:flex-row gap-3" : "flex flex-col sm:flex-row gap-3 max-w-md mx-auto"}>
+      <div class="flex-1">
+        <label for="mce-EMAIL" class="sr-only">Email Address</label>
+        <input
+          type="email"
+          name="EMAIL"
+          id="mce-EMAIL"
+          required
+          placeholder="Enter your email"
+          class="w-full px-4 py-3 bg-dnd-bg border border-dnd-border rounded-lg text-dnd-text placeholder-dnd-text-muted focus:outline-none focus:border-dnd-primary transition-colors"
+        />
+      </div>
+
+      <!-- Honeypot field -->
+      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+        <input type="text" name="b_9167d57bd4695f1db971839e9_d6fca2373c" tabindex="-1" value="" />
+      </div>
+
+      <button
+        type="submit"
+        name="subscribe"
+        id="mc-embedded-subscribe"
+        class="btn btn-primary whitespace-nowrap"
+      >
+        Subscribe
+      </button>
+    </div>
+
+    <div id="mce-responses" class="mt-3">
+      <div class="response text-dnd-secondary text-sm" id="mce-error-response" style="display: none;"></div>
+      <div class="response text-dnd-accent text-sm" id="mce-success-response" style="display: none;"></div>
+    </div>
+  </form>
+
+  <p class="text-dnd-text-muted text-xs mt-4 {compact ? '' : 'text-center'}">
+    We respect your privacy. Unsubscribe anytime.
+  </p>
+</div>
+
+<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" is:inline></script>
