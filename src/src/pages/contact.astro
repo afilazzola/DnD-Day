@@ -264,21 +264,10 @@ const API_ENDPOINT = import.meta.env.PUBLIC_API_ENDPOINT;
 </BaseLayout>
 
 <script define:vars={{ RECAPTCHA_SITE_KEY, API_ENDPOINT }}>
-  // Track when reCAPTCHA is fully loaded
-  let recaptchaReady = false;
-  const recaptchaReadyPromise = new Promise((resolve) => {
-    const recaptchaScript = document.createElement('script');
-    recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
-    recaptchaScript.async = true;
-    recaptchaScript.onload = () => {
-      // Script loaded, now wait for grecaptcha.ready
-      grecaptcha.ready(() => {
-        recaptchaReady = true;
-        resolve();
-      });
-    };
-    document.head.appendChild(recaptchaScript);
-  });
+  // Load reCAPTCHA script dynamically
+  const recaptchaScript = document.createElement("script");
+  recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+  document.head.appendChild(recaptchaScript);
 
   const form = document.getElementById("contact-form");
   const submitBtn = form?.querySelector('button[type="submit"]');
@@ -317,11 +306,16 @@ const API_ENDPOINT = import.meta.env.PUBLIC_API_ENDPOINT;
     errorMessage?.classList.add("hidden");
 
     try {
-      // Wait for reCAPTCHA to be fully loaded
-      await recaptchaReadyPromise;
-
       // Get reCAPTCHA token
-      const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact_submit' });
+      const actionName = "contact_submit";
+      const recaptchaToken = await new Promise((resolve, reject) => {
+        grecaptcha.ready(() => {
+          grecaptcha
+            .execute(RECAPTCHA_SITE_KEY, { action: actionName })
+            .then(resolve)
+            .catch(reject);
+        });
+      });
 
       // Send to Lambda
       const response = await fetch(API_ENDPOINT, {
@@ -336,7 +330,7 @@ const API_ENDPOINT = import.meta.env.PUBLIC_API_ENDPOINT;
           message,
           website: formData.get("website"), // honeypot
           recaptchaToken,
-          recaptchaAction: "contact_submit",
+          recaptchaAction: actionName,
         }),
       });
 
