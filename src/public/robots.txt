@@ -1,0 +1,7 @@
+# robots.txt for DnD Day - Operation Golden Sword
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dndday.com/sitemap-index.xml
