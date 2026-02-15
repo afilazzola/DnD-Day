@@ -6,9 +6,17 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
 }
 
-const { title, description = 'Operation Golden Sword - A massive DnD Day event on the Sword Coast' } = Astro.props;
+const {
+  title,
+  description = 'Operation Golden Sword - A massive multi-table DnD event on the Sword Coast. Join the invasion of Amn on June 6, 2026.',
+  image = '/images/og-image.jpg'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
 ---
 
 <!doctype html>
@@ -17,13 +25,41 @@ const { title, description = 'Operation Golden Sword - A massive DnD Day event o
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#c9a227" />
     <link rel="icon" type="image/png" href="/dragon.png" />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title} | DnD Day</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={`${title} | DnD Day`} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:site_name" content="DnD Day - Operation Golden Sword" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | DnD Day`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPRB5MBVL7"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QPRB5MBVL7');
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />
