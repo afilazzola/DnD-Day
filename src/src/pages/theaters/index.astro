@@ -19,8 +19,28 @@ import theaters from '../../data/theaters.json';
     </div>
   </section>
 
-  <!-- Theater Grid -->
+  <!-- Tactical Map -->
   <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+          <p class="section-title">Tactical Map</p>
+          <h2 class="text-2xl md:text-3xl font-display">
+            <span class="gold-gradient">Landing Zones</span>
+          </h2>
+        </div>
+
+        <img
+          src="/images/landing_map.jpg"
+          alt="Map of the Landing Area - Juno Beach, Gold Beach, Coastal Keep, Watch Tower"
+          class="rounded-lg border-2 border-dnd-border w-full"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Theater Grid -->
+  <section class="py-16 bg-dnd-bg-secondary">
     <div class="container-custom">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {theaters.theaters.map((theater) => (
@@ -38,7 +58,7 @@ import theaters from '../../data/theaters.json';
   </section>
 
   <!-- Interconnection -->
-  <section class="py-16 bg-dnd-bg-secondary">
+  <section class="py-16">
     <div class="container-custom">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-8">
@@ -91,7 +111,7 @@ import theaters from '../../data/theaters.json';
   </section>
 
   <!-- CTA -->
-  <section class="py-16">
+  <section class="py-16 bg-dnd-bg-secondary">
     <div class="container-custom text-center">
       <h2 class="text-2xl md:text-3xl font-display mb-4">
         <span class="gold-gradient">Choose Your Theater</span>
