@@ -1,0 +1,420 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="The War Board"
+  description="How the multi-table war mechanics unite four theaters into one epic battle"
+>
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">Unified War Mechanics</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">The War Board</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        Tactical independence. Strategic unity. Four tables fighting one war.
+      </p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">How It Works</h2>
+
+        <div class="space-y-4 text-dnd-text-muted leading-relaxed">
+          <p>
+            Each table runs independently minute-to-minute, but shares Act-level
+            consequences, global events, and limited cross-table actions. This
+            preserves pacing while creating shared war tension.
+          </p>
+          <p>
+            The War Board tracks the overall battle state—visible to all players
+            throughout the event. When your table succeeds, everyone sees it.
+            When the enemy pushes back, everyone feels it.
+          </p>
+        </div>
+
+        <div class="card mt-8 border-dnd-primary">
+          <p class="text-dnd-primary font-display text-lg mb-2">
+            The Goal
+          </p>
+          <p class="text-dnd-text-muted">
+            Create cheers when other tables succeed, groans when the War Track drops,
+            strategic debate during breaks, and a final battle that feels earned.
+            The invasion becomes a shared story—not four separate games.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Token System -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">
+          War Momentum Tokens
+        </h2>
+
+        <p class="text-dnd-text-muted mb-6">
+          Tokens represent battlefield momentum, morale, resource stability, and enemy
+          pressure. They're awarded at major Act-level objectives—not individual dice rolls.
+        </p>
+
+        <div class="card mb-8 border-dnd-primary">
+          <div class="flex items-center justify-center gap-8 mb-4">
+            <div class="text-center">
+              <span class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-white font-bold text-xl mx-auto mb-2">+1</span>
+              <p class="text-green-500 font-display text-sm">Success</p>
+            </div>
+            <div class="text-center">
+              <span class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white font-bold text-xl mx-auto mb-2">−1</span>
+              <p class="text-red-500 font-display text-sm">Failure</p>
+            </div>
+          </div>
+          <p class="text-dnd-text-muted text-sm text-center">
+            Success moves the War Track toward Allied Advantage (+1).<br/>
+            Failure moves the War Track toward Enemy Advantage (−1).
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="font-display text-dnd-text mb-4">Example: Siege Train — Act II</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-dnd-border">
+                  <th class="text-left py-2 text-dnd-text-muted font-normal">Outcome</th>
+                  <th class="text-left py-2 text-dnd-text-muted font-normal">Result</th>
+                  <th class="text-left py-2 text-dnd-text-muted font-normal">War Track</th>
+                </tr>
+              </thead>
+              <tbody class="text-dnd-text-muted">
+                <tr class="border-b border-dnd-border/50">
+                  <td class="py-2">Both engines landed</td>
+                  <td class="py-2 text-green-500">Major Success</td>
+                  <td class="py-2"><span class="text-green-500">+2</span></td>
+                </tr>
+                <tr class="border-b border-dnd-border/50">
+                  <td class="py-2">One engine landed</td>
+                  <td class="py-2 text-yellow-500">Partial Success</td>
+                  <td class="py-2"><span class="text-green-500">+1</span></td>
+                </tr>
+                <tr>
+                  <td class="py-2">No engines landed</td>
+                  <td class="py-2 text-red-500">Failure</td>
+                  <td class="py-2"><span class="text-red-500">−1</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-dnd-text-muted text-xs mt-3 italic">
+            Use graduated outcomes—avoid binary pass/fail whenever possible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- War Track -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">
+          War Track
+        </h2>
+
+        <p class="text-dnd-text-muted mb-8">
+          A visible tracker that shows the overall battle state. The track starts at 0
+          and moves based on objective outcomes. Positive values favor the allies;
+          negative values favor the enemy.
+        </p>
+
+        <!-- Visual War Track Bar -->
+        <div class="mb-8">
+          <div class="flex justify-between text-xs text-dnd-text-muted mb-2">
+            <span>Enemy Advantage</span>
+            <span>Neutral</span>
+            <span>Allied Advantage</span>
+          </div>
+          <div class="flex h-10 rounded-lg overflow-hidden border border-dnd-border">
+            <div class="w-[20%] bg-red-900 flex items-center justify-center text-xs font-bold text-white">−5</div>
+            <div class="w-[20%] bg-red-600 flex items-center justify-center text-xs font-bold text-white">−3</div>
+            <div class="w-[20%] bg-yellow-600 flex items-center justify-center text-xs font-bold text-white">0</div>
+            <div class="w-[20%] bg-green-600 flex items-center justify-center text-xs font-bold text-white">+3</div>
+            <div class="w-[20%] bg-green-700 flex items-center justify-center text-xs font-bold text-white">+5</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="font-display text-dnd-text mb-4">Threshold Effects</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-dnd-border">
+                  <th class="text-left py-2 text-dnd-text-muted font-normal w-24">Level</th>
+                  <th class="text-left py-2 text-dnd-text-muted font-normal">Effect</th>
+                </tr>
+              </thead>
+              <tbody class="text-dnd-text-muted">
+                <tr class="border-b border-dnd-border/50">
+                  <td class="py-2"><span class="text-red-500 font-bold">−2</span></td>
+                  <td class="py-2">Artillery begins firing periodically at all theaters</td>
+                </tr>
+                <tr class="border-b border-dnd-border/50">
+                  <td class="py-2"><span class="text-red-600 font-bold">−4</span></td>
+                  <td class="py-2">Elite enemy units appear in encounters</td>
+                </tr>
+                <tr class="border-b border-dnd-border/50">
+                  <td class="py-2"><span class="text-red-700 font-bold">−6</span></td>
+                  <td class="py-2">Warmagus begins pre-channeling arcane energy</td>
+                </tr>
+                <tr class="border-b border-dnd-border/50">
+                  <td class="py-2"><span class="text-green-500 font-bold">+2</span></td>
+                  <td class="py-2">Allied reinforcements arrive, granting temporary aid</td>
+                </tr>
+                <tr>
+                  <td class="py-2"><span class="text-green-600 font-bold">+4</span></td>
+                  <td class="py-2">Enemy morale breaks—reduced resistance across theaters</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-dnd-text-muted text-xs mt-4 italic">
+            Negative momentum increases tension but should never make victory impossible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Events -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">
+          Periodic Global Events
+        </h2>
+
+        <p class="text-dnd-text-muted mb-8">
+          Every 45–60 minutes, the Lead DM triggers a Global Battlefield Event that
+          affects all theaters simultaneously. The type of event depends on the
+          current War State.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card border-green-600">
+            <h3 class="font-display text-green-500 mb-4 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Favorable War State
+            </h3>
+            <ul class="text-dnd-text-muted text-sm space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">•</span>
+                <span>Allied cleric wave grants temporary Bless</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">•</span>
+                <span>Rebel sabotage weakens enemy defenses</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">•</span>
+                <span>Enemy reinforcements delayed</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card border-red-600">
+            <h3 class="font-display text-red-500 mb-4 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              Poor War State
+            </h3>
+            <ul class="text-dnd-text-muted text-sm space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-red-500">•</span>
+                <span>Coordinated artillery strike hits random table</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-red-500">•</span>
+                <span>Wyvern air raid strafes battlefield</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-red-500">•</span>
+                <span>Elite shock troops arrive as reinforcements</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-dnd-text-muted text-sm mt-6 italic text-center">
+          These events create shared tension without synchronizing initiative.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signal Actions -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">
+          Signal Actions
+        </h2>
+
+        <p class="text-dnd-text-muted mb-6">
+          <strong class="text-dnd-text">Once per Act</strong>, a table may perform
+          a Signal Action to directly help another theater. No physical player
+          movement required.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-3">Signal Methods</h3>
+            <ul class="text-dnd-text-muted text-sm space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-dnd-primary">•</span>
+                <span>Send magical sending message</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-dnd-primary">•</span>
+                <span>Fire arcane signal flare</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-dnd-primary">•</span>
+                <span>Activate relay beacon</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="font-display text-dnd-text mb-3">Possible Effects</h3>
+            <ul class="text-dnd-text-muted text-sm space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">+</span>
+                <span>Grant advantage to another table</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">+</span>
+                <span>Cancel one artillery event</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">+</span>
+                <span>Add +1 to War Track</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">+</span>
+                <span>Delay enemy reinforcements</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card border-dnd-accent">
+          <h3 class="font-display text-dnd-accent mb-3">The Cost</h3>
+          <p class="text-dnd-text-muted text-sm">
+            Signal Actions aren't free. Your table might lose a bonus objective,
+            consume a rare resource, or take −1 on the War Track. Choose wisely.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Battle Impact -->
+  <section class="py-16">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-display text-dnd-primary mb-6">
+          Final Battle Impact
+        </h2>
+
+        <p class="text-dnd-text-muted mb-8">
+          In Act IV, all tables converge for the assault on the Warmagus. The
+          final battle's difficulty is directly shaped by where the War Track ends.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card border-red-600">
+            <h3 class="font-display text-red-500 mb-4">Negative War Track</h3>
+            <p class="text-dnd-text-muted text-sm mb-3">
+              Each point below 0 makes the Warmagus stronger:
+            </p>
+            <ul class="text-dnd-text-muted text-sm space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-red-500">+</span>
+                <span>+15 HP to Warmagus</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-red-500">+</span>
+                <span>+1 Legendary Resistance</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-red-500">+</span>
+                <span>Additional battlefield abilities</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card border-green-600">
+            <h3 class="font-display text-green-500 mb-4">Positive War Track</h3>
+            <p class="text-dnd-text-muted text-sm mb-3">
+              Each point above 0 weakens the Warmagus:
+            </p>
+            <ul class="text-dnd-text-muted text-sm space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">−</span>
+                <span>Remove Warmagus abilities</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">−</span>
+                <span>Reduce maximum HP</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-green-500">−</span>
+                <span>Remove Legendary Actions</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mt-8 border-dnd-primary">
+          <p class="text-dnd-primary font-display text-lg mb-2">
+            The Final Battle Reflects the Entire Day
+          </p>
+          <p class="text-dnd-text-muted">
+            Every objective matters. Every point on the War Track counts. When you
+            face the Warmagus, you'll know exactly how well—or poorly—Operation
+            Golden Sword went.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl font-display text-dnd-primary mb-4">
+          Ready to Fight?
+        </h2>
+        <p class="text-dnd-text-muted mb-8">
+          Learn more about the theaters, review DM guidelines, or check the mission briefing.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/theaters" class="btn btn-primary">View Theaters</a>
+          <a href="/dm-prep" class="btn btn-secondary">DM Preparation</a>
+          <a href="/briefing" class="btn btn-secondary">Mission Briefing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
