@@ -50,11 +50,11 @@
       "tone": "Precision under fire",
       "color": "theater-siege",
       "icon": "catapult",
-      "description": "You escort the siege engines that will crack the Coastal Keep. Without these weapons, the assault becomes a grinding war of attrition. But first, you must get them off the beach.",
+      "description": "You escort the siege engines that will crack Sainte-Mère-Église Cathedral. Without these weapons, the assault becomes a grinding war of attrition. But first, you must get them off the beach.",
       "actII": {
         "title": "Land the Siege Engines",
         "objectives": [
-          "Land catapults and trebuchets on Gold Beach",
+          "Land catapults and ballistas on Gold Beach",
           "Protect siege engines from enemy fire",
           "Begin moving equipment inland"
         ]
@@ -65,7 +65,7 @@
           "Haul massive siege engines up the sandy bluffs of Hoc's Point",
           "Get creative — winches, magic, beasts of burden, or brute force",
           "Protect the equipment from saboteurs while vulnerable",
-          "Cross the Pegasus Bridge and advance to the Keep"
+          "Cross the Pegasus Bridge and advance to the Cathedral"
         ]
       },
       "secondaryObjectives": [
@@ -74,12 +74,12 @@
       ],
       "keyTension": "The siege engines are slow and vulnerable. Getting them up the sandy bluffs of Hoc's Point requires ingenuity. Losing them is catastrophic.",
       "successEffects": [
-        "Siege engines reach the Keep",
+        "Siege engines reach the Cathedral",
         "Faster breach in Act IV",
         "Shorter, less lethal final assault"
       ],
       "failureEffects": [
-        "Keep becomes nearly impregnable",
+        "Cathedral becomes nearly impregnable",
         "Act IV shifts toward attrition or sabotage",
         "Casualties spike dramatically"
       ],
@@ -124,8 +124,8 @@
       ],
       "failureEffects": [
         "Bridge destroyed — invasion stalls",
-        "Siege engines cannot reach the Keep",
-        "Enemy has time to fortify the Coastal Keep"
+        "Siege engines cannot reach the Cathedral",
+        "Enemy has time to fortify the Cathedral"
       ],
       "helps": ["All theaters", "Act IV"],
       "hurts": ["Entire operation"]
@@ -151,7 +151,7 @@
         "title": "Block the Road",
         "objectives": [
           "Land on the inland road beyond the Pegasus Bridge",
-          "Establish a blocking position against Keep reinforcements",
+          "Establish a blocking position against Cathedral reinforcements",
           "Hold the road until beach forces break through",
           "Prevent enemy counterattack from reaching the bridge"
         ]
@@ -162,12 +162,12 @@
       ],
       "successEffects": [
         "Ground forces protected from air strikes",
-        "Bridge isolated from Keep reinforcements",
+        "Bridge isolated from Cathedral reinforcements",
         "Enemy command and control disrupted"
       ],
       "failureEffects": [
         "Air strikes harass all theaters",
-        "Keep reinforcements reach the bridge",
+        "Cathedral reinforcements reach the bridge",
         "Portal team overwhelmed"
       ],
       "helps": ["All theaters", "Act III - The Bridge"],

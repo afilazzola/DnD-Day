@@ -1,10 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import TheaterCard from '../../components/TheaterCard.astro';
-import theaters from '../../data/theaters.json';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TheaterCard from "../../components/TheaterCard.astro";
+import theaters from "../../data/theaters.json";
 ---
 
-<BaseLayout title="Theaters of War" description="Explore the four theaters of war in Operation Golden Sword.">
+<BaseLayout
+  title="Theaters of War"
+  description="Four theaters. One battle. Choose your role in Operation Golden Sword — beach assault, siege train, portals & bridges, or air battle. Multi-table D&D event, June 6, 2026 in Toronto."
+>
   <!-- Header -->
   <section class="py-16 bg-dnd-bg-secondary">
     <div class="container-custom text-center">
@@ -13,8 +16,9 @@ import theaters from '../../data/theaters.json';
         <span class="gold-gradient">Theaters of War</span>
       </h1>
       <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
-        The invasion splits into four critical theaters. Each plays a vital role in the battle for the Coastal Keep.
-        Choose wisely — your theater will shape the fate of Amn.
+        The invasion splits into four critical theaters. Each plays a vital role
+        in the battle for Sainte-Mère-Église Cathedral. Choose wisely — your
+        theater will shape the fate of Amn.
       </p>
     </div>
   </section>
@@ -31,8 +35,8 @@ import theaters from '../../data/theaters.json';
         </div>
 
         <img
-          src="/images/landing_map.jpg"
-          alt="Map of the Landing Area - Juno Beach, Gold Beach, Coastal Keep, Watch Tower"
+          src="/images/landing_map_cathedral.jpg"
+          alt="Map of the Landing Area - Juno Beach, Gold Beach, Sainte-Mère-Église Cathedral, Watch Tower"
           class="rounded-lg border-2 border-dnd-border w-full"
         />
       </div>
@@ -43,16 +47,18 @@ import theaters from '../../data/theaters.json';
   <section class="py-16 bg-dnd-bg-secondary">
     <div class="container-custom">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {theaters.theaters.map((theater) => (
-          <TheaterCard
-            id={theater.id}
-            name={theater.name}
-            role={theater.role}
-            tone={theater.tone}
-            color={theater.color}
-            icon={theater.icon}
-          />
-        ))}
+        {
+          theaters.theaters.map((theater) => (
+            <TheaterCard
+              id={theater.id}
+              name={theater.name}
+              role={theater.role}
+              tone={theater.tone}
+              color={theater.color}
+              icon={theater.icon}
+            />
+          ))
+        }
       </div>
     </div>
   </section>
@@ -69,17 +75,24 @@ import theaters from '../../data/theaters.json';
         </div>
 
         <p class="text-dnd-text-muted text-center mb-8">
-          Success or failure in one theater directly affects all others. The invasion is a coordinated effort —
-          every victory creates opportunities, every setback adds pressure.
+          Success or failure in one theater directly affects all others. The
+          invasion is a coordinated effort — every victory creates
+          opportunities, every setback adds pressure.
         </p>
 
         <div class="card overflow-x-auto">
           <table class="w-full text-sm">
             <thead>
               <tr class="border-b border-dnd-border">
-                <th class="text-left py-3 text-dnd-text font-display">Theater</th>
-                <th class="text-left py-3 text-dnd-accent font-display">Success Helps</th>
-                <th class="text-left py-3 text-dnd-secondary font-display">Failure Hurts</th>
+                <th class="text-left py-3 text-dnd-text font-display"
+                  >Theater</th
+                >
+                <th class="text-left py-3 text-dnd-accent font-display"
+                  >Success Helps</th
+                >
+                <th class="text-left py-3 text-dnd-secondary font-display"
+                  >Failure Hurts</th
+                >
               </tr>
             </thead>
             <tbody class="text-dnd-text-muted">
@@ -94,7 +107,8 @@ import theaters from '../../data/theaters.json';
                 <td class="py-3">Act IV - Final Battle</td>
               </tr>
               <tr class="border-b border-dnd-border/50">
-                <td class="py-3 font-medium text-dnd-text">Portals & Bridges</td>
+                <td class="py-3 font-medium text-dnd-text">Portals & Bridges</td
+                >
                 <td class="py-3">Act III Bridge, all ground forces</td>
                 <td class="py-3">Bridge destroyed, invasion stalls</td>
               </tr>
@@ -117,7 +131,8 @@ import theaters from '../../data/theaters.json';
         <span class="gold-gradient">Choose Your Theater</span>
       </h2>
       <p class="text-dnd-text-muted mb-8 max-w-xl mx-auto">
-        Ready to join the fight? Sign up for your preferred theater and prepare for war.
+        Ready to join the fight? Sign up for your preferred theater and prepare
+        for war.
       </p>
       <a href="/signup" class="btn btn-primary">Sign Up Now</a>
     </div>
