@@ -10,7 +10,7 @@
 **Character Level:** 7
 **Allowed Content:** Official 5e material including Unearthed Arcana, Tasha's Cauldron of Everything, Tal'Dorei Campaign Setting, and Explorer's Guide to Wildemount
 **Character Creation:** Point buy preferred
-**Structure:** Four acts (Eve of War → Iron Tide → The Bridge → Fall of the Coastal Keep)
+**Structure:** Four acts (Eve of War → Iron Tide → The Bridge → Fall of Sainte-Mère-Église Cathedral)
 
 ---
 
@@ -47,22 +47,22 @@ This vulnerability has drawn a desperate gamble:
 
 The goal of _DnD Day_ is not to reclaim Amn in a single battle.
 
-The goal is to **capture the Coastal Keep**.
+The goal is to **capture Sainte-Mère-Église Cathedral**.
 
-The Coastal Keep is:
+Sainte-Mère-Église Cathedral is:
 
 - A fortress
 - A command hub
 - The primary logistical and arcane relay between **Athkatla** and the Iron Conclave’s eastern armies
 
-If the Keep falls:
+If the Cathedral falls:
 
 - Eastern armies are cut off from command
 - Reinforcements cannot be coordinated
 - Battlefield intelligence collapses
 - Athkatla becomes exposed
 
-If the Keep holds:
+If the Cathedral holds:
 
 - The invasion will be crushed between converging armies
 - The Iron Conclave will respond with forces too vast to resist
@@ -113,7 +113,7 @@ _Duergar Warlord / Artificer / Warlock_
 The Iron Conclave intends to:
 
 1. Hold the coastline long enough to mobilize inland armies
-2. Maintain the Coastal Keep’s communications with Athkatla
+2. Maintain the Cathedral’s communications with Athkatla
 3. Crush the invasion through coordination and attrition
 
 The adventurers must strike fast.
@@ -314,7 +314,7 @@ The heroes are split into four theaters of war, each critical to the battle.
 - Haul massive siege engines up the sandy bluffs
 - Get creative — winches, magic, beasts of burden, or brute force
 - Protect the equipment from saboteurs while vulnerable
-- Cross the Pegasus Bridge and advance to the Keep
+- Cross the Pegasus Bridge and advance to the Cathedral
 
 ### Key Tension
 
@@ -322,13 +322,13 @@ The siege engines are slow and vulnerable. Getting them up the sandy terrain req
 
 ### Success Effects
 
-- Siege engines reach the Keep
+- Siege engines reach the Cathedral
 - Faster breach in Act IV
 - Shorter, less lethal final assault
 
 ### Failure Effects
 
-- Keep becomes nearly impregnable
+- Cathedral becomes nearly impregnable
 - Act IV shifts toward attrition or sabotage
 - Casualties spike dramatically
 
@@ -366,8 +366,8 @@ Teleportation to a resistance-held watchtower behind enemy lines.
 ### Failure Effects
 
 - Bridge destroyed — invasion stalls
-- Siege engines cannot reach the Keep
-- Enemy has time to fortify the Coastal Keep
+- Siege engines cannot reach the Cathedral
+- Enemy has time to fortify the Cathedral
 
 ---
 
@@ -386,20 +386,20 @@ Teleportation to a resistance-held watchtower behind enemy lines.
 ### Act III — Block the Road
 
 - Land on the inland road beyond the Pegasus Bridge
-- Establish a blocking position against Keep reinforcements
+- Establish a blocking position against Cathedral reinforcements
 - Hold the road until beach forces break through
 - Prevent enemy counterattack from reaching the bridge
 
 ### Success Effects
 
 - Ground forces protected from air strikes
-- Bridge isolated from Keep reinforcements
+- Bridge isolated from Cathedral reinforcements
 - Enemy command and control disrupted
 
 ### Failure Effects
 
 - Air strikes harass all theaters
-- Keep reinforcements reach the bridge
+- Cathedral reinforcements reach the bridge
 - Portal team overwhelmed
 
 ---
@@ -409,7 +409,7 @@ Teleportation to a resistance-held watchtower behind enemy lines.
 | Theater | Company        | Act II Role           | Act III Role              | If They Fail           |
 | ------- | -------------- | --------------------- | ------------------------- | ---------------------- |
 | T1      | Iron Wolves    | Storm the beach       | Break through to bridge   | Siege Train trapped    |
-| T2      | Stone Breakers | Land the engines      | Climb the bluffs          | Keep impregnable       |
+| T2      | Stone Breakers | Land the engines      | Climb the bluffs          | Cathedral impregnable  |
 | T3      | Shadow Company | Infiltrate            | Disarm the bridge         | Bridge destroyed       |
 | T4      | Storm Riders   | Win the sky           | Block reinforcements      | Portal team overwhelmed|
 
@@ -424,7 +424,7 @@ All four theaters converge on Pegasus Bridge in Act III. Shadow Company disarms 
 Escalations occur only if theaters fail:
 
 - Messengers attempt to break through
-- Signal flares erupt from the Keep
+- Signal flares erupt from the Cathedral
 - Arcane beacons pulse brighter
 - Air units converge on the fortress
 
@@ -440,7 +440,7 @@ Escalations occur only if theaters fail:
 
 ## THE CRITICAL CROSSING
 
-Between the beaches and the Coastal Keep lies **Pegasus Bridge** over the Orn River — the only crossing capable of supporting siege engines and massed troops.
+Between the beaches and Sainte-Mère-Église Cathedral lies **Pegasus Bridge** over the Orn River — the only crossing capable of supporting siege engines and massed troops.
 
 Intelligence confirms the Iron Conclave has rigged it for demolition.
 
@@ -448,7 +448,7 @@ If the bridge falls:
 
 - Siege engines cannot cross the river
 - Ground forces must find alternate routes through enemy territory
-- The Coastal Keep has time to reinforce
+- The Cathedral has time to reinforce
 - The invasion stalls
 
 **The bridge must hold. Everything depends on it.**
@@ -490,7 +490,7 @@ The siege train faces a brutal challenge: hauling massive catapults and trebuche
 - Haul siege engines up the sandy bluffs
 - Get creative — winches, magic, beasts of burden, brute force, or improvised solutions
 - Protect the equipment from saboteurs while vulnerable
-- Cross the bridge and advance to the Keep
+- Cross the bridge and advance to the Cathedral
 
 **Key Tension:** The siege engines are slow and vulnerable. Losing them is catastrophic for Act IV.
 
@@ -519,12 +519,12 @@ The portal team is already behind enemy lines — the only force close enough to
 **Role:** Cut off reinforcements
 **Tone:** Fast transition from air to ground combat
 
-With air superiority achieved, flying units must land on the road beyond the bridge to intercept enemy reinforcements marching from the Coastal Keep.
+With air superiority achieved, flying units must land on the road beyond the bridge to intercept enemy reinforcements marching from the Cathedral.
 
 **Objectives:**
 
 - Land on the inland road past the bridge
-- Establish a blocking position against Keep reinforcements
+- Establish a blocking position against Cathedral reinforcements
 - Buy time for the portal team and beach forces
 - Prevent enemy counterattack from reaching the bridge
 
@@ -536,31 +536,31 @@ With air superiority achieved, flying units must land on the road beyond the bri
 
 ### If the Bridge Holds
 
-- Siege engines cross and advance toward the Keep
+- Siege engines cross and advance toward the Cathedral
 - All ground forces converge and link up
 - The final assault begins with momentum
-- Enemy forces at the Keep are isolated
+- Enemy forces at the Cathedral are isolated
 
 ### If the Bridge Falls
 
-- Siege equipment cannot reach the Keep
+- Siege equipment cannot reach the Cathedral
 - Ground forces must find alternate crossings through enemy territory
-- The Keep has time to reinforce
+- The Cathedral has time to reinforce
 - Act IV becomes significantly harder — or impossible
 
 ---
 
-# ACT IV — THE FALL OF THE COASTAL KEEP
+# ACT IV — THE FALL OF SAINTE-MÈRE-ÉGLISE CATHEDRAL
 
 **Tone:** Desperate, mythic, decisive
 
-All surviving forces converge on the Coastal Keep.
+All surviving forces converge on Sainte-Mère-Église Cathedral.
 
 ---
 
 ## THE TWIST: THE ARCANE COMMANDER
 
-The Keep is commanded by a **Conclave Warmagus**, responsible for:
+The Cathedral is commanded by a **Conclave Warmagus**, responsible for:
 
 - Battlefield coordination
 - Arcane relay with Athkatla
@@ -604,6 +604,6 @@ DMs pause simultaneously.
 
 The Lead DM delivers a unified epilogue:
 
-- The fate of the Coastal Keep
+- The fate of Sainte-Mère-Église Cathedral
 - The shock in Athkatla
 - The beginning of open rebellion across Amn

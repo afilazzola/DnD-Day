@@ -8,13 +8,13 @@ Amn was chosen not out of hatred, but efficiency. Its wealth, guilds, and trade 
 
 ---
 
-## The Warmagus of the Coastal Keep
+## The Warmagus of Sainte-Mère-Église
 
 _Conclave Archmage / Strategic Commander_
 
 Once a respected Amnian arcane scholar, the Warmagus specialized in long-range communication and battlefield coordination. When Athkatla fell, they chose not to flee, believing resistance would only fracture the realm further. Instead, they offered their expertise to the Iron Conclave, convinced that a swift, orderly conquest would spare the greatest number of lives.
 
-From the Coastal Keep, the Warmagus maintains the arcane relay linking Athkatla to the eastern armies—synchronizing ground, air, and siege forces with ruthless precision. Knowing they are a single point of failure, they developed a forbidden contingency: fracturing their consciousness into multiple autonomous arcane aspects. To the Warmagus, this is not madness, but responsibility—command divided so it cannot be destroyed in a single blow.
+From the Cathedral, the Warmagus maintains the arcane relay linking Athkatla to the eastern armies—synchronizing ground, air, and siege forces with ruthless precision. Knowing they are a single point of failure, they developed a forbidden contingency: fracturing their consciousness into multiple autonomous arcane aspects. To the Warmagus, this is not madness, but responsibility—command divided so it cannot be destroyed in a single blow.
 
 ## The Iron Conclave — Faction Breakdown
 
@@ -69,7 +69,7 @@ _The Hammer Behind the Anvil_
 - Duergar are bound by contracts, doctrine, and ideology
 - Orcs are bound by fear, momentum, and reward
 - Neither faction trusts the other—but both fear Tharûm’s reprisal
-- The Coastal Keep exists primarily to ensure:
+- The Cathedral exists primarily to ensure:
   - Orc aggression is properly directed
   - Duergar command is never isolated
   - Neither side can rebel without being crushed by the other
