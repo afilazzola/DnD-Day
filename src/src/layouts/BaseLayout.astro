@@ -7,12 +7,14 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
 }
 
 const {
   title,
   description = 'Operation Golden Sword - A massive multi-table DnD event on the Sword Coast. Join the invasion of Amn on June 6, 2026.',
-  image = '/images/og-image.jpg'
+  image = '/images/og-image.jpg',
+  imageAlt = 'Operation Golden Sword - DnD Day Event'
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -43,6 +45,7 @@ const imageURL = new URL(image, Astro.site);
     <meta property="og:image" content={imageURL} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:locale" content="en_CA" />
     <meta property="og:site_name" content="DnD Day - Operation Golden Sword" />
 
@@ -51,6 +54,32 @@ const imageURL = new URL(image, Astro.site);
     <meta name="twitter:title" content={`${title} | DnD Day`} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageURL} />
+    <meta name="twitter:image:alt" content={imageAlt} />
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DnD Day",
+      "url": "https://dndday.com",
+      "logo": "https://dndday.com/dragon.png",
+      "description": "DnD Day organizes multi-table Dungeons & Dragons campaign events. Operation Golden Sword is a 4-theater amphibious invasion campaign on June 6, 2026 in Toronto.",
+      "event": {
+        "@type": "Event",
+        "name": "DnD Day - Operation Golden Sword",
+        "startDate": "2026-06-06T17:00:00-04:00",
+        "location": {
+          "@type": "Place",
+          "name": "Royal Canadian Legion - Coronation Branch 286",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Etobicoke",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+          }
+        }
+      }
+    })} />
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPRB5MBVL7"></script>
