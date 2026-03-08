@@ -305,7 +305,7 @@ The heroes are split into four theaters of war, each critical to the battle.
 
 ### Act II — Land the Siege Engines
 
-- Land catapults and trebuchets on Gold Beach
+- Land catapults and ballistas on Gold Beach
 - Protect siege engines from enemy fire
 - Begin moving equipment inland
 
@@ -483,7 +483,7 @@ The assault force must smash through the entrenched enemy defensive line blockin
 **Role:** Get the siege engines through
 **Tone:** Problem-solving under fire
 
-The siege train faces a brutal challenge: hauling massive catapults and trebuchets up the sandy bluffs of Hoc's Point and through difficult terrain while under fire.
+The siege train faces a brutal challenge: hauling massive catapults and ballistas up the sandy bluffs of Hoc's Point and through difficult terrain while under fire.
 
 **Objectives:**
 

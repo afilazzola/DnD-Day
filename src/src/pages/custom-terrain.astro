@@ -58,6 +58,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Catapult & Battlefield -->
+        <div class="card overflow-hidden p-0 md:col-span-2">
+          <button
+            class="w-full cursor-pointer lightbox-trigger"
+            data-src="/images/Catapult_Background.jpg"
+            data-alt="Catapult siege engine on the battlefield"
+          >
+            <img
+              src="/images/Catapult_Background.jpg"
+              alt="Catapult siege engine on the battlefield"
+              class="w-full h-[28rem] object-contain hover:scale-105 transition-transform duration-300"
+            />
+          </button>
+          <div class="p-6">
+            <h3 class="font-display text-dnd-primary text-xl mb-2">Siege Train</h3>
+            <p class="text-dnd-text-muted text-sm">
+              Catapults and ballistas ready for the assault on Sainte-Mère-Église Cathedral.
+              Built for the Stone Breakers' grueling push from Gold Beach through Hoc's Point.
+            </p>
+            <p class="text-dnd-text-muted/60 text-xs mt-3">Click image to view full size</p>
+          </div>
+        </div>
+
         <!-- Forest & Airship -->
         <div class="card overflow-hidden p-0">
           <button
