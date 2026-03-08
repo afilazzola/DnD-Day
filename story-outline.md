@@ -22,7 +22,7 @@ Each theater fields one company of adventurers (1 DM + 6 players):
 | ------- | --------------- | ----------------------- |
 | T1      | Iron Wolves     | General Assault         |
 | T2      | Stone Breakers  | Siege Train             |
-| T3      | Shadow Company  | Portals & Bridges       |
+| T3      | Bête noire  | Portals & Bridges       |
 | T4      | Storm Riders    | Air Battle / Sky Control|
 
 ---
@@ -410,12 +410,12 @@ Teleportation to a resistance-held watchtower behind enemy lines.
 | ------- | -------------- | --------------------- | ------------------------- | ---------------------- |
 | T1      | Iron Wolves    | Storm the beach       | Break through to bridge   | Siege Train trapped    |
 | T2      | Stone Breakers | Land the engines      | Climb the bluffs          | Cathedral impregnable  |
-| T3      | Shadow Company | Infiltrate            | Disarm the bridge         | Bridge destroyed       |
+| T3      | Bête noire | Infiltrate            | Disarm the bridge         | Bridge destroyed       |
 | T4      | Storm Riders   | Win the sky           | Block reinforcements      | Portal team overwhelmed|
 
 **No theater stands alone.**
 
-All four theaters converge on Pegasus Bridge in Act III. Shadow Company disarms it, Storm Riders block reinforcements, and the Iron Wolves and Stone Breakers break through to link up.
+All four theaters converge on Pegasus Bridge in Act III. Bête noire disarms it, Storm Riders block reinforcements, and the Iron Wolves and Stone Breakers break through to link up.
 
 ---
 
