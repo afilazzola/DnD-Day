@@ -59,7 +59,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <!-- Catapult & Battlefield -->
-        <div class="card overflow-hidden p-0 md:col-span-2">
+        <div class="card overflow-hidden p-0">
           <button
             class="w-full cursor-pointer lightbox-trigger"
             data-src="/images/Catapult_Background.jpg"
@@ -76,6 +76,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <p class="text-dnd-text-muted text-sm">
               Catapults and ballistas ready for the assault on Sainte-Mère-Église Cathedral.
               Built for the Stone Breakers' grueling push from Gold Beach through Hoc's Point.
+            </p>
+            <p class="text-dnd-text-muted/60 text-xs mt-3">Click image to view full size</p>
+          </div>
+        </div>
+
+        <!-- Bastilla -->
+        <div class="card overflow-hidden p-0">
+          <button
+            class="w-full cursor-pointer lightbox-trigger"
+            data-src="/images/Ballista.jpg"
+            data-alt="Bastilla war engine on the battlefield"
+          >
+            <img
+              src="/images/Ballista.jpg"
+              alt="Bastilla war engine on the battlefield"
+              class="w-full h-[28rem] object-contain hover:scale-105 transition-transform duration-300"
+            />
+          </button>
+          <div class="p-6">
+            <h3 class="font-display text-dnd-primary text-xl mb-2">Bastilla</h3>
+            <p class="text-dnd-text-muted text-sm">
+              A formidable bastilla siege engine, ready to breach enemy fortifications.
+              A key asset for the Stone Breakers pushing toward Sainte-Mère-Église Cathedral.
             </p>
             <p class="text-dnd-text-muted/60 text-xs mt-3">Click image to view full size</p>
           </div>
