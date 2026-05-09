@@ -69,33 +69,117 @@ const GOOGLE_FORM_URL = "https://forms.gle/YatYTQdfLjxWqPnH7";
                 </p>
               </div>
 
-              <!-- Payment Buttons -->
-              <div class="mt-8 space-y-3">
-                <a
-                  href={PLAYER_PAYMENT_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-primary w-full text-center block"
-                >
-                  Enlist as a Player — $20
-                </a>
-                <a
-                  href={SPECTATOR_PAYMENT_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-secondary w-full text-center block"
-                >
-                  Join as a Spectator — $10
-                </a>
-                <p class="text-dnd-text-muted text-xs text-center mt-2">
-                  After payment you'll complete your registration details via the
-                  <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" class="text-dnd-primary hover:underline">sign-up form</a>.
+              <!-- CTA -->
+              <div class="mt-8">
+                <p class="text-dnd-text-muted text-sm text-center">
+                  Choose your role below and secure your spot in the fight.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Ticket Options -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom">
+      <div class="text-center mb-10">
+        <p class="section-title">Choose Your Role</p>
+        <h2 class="text-2xl md:text-3xl font-display">
+          <span class="gold-gradient">Secure Your Spot</span>
+        </h2>
+        <p class="text-dnd-text-muted mt-3 max-w-xl mx-auto">
+          Limited seats. Every ticket includes exclusive take-home rewards — all you need to bring is your courage.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <!-- Player Ticket -->
+        <div class="card border-2 border-dnd-primary flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold uppercase tracking-widest text-dnd-primary">Player</span>
+            <span class="bg-dnd-primary/20 text-dnd-primary text-xs font-bold px-2 py-1 rounded">Limited Spots</span>
+          </div>
+          <div class="mb-6">
+            <span class="text-5xl font-display text-dnd-text">$20</span>
+            <span class="text-dnd-text-muted text-sm ml-1">CAD</span>
+          </div>
+          <ul class="space-y-3 text-sm text-dnd-text-muted mb-8 flex-1">
+            <li class="flex items-start gap-3">
+              <span class="text-dnd-primary mt-0.5">✦</span>
+              <span>Full participation in the Operation Golden Sword D&D campaign</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-dnd-primary mt-0.5">✦</span>
+              <span>Choose your theater of war and fight alongside your company</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-dnd-primary mt-0.5">✦</span>
+              <span>One mystery dice set to keep</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-dnd-primary mt-0.5">✦</span>
+              <span>Entry into the raffle for custom terrain &amp; accessories</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-dnd-primary mt-0.5">✦</span>
+              <span>Certificate of completion</span>
+            </li>
+          </ul>
+          <a
+            href={PLAYER_PAYMENT_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary w-full text-center block"
+          >
+            Enlist as a Player — $20
+          </a>
+        </div>
+
+        <!-- Spectator Ticket -->
+        <div class="card border border-dnd-border flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold uppercase tracking-widest text-dnd-text-muted">Spectator</span>
+          </div>
+          <div class="mb-6">
+            <span class="text-5xl font-display text-dnd-text">$10</span>
+            <span class="text-dnd-text-muted text-sm ml-1">CAD</span>
+          </div>
+          <ul class="space-y-3 text-sm text-dnd-text-muted mb-8 flex-1">
+            <li class="flex items-start gap-3">
+              <span class="text-dnd-primary mt-0.5">✦</span>
+              <span>Full spectator access to the Legendary D&D event</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-dnd-primary mt-0.5">✦</span>
+              <span>Watch multiple tables and follow the campaign as it unfolds</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-dnd-primary mt-0.5">✦</span>
+              <span>One mystery dice set to keep</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-dnd-primary mt-0.5">✦</span>
+              <span>Certificate of participation</span>
+            </li>
+          </ul>
+          <a
+            href={SPECTATOR_PAYMENT_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary w-full text-center block"
+          >
+            Join as a Spectator — $10
+          </a>
+        </div>
+      </div>
+
+      <p class="text-dnd-text-muted text-xs text-center mt-8">
+        After payment, complete your registration details via the
+        <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" class="text-dnd-primary hover:underline">sign-up form</a>.
+      </p>
     </div>
   </section>
 
