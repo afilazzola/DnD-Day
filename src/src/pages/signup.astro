@@ -1,7 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import NewsletterSignup from "../components/NewsletterSignup.astro";
-
 const PLAYER_PAYMENT_LINK = "https://buy.stripe.com/6oUaEWazeghxfKl0sq2VG00";
 const SPECTATOR_PAYMENT_LINK = "https://buy.stripe.com/3cIdR89va7L1fKla302VG01";
 const GOOGLE_FORM_URL = "https://forms.gle/YatYTQdfLjxWqPnH7";
@@ -419,15 +417,4 @@ const GOOGLE_FORM_URL = "https://forms.gle/YatYTQdfLjxWqPnH7";
     </div>
   </section>
 
-  <!-- Newsletter -->
-  <section class="py-16 bg-dnd-bg-secondary">
-    <div class="container-custom">
-      <div class="card max-w-2xl mx-auto">
-        <NewsletterSignup
-          title="Not Ready Yet?"
-          description="Subscribe to get notified about character requirements, event updates, and when registration opens for new spots."
-        />
-      </div>
-    </div>
-  </section>
 </BaseLayout>
