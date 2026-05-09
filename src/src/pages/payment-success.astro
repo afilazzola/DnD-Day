@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const GOOGLE_FORM_URL = "https://forms.gle/YatYTQdfLjxWqPnH7";
+---
+
+<BaseLayout
+  title="Payment Confirmed — Operation Golden Sword"
+  description="Your payment for DnD Day has been confirmed. Complete your registration to claim your spot."
+>
+  <!-- Header -->
+  <section class="py-16 bg-dnd-bg-secondary">
+    <div class="container-custom text-center">
+      <p class="section-title">Payment Confirmed</p>
+      <h1 class="text-4xl md:text-5xl font-display mb-4">
+        <span class="gold-gradient">You're In!</span>
+      </h1>
+      <p class="text-dnd-text-muted text-lg max-w-2xl mx-auto">
+        Your payment was successful. One last step to secure your place in the ranks.
+      </p>
+    </div>
+  </section>
+
+  <!-- Confirmation -->
+  <section class="py-20">
+    <div class="container-custom">
+      <div class="max-w-lg mx-auto text-center">
+        <div class="card">
+          <!-- Icon -->
+          <div class="text-6xl mb-6">🛡️</div>
+
+          <h2 class="text-2xl font-display text-dnd-primary mb-4">
+            Your Seat is Reserved
+          </h2>
+          <p class="text-dnd-text-muted mb-2">
+            A receipt has been sent to your email by Stripe.
+          </p>
+          <p class="text-dnd-text-muted mb-8">
+            To finalise your spot, complete the registration form — it only takes a minute and tells us your character details and theater preference.
+          </p>
+
+          <a
+            href={GOOGLE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary w-full text-center block mb-4"
+          >
+            Complete Registration Form
+          </a>
+
+          <a href="/signup" class="text-dnd-text-muted text-sm hover:text-dnd-primary transition-colors">
+            Paying for someone else? Return to sign-up
+          </a>
+        </div>
+
+        <!-- What's Next -->
+        <div class="mt-10 text-left space-y-4">
+          <h3 class="font-display text-dnd-primary text-center mb-6">What Happens Next</h3>
+          <div class="flex items-start gap-4">
+            <span class="text-dnd-primary text-xl mt-0.5">1.</span>
+            <p class="text-dnd-text-muted">Complete the registration form above so we know your name, character concept, and theater preference.</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="text-dnd-primary text-xl mt-0.5">2.</span>
+            <p class="text-dnd-text-muted">Watch your email for event details, character requirements, and pre-game briefings as June 6 approaches.</p>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="text-dnd-primary text-xl mt-0.5">3.</span>
+            <p class="text-dnd-text-muted">Show up ready to fight for Amn. Glory awaits.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

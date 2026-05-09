@@ -1,6 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NewsletterSignup from "../components/NewsletterSignup.astro";
+
+const PLAYER_PAYMENT_LINK = "https://buy.stripe.com/REPLACE_WITH_PLAYER_LINK";
+const SPECTATOR_PAYMENT_LINK = "https://buy.stripe.com/REPLACE_WITH_SPECTATOR_LINK";
+const GOOGLE_FORM_URL = "https://forms.gle/YatYTQdfLjxWqPnH7";
 ---
 
 <BaseLayout
@@ -65,16 +69,28 @@ import NewsletterSignup from "../components/NewsletterSignup.astro";
                 </p>
               </div>
 
-              <!-- Sign Up Button -->
-              <div class="mt-8">
+              <!-- Payment Buttons -->
+              <div class="mt-8 space-y-3">
                 <a
-                  href="https://forms.gle/YatYTQdfLjxWqPnH7"
+                  href={PLAYER_PAYMENT_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn-primary w-full text-center block"
                 >
-                  Register for Battle
+                  Enlist as a Player — $20
                 </a>
+                <a
+                  href={SPECTATOR_PAYMENT_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-secondary w-full text-center block"
+                >
+                  Join as a Spectator — $10
+                </a>
+                <p class="text-dnd-text-muted text-xs text-center mt-2">
+                  After payment you'll complete your registration details via the
+                  <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" class="text-dnd-primary hover:underline">sign-up form</a>.
+                </p>
               </div>
             </div>
           </div>
