@@ -12,9 +12,34 @@ Amn was chosen not out of hatred, but efficiency. Its wealth, guilds, and trade 
 
 _Conclave Archmage / Strategic Commander_
 
-Once a respected Amnian arcane scholar, the Warmagus specialized in long-range communication and battlefield coordination. When Athkatla fell, they chose not to flee, believing resistance would only fracture the realm further. Instead, they offered their expertise to the Iron Conclave, convinced that a swift, orderly conquest would spare the greatest number of lives.
+Before the Iron Conclave ever set foot on Amnian soil, the Warmagus was one of Athkatla's most beloved arcane scholars — a specialist in long-range communication magic and battlefield coordination. Not war magic. Communication. Their life's work was the belief that most conflicts stem from ignorance and misunderstanding, and that if information could flow freely and accurately between people, violence could be prevented before it began. They taught, they wrote, they built relay networks for merchants and diplomats. They wanted to connect the world, not conquer it.
 
-From the Cathedral, the Warmagus maintains the arcane relay linking Athkatla to the eastern armies—synchronizing ground, air, and siege forces with ruthless precision. Knowing they are a single point of failure, they developed a forbidden contingency: fracturing their consciousness into multiple autonomous arcane aspects. To the Warmagus, this is not madness, but responsibility—command divided so it cannot be destroyed in a single blow.
+When Tharûm Blackmantle's forces surrounded Athkatla, the Warmagus did not flee. They stayed because they believed their skills — their particular gift for communication, for finding common ground, for understanding what people actually needed — could broker something. A negotiated surrender. Reduced casualties. A transition instead of a massacre.
+
+Tharûm listened. And then he showed them the alternative: a detailed operational plan for what would happen to Athkatla if the city resisted. Street by street. Quarter by quarter. He didn't threaten. He simply presented the mathematics.
+
+The Warmagus negotiated the city's surrender. Athkatla did not burn. Its people are alive.
+
+And that is the chain around their neck.
+
+Every cooperation that followed was justified the same way: _if I stop, thousands die_. Every arcane relay they tuned, every coordination signal they broadcast, every order they synchronized was done in service of that original calculation — that their continued involvement was the only thing standing between the occupation and something worse. They told themselves they were managing it. Containing it. That without them, the Iron Conclave would be cruder, bloodier, less precise.
+
+They were not wrong. They were also not right enough to matter.
+
+From the Cathedral, the Warmagus now maintains the arcane relay that links Athkatla to the eastern armies — the nerve system of the entire occupation. They coordinate ground, air, and siege forces across the entire theater with ruthless precision. The skills they built to bring people together are the same skills that make the Iron Conclave function.
+
+The forbidden contingency — fracturing their consciousness into multiple autonomous arcane aspects — was not, at its core, a military calculation. It was dissociation. The weight of what they had become was too much for a single mind to hold. By shattering themselves into fragments, each aspect only has to carry _part_ of the guilt. No single piece has to look at the whole picture.
+
+The four aspects that emerge in Act IV each represent something the Warmagus surrendered:
+
+- **Control** — the belief that they could manage this, keep it contained, prevent the worst
+- **Destruction** — the violence done in their name, the deaths they told themselves were necessary
+- **Deception** — the lies told to themselves and to the people of Athkatla who trusted them
+- **Dominion** — the power they allowed to grow until they could no longer imagine leaving it behind
+
+If the players ever learn who the Warmagus was before — and there are fragments of that person still visible in the way the Cathedral is run, in small mercies nobody ordered, in operational decisions that are slightly less brutal than they needed to be — the question they'll carry into Act IV is not whether the Warmagus is evil. It is whether evil is something you become, or something that happens to you when you run out of better options.
+
+They still remember what they were building. They just can't find the way back.
 
 ## The Iron Conclave — Faction Breakdown
 

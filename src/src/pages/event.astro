@@ -1,7 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import NewsletterSignup from "../components/NewsletterSignup.astro";
-
 const eventSchema = {
   "@context": "https://schema.org",
   "@type": "Event",
@@ -359,17 +357,6 @@ const eventSchema = {
     </div>
   </section>
 
-  <!-- Newsletter -->
-  <section class="py-16 bg-dnd-bg-secondary">
-    <div class="container-custom">
-      <div class="card max-w-2xl mx-auto">
-        <NewsletterSignup
-          title="Get Event Updates"
-          description="Be the first to know about character requirements, schedule changes, and important announcements."
-        />
-      </div>
-    </div>
-  </section>
 
   <!-- CTA -->
   <section class="py-16">
