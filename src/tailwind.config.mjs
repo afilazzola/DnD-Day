@@ -9,7 +9,7 @@ export default {
         'dnd-bg-secondary': '#141b26',
         'dnd-primary': '#c9a227',
         'dnd-secondary': '#8b0000',
-        'dnd-accent': '#4a6741',
+        'dnd-accent': '#6aab5a',
         'dnd-text': '#f7f3ec',
         'dnd-text-muted': '#b8b0a4',
         'dnd-border': '#2a3444',
