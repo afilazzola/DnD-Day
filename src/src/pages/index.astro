@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import TheaterCard from '../components/TheaterCard.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
 import theaters from '../data/theaters.json';
 ---
 
@@ -13,9 +14,11 @@ import theaters from '../data/theaters.json';
   <Hero
     title="Operation Golden Sword"
     subtitle="DnD Day Event"
-    description="The Iron Tide Rises. The Sword Coast Calls. Join a massive multi-table DnD event where heroes unite to break the Iron Conclave's grip on Amn."
+    description="Thank you to everyone who answered the call. Operation Golden Sword was an unforgettable battle. Stay connected for the next adventure."
     backgroundImage="/images/hero-banner.jpg"
     backgroundVideo="/images/DnD-Day Banner.mp4"
+    ctaText="Join the Mailing List"
+    ctaHref="/signup"
   />
 
   <!-- Story Teaser -->
@@ -148,22 +151,20 @@ import theaters from '../data/theaters.json';
     </div>
   </section>
 
-  <!-- Call to Action -->
+  <!-- Thank You / Newsletter CTA -->
   <section class="py-24">
     <div class="container-custom text-center">
       <h2 class="text-3xl md:text-5xl font-display mb-6">
-        <span class="gold-gradient">Will You Answer the Call?</span>
+        <span class="gold-gradient">Thank You for Answering the Call</span>
       </h2>
-      <p class="text-dnd-text-muted text-lg mb-8 max-w-xl mx-auto">
-        The Sword Coast needs heroes. Choose your theater, gather your party, and prepare for war.
+      <p class="text-dnd-text-muted text-lg mb-10 max-w-xl mx-auto">
+        Operation Golden Sword has concluded. It was an honour to fight alongside every hero, DM, and spectator who joined us. Want to be first in line for the next campaign?
       </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/signup" class="btn btn-primary text-lg px-8 py-4">
-          Sign Up Now
-        </a>
-        <a href="/event" class="btn btn-secondary">
-          Event Details
-        </a>
+      <div class="max-w-lg mx-auto border-t border-dnd-border pt-10">
+        <NewsletterSignup
+          title="Join the list for the next event"
+          description="Be the first to hear when we announce our next campaign."
+        />
       </div>
     </div>
   </section>
